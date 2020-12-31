@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Adapter;
 import android.content.Intent;
 import android.net.Uri;
+import android.app.AlertDialog;
 
 public class MainActivity extends Activity
 {
@@ -33,22 +34,23 @@ public class MainActivity extends Activity
 	 //显示进度
 	 TextView showprogress;
 	ArrayAdapter<String> adapter;
-	Bgm bgm;
+	
 	TextView scoreT;
 	int score=0;
 	//解锁的句子个数
 	TextView unlockT;
+	//封装类
+	Bgm bgm;
+	EasySoundPool tool;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) 
+	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bar=findViewById(R.id.bar);
-		showprogress=findViewById(R.id.progress);
-		ctx=getApplicationContext();
-		scoreT=findViewById(R.id.score);
-		unlocked_stn=findViewById(R.id.unlock_stn);
-		unlockT=findViewById(R.id.unlocked);
+		initView();
+        
 		playBgm();
+		tool=initSoundPool();
 		//todo 添加一个循环背景音乐，留住玩家
 		for(int i=0;i<sentences.length;i++)
 		{
@@ -65,6 +67,23 @@ public class MainActivity extends Activity
             adapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,getData());
 			list.setAdapter(adapter);
     }
+
+	private void initView()
+	{
+		bar=findViewById(R.id.bar);
+		showprogress=findViewById(R.id.progress);
+		ctx=getApplicationContext();
+		
+		scoreT=findViewById(R.id.score);
+		unlocked_stn=findViewById(R.id.unlock_stn);
+		unlockT=findViewById(R.id.unlocked);
+	}
+
+	private EasySoundPool initSoundPool() 
+	{
+		EasySoundPool tool=new EasySoundPool();
+		return tool;
+	}
 
 	private void playBgm()
 	{
@@ -103,7 +122,18 @@ public class MainActivity extends Activity
 	{
 		Toast.makeText(ctx,"功能没有做",Toast.LENGTH_LONG).show();
 	}
-	public void click(View v)
+	//联系作者
+	public void contect(View v)
+	{
+		/*AlertDialog builder=new AlertDialog.Builder(this).create();
+		builder.setMessage("请加qq2439905184");
+		builder.show();*/
+		new EasyDialog().show(this,"联系作者","请加qq2439905184");
+		
+	//EasyDialog tool=new EasyDialog();
+	//tool.show(ctx,"请加qq2439905184");
+	}
+	public void clickit(View v)
 	{
 		progress+=5;
 		bar.setProgress(progress);
