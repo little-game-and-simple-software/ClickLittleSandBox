@@ -5,12 +5,25 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 
-	<TextView
-		android:layout_width="wrap_content"
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="点击小沙盒"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_gravity="center"/>
+		android:gravity="right">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="点击小沙盒"
+			android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="积分:0"
+			android:id="@+id/score"/>
+
+	</LinearLayout>
 
 	<ProgressBar
 		android:layout_width="match_parent"
@@ -48,28 +61,56 @@
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="已经解锁的句子"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:id="@+id/unlock_stn"/>
-
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
 		android:text="长度"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:id="@+id/len"/>
 
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="作者的其他游戏"
-		android:onClick="showothergames"/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="作者的其他游戏"
+			android:onClick="showothergames"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:text="相关网站"
+			android:onClick="openWeb"/>
+
+	</LinearLayout>
 
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="赞助作者"
 		android:onClick="showad"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="已经解锁的句子(共20个句子)"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:id="@+id/unlock_stn"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="解锁个数0/20"
+			android:id="@+id/unlocked"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+	</LinearLayout>
 
 	<ListView
 		android:layout_width="wrap_content"

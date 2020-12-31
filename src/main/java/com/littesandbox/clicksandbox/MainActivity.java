@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import android.widget.AdapterView;
 import android.widget.Adapter;
+import android.content.Intent;
+import android.net.Uri;
 
 public class MainActivity extends Activity
 {
@@ -31,6 +33,11 @@ public class MainActivity extends Activity
 	 //显示进度
 	 TextView showprogress;
 	ArrayAdapter<String> adapter;
+	Bgm bgm;
+	TextView scoreT;
+	int score=0;
+	//解锁的句子个数
+	TextView unlockT;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +45,10 @@ public class MainActivity extends Activity
         bar=findViewById(R.id.bar);
 		showprogress=findViewById(R.id.progress);
 		ctx=getApplicationContext();
+		scoreT=findViewById(R.id.score);
+		unlocked_stn=findViewById(R.id.unlock_stn);
+		unlockT=findViewById(R.id.unlocked);
+		playBgm();
 		//todo 添加一个循环背景音乐，留住玩家
 		for(int i=0;i<sentences.length;i++)
 		{
@@ -50,38 +61,43 @@ public class MainActivity extends Activity
 		list=findViewById(R.id.list);
 		//listadapter数据长度
 		len_T=findViewById(R.id.len);
-		//ListView listView = findViewById(R.id.listview);//初始化控件
 		//创建数组适配器，4个参数
-       adapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,getData());
-		
-	   //adapter.add("x");
-		
+            adapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,getData());
 			list.setAdapter(adapter);
-			list.setOnItemClickListener(new AdapterView.OnItemClickListener()
-			{
-
-				@Override
-				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4) {
-				}
-				
-				
-			});
-		
     }
-	private List<String> getData(){
 
+	private void playBgm()
+	{
+	    bgm=new Bgm();
+		bgm.init(ctx);
+		bgm.play();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		bgm.stop();
+	}
+	
+	private List<String> getData(){
         List<String> data = new ArrayList<String>();
        /* data.add("测试数据1");
         data.add("测试数据2");
         data.add("测试数据3");
         data.add("测试数据4");j*/
-
         return data;
     }
 	//赞助作者的按钮
 	public void showad(View v)
 	{
 		Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
+	}
+	//跳转到每日一句
+	public void openWeb(View v)
+	{
+		Uri uri=Uri.parse("http://everydayonesentence.biu8.top");
+		Intent i=new Intent(Intent.ACTION_VIEW,uri);
+		startActivity(i);
 	}
 	public void showothergames(View v)
 	{
@@ -98,8 +114,11 @@ public class MainActivity extends Activity
 		
 		if(progress>=100)
 		{
+			
 			progress=0;
 			bar.setProgress(progress);
+			score+=5;
+			scoreT.setText("积分:"+score);
 			int len=sentences.length;
 			//todo 添加一个进度满了的胜利音效 留住玩家
 			if(size>0)
@@ -111,6 +130,7 @@ public class MainActivity extends Activity
 			randView.setText("当前数组长度"+size);
 			int count=adapter.getCount();
 			len_T.setText("adapter长度"+count);
+			unlockT.setText("解锁句子个数"+count+"/"+"20");
 			//Toast.makeText(ctx,"句子数组length"+len,1000).show();
 			}	
 			}
