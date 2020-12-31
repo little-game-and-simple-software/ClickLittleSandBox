@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="点击小沙盒"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_gravity="center"/>
+
+	<ProgressBar
+		android:layout_width="match_parent"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_height="wrap_content"
+		android:id="@+id/bar"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="0/100"
+		android:layout_gravity="center"
+		android:id="@+id/progress"/>
+
+	<ImageView
+		android:src="@drawable/sand"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:layout_gravity="center"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="点击"
+		android:layout_gravity="center"
+		android:onClick="click"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="随机值:"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/rand"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="已经解锁的句子"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/unlock_stn"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="长度"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/len"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="作者的其他游戏"
+		android:onClick="showothergames"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="赞助作者"
+		android:onClick="showad"/>
+
+	<ListView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/list"/>
+
+</LinearLayout>
+
