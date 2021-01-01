@@ -146,6 +146,13 @@ public class MainActivity extends Activity
 	{
 		Toast.makeText(ctx,"功能没有做",Toast.LENGTH_LONG).show();
 	}
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Toast.makeText(ctx,"如果不小心退出，请按图片重新进入主界面",Toast.LENGTH_LONG).show();
+    }
+    
 	//联系作者
 	public void contect(View v)
 	{
