@@ -16,6 +16,9 @@ import android.widget.Adapter;
 import android.content.Intent;
 import android.net.Uri;
 import android.app.AlertDialog;
+import android.os.Build;
+import android.app.Dialog;
+import android.content.DialogInterface;
 
 public class MainActivity extends Activity
 {
@@ -109,6 +112,27 @@ public class MainActivity extends Activity
 	//赞助作者的按钮
 	public void showad(View v)
 	{
+        AlertDialog builder=new AlertDialog.Builder(this).create();
+        builder.setTitle("请选择赞助方式");
+        builder.setMessage("1.微信赞助,2.观看广告赞助作者");
+       builder.setButton("微信赞助",new DialogInterface.OnClickListener()
+            {
+                @Override
+                public void onClick(DialogInterface p1, int p2)
+                {
+                     Intent i =new Intent(ctx,wechat.class);
+                    startActivity(i);
+                }
+       });
+       builder.setButton2("观看广告",new DialogInterface.OnClickListener()
+            {
+                @Override
+                public void onClick(DialogInterface p1, int p2) 
+                {
+                    Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
+                }
+       });
+        builder.show();
 		Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
 	}
 	//跳转到每日一句

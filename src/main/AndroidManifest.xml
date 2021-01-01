@@ -26,7 +26,11 @@
             </intent-filter>
 
         </activity>
-
+<activity
+    android:name=".wechat"
+    >
+  
+</activity>
         <meta-data
             android:name="android.max_aspect"
             android:value="4.0"/>

@@ -60,6 +60,7 @@ public class Game
 	   FileReader reader = null;
 	   try {
 		 reader=new FileReader(file);
+         //reader.read();
 	   } catch (FileNotFoundException e) 
 	  {
 		  e.printStackTrace();
