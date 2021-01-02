@@ -19,6 +19,8 @@ import android.app.AlertDialog;
 import android.os.Build;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import java.io.File;
+import java.io.IOException;
 /*所有的句子
 
  1道可道，非常道
@@ -186,10 +188,23 @@ public class MainActivity extends Activity
 		//Toast.makeText(ctx,"功能没有做",Toast.LENGTH_LONG).show();
 	}
 
+    //保存进度
+    public void save(View v)
+    {
+   //     File file = new File("/sdcard/test.txt");
+           String result= new Game().save(adapter);
+           len_T.setText(result);
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Toast.makeText(ctx,"如果不小心退出，请按图片重新进入主界面",Toast.LENGTH_LONG).show();
+        
+        //File file = new File("/sdcard/Download/test.txt");
+  /*      try{
+        Game.save(stn, file);
+        }catch(IOException e)
+        {}*/
+        Toast.makeText(ctx, "如果不小心退出，请按图片重新进入主界面", Toast.LENGTH_LONG).show();
     }
     
 	//联系作者

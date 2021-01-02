@@ -7,10 +7,13 @@ import android.os.Environment;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.BufferedWriter;
+import android.widget.Adapter;
 
 public class Game 
 {
-	//存档路径
+    static FileWriter writer;
+	/*//存档路径
 	String savePath="";
 	static class saveMode
 	{
@@ -31,29 +34,27 @@ public class Game
 		}
 	}
 	*/
-   public static void save(ArrayList data,File file)
-   {
-	   
-	   if(data.size()>0)
+   public String save(Adapter data)
+   { 
+   String result="";
+       //writer=new FileWriter(file);
+	   if (data.getCount() > 0) 
 	   {
-		   for(int i=0;i<data.size()-1;i++)
+		   for(int i=0;i<data.getCount();i++)
 		   {
 			   //每个元素
-			  String tmp= (String) data.get(i);
+			  String tmp= (String) data.getItem(i);
+              result+=tmp;
 			 //数组中每个元素存一行
-			   try {
-				   FileWriter writer=new FileWriter(file);
-				   
-			   } catch (IOException e) {
-				   e.printStackTrace();
-			   }
-			   //  write_line(tmp);
+     //        writer.write(tmp); 
 		   }
 	   }
-	  // FileWriter writer=new FileWriter();
-	  // writer.write();
-   }
-   public static ArrayList<String> load(File file) throws IOException
+       return result;
+     }
+     }
+     
+   
+  /* public static ArrayList<String> load(File file) throws IOException
    {
 	   ArrayList<String> currentStnArray=new ArrayList<String>();
 	   int value = 0;
@@ -96,4 +97,4 @@ public class Game
 	  return currentStnArray;*/
    
    
-}
+

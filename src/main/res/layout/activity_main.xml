@@ -62,6 +62,12 @@
 			android:text="自动点击"
 			android:onClick="auto"/>
 
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="保存进度"
+			android:onClick="save"/>
+
 	</LinearLayout>
 
 	<TextView
