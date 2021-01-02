@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.soulgame.tgsdksampleapp.android"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1603354620
+        versionName "1.9.0"
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'tgsdk_sample_app'
+            keyPassword 'tgsdk.soulgame.com'
+            storeFile file('./../tgsdk_sample_app.keystore')
+            storePassword 'tgsdk.soulgame.com'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            signingConfig signingConfigs.releaseConfig
+            manifestPlaceholders = [
+                    TGSDK_APPID_VALUE: "59t5rJH783hEQ3Jd7Zqr",
+                    TGSDK_CHANNELID_VALUE: 10035,
+            ]
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            signingConfig signingConfigs.releaseConfig
+            manifestPlaceholders = [
+                    TGSDK_APPID_VALUE: "59t5rJH783hEQ3Jd7Zqr",
+                    TGSDK_CHANNELID_VALUE: 10035,
+            ]
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.squareup.okio:okio:1.14.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    
+    
+        // By wangmai
+    implementation 'com.google.code.gson:gson:2.8.2'
+    // By oneway
+    implementation 'mobi.oneway.common:core:1.0.8'
+    // By wangmai
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+    // By wangmai
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation(name: 'TGSDK.1.9.0', ext: 'aar')
+    implementation(name: 'GDTSDK.unionNoPlugin.4.270.1140', ext: 'aar')
+    implementation(name: 'TGSDKADGuangdiantong.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADBaidu.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADSigmob.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADMobvista.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADHytech.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADOneway.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADYoads.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADWangmai.1.9.0', ext: 'aar')
+    implementation(name: 'open_ad_sdk.3.3.0.0', ext: 'aar')
+    implementation(name: 'TGSDKADBytedance.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADUniplay.1.9.0', ext: 'aar')
+
+}

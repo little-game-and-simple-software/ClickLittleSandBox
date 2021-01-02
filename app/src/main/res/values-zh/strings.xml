@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yomob示例</string>
+    <string name="ad_tips">广告场景:</string>
+    <string name="showad">播放广告</string>
+    <string name="ad_click">广告被点击了</string>
+    <string name="ad_close">广告被关闭了</string>
+    <string name="ad_completed">广告播放完成</string>
+    <string name="ad_not_ready">广告没有准备好</string>
+    <string name="ad_play">播放广告</string>
+    <string name="ad_show_fail">广告播放失败</string>
+    <string name="ad_show_success">广告播放成功</string>
+    <string name="check_play_ad">是否可以播放广告？</string>
+    <string name="cp_ad_loaded">静态插屏广告准备好了</string>
+    <string name="no_label">否</string>
+    <string name="ok_label">确定</string>
+    <string name="please_choose_scene">请先选择一个要播放的广告场景</string>
+    <string name="preload_fail">预加载失败</string>
+    <string name="preload_success">预加载成功</string>
+    <string name="reward_fail">条件未达成，无法得到广告奖励</string>
+    <string name="reward_success">条件达成，可以得到广告奖励</string>
+    <string name="sdk_init_fail">SDK 初始化失败</string>
+    <string name="sdk_init_success">SDSK 初始化成功</string>
+    <string name="video_ad_loaded">视频广告准备好了</string>
+    <string name="cancel_label">取消</string>
+    <string name="yes_label">是</string>
+    <string name="sdk_loading">SDK 正在初始化并进行广告预加载</string>
+    <string name="show_test_view">测试模式播放</string>
+    <string name="could_to_get_reward">恭喜你，获得了奖励 :-)</string>
+    <string name="not_to_get_reward">哦抱歉！你不能得到奖励 :-(</string>
+    <string name="close_banner">关闭 Banner 广告</string>
+    <string name="reward_text">是否可以获取奖励</string>
+    <string name="currentsdk">当前播放:</string>
+    <string name="currentscene">当前场景:</string>
+</resources>

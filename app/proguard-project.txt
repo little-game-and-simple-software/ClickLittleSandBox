@@ -1,0 +1,167 @@
+-ignorewarnings
+
+-keepattributes Signature
+-keep class okhttp3.** { *; }
+-keep class okio.** { *; }
+
+# TGSDK
+-keep class com.soulgame.sgsdk.** { *; }
+
+-keep class com.mock.sdk.main.** { *; }
+
+-keep class eco.data.m3.** { *; }
+
+# Android Support
+-keep class androidx.core.app.** { *; }
+-keep class androidx.core.content.** { *; }
+-keep class android.support.v4.app.** { *; }
+-keep class android.support.v4.content.** { *; }
+
+# GooglePlayService
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keepnames class * implements android.os.Parcelable
+-keepclassmembers class * implements android.os.Parcelable {
+  public static final *** CREATOR;
+}
+
+-keep @interface android.support.annotation.Keep
+-keep @android.support.annotation.Keep class *
+-keepclasseswithmembers class * {
+  @android.support.annotation.Keep <fields>;
+}
+-keepclasseswithmembers class * {
+  @android.support.annotation.Keep <methods>;
+}
+
+-keep @interface com.google.android.gms.common.annotation.KeepName
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+  @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keep @interface com.google.android.gms.common.util.DynamiteApi
+-keep public @com.google.android.gms.common.util.DynamiteApi class * {
+  public <fields>;
+  public <methods>;
+}
+
+-dontwarn android.security.NetworkSecurityPolicy
+
+
+
+# androidx
+-keep class com.google.android.material.** {*;}
+-keep class androidx.** {*;}
+-keep public class * extends androidx.**
+-keep interface androidx.** {*;}
+-dontwarn com.google.android.material.**
+-dontnote com.google.android.material.**
+-dontwarn androidx.**
+
+# android.support.v4
+-dontwarn android.support.v4.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.** { *; }
+-keep public class * extends android.support.v4.**
+
+# Bugly
+-dontwarn com.tencent.bugly.tgsdk.**
+-keep class com.tencent.bugly.tgsdk.** { *; }
+
+# ADX
+-dontwarn com.yomob.tgsdklib.**
+-keep class com.yomob.tgsdklib.** { *; }
+-keep interface com.yomob.tgsdklib.** { *; }
+
+# Guangdiantong
+-keep class com.qq.e.** { public protected *; }
+-keep class android.support.v4.**{ public *; }
+-keep class android.support.v7.**{ public *; }
+-keep class MTT.ThirdAppInfoNew { *; }
+-keep class com.tencent.** { *; }
+
+# Baidu
+ -keepclassmembers class * extends android.app.Activity { public void *(android.view.View);
+}
+-keepclassmembers enum * {
+public static **[] values();
+public static ** valueOf(java.lang.String);
+}
+-keep class com.baidu.mobads.*.** { *; }
+
+# sigmob
+-dontwarn android.support.v4.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.** { *; }
+-keep public class * extends android.support.v4.**
+-keep class sun.misc.Unsafe { *; }
+-dontwarn com.sigmob.**
+-keep class com.sigmob.**.**{*;}
+
+# Mintegral
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.mintegral.** {*; }
+-keep interface com.mintegral.** {*; }
+-keep class android.support.v4.** { *; }
+-keep interface androidx.** { *; }
+-keep class androidx.** { *; }
+-keep public class * extends androidx.** { *; }
+-dontwarn com.mintegral.**
+-keep class **.R$* { public static final int mintegral*; }
+-keep class com.alphab.** {*; }
+-keep interface com.alphab.** {*; }
+
+# HyTech
+-keep class com.hytt.** { *; }
+-keep interface com.hytt.** { *; }
+
+# OneWay
+-keep class mobi.oneway.** {*;}
+
+#Yoads
+-keep class **.R$* { *; }
+-keep class com.yomob.yomobads.** { *; }
+
+# Wangmai
+-keep class com.wangmai.** { *; }
+-keep class cn.com.ad4.stat.** { *; }
+-keep class com.google.gson.** { *; }
+-keep class com.qq.e.** { *; }
+-keep class com.squareup.picasso.** {*;}
+-keep class cn.com.ad4.stat.** { *; }
+-keep class com.ak.** {*;}
+-keep class com.bun.miitmdid.core.** {*;}
+-keep class btmsdkobf.** { *; }
+-keep class com.tmsdk.** { *; }
+-keep class tmsdk.** { *; }
+-keep class cn.view.** {*;}
+-keep class cn.adx.** {*;}
+
+# ByteDance
+-keep class com.bytedance.sdk.openadsdk.** { *; }
+-keep class com.androidquery.callback.** { *; }
+-keep class com.bytedance.sdk.openadsdk.** { *; }
+-keep public interface com.bytedance.sdk.openadsdk.downloadnew.** {*;}
+-keep class com.ss.sys.ces.* {*;}
+
+# Uniplay
+-keep class com.uniplay.adsdk.**
+-keep class com.joomob.**
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+-keepattributes Annotation
+-keepattributes JavascriptInterface
+-keepclassmembers class * {
+@android.webkit.JavascriptInterface <methods>;
+}
+-keepclassmembers public class com.uniplay.adsdk.JavaScriptInterface{
+<fields>;
+<methods>;
+public *;
+private *;
+}

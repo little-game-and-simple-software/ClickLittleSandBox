@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TGSDKSampleApp</string>
+    <string name="ad_tips">AD Scenes:</string>
+    <string name="showad">Show AD</string>
+    <string name="ok_label">OK</string>
+    <string name="reward_fail">AD Reward Fail</string>
+    <string name="reward_success">AD Reward success</string>
+    <string name="ad_click">AD Clicked</string>
+    <string name="ad_close">AD Closed</string>
+    <string name="ad_completed">AD play completed</string>
+    <string name="ad_show_fail">Ad show failed</string>
+    <string name="ad_show_success">AD show successfull</string>
+    <string name="preload_success">Preload successfull</string>
+    <string name="preload_fail">Preload failed</string>
+    <string name="cp_ad_loaded">AD loaded</string>
+    <string name="video_ad_loaded">Video AD loaded</string>
+    <string name="sdk_init_success">Yomob SDK init</string>
+    <string name="sdk_init_fail">Yomob SDK init failed</string>
+    <string name="please_choose_scene">Select an AD scene please</string>
+    <string name="no_label">Cancel</string>
+    <string name="check_play_ad">Do you want to play AD?</string>
+    <string name="ad_play">Play AD</string>
+    <string name="ad_not_ready">Any AD scene not ready</string>
+    <string name="yes_label">Yes</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="sdk_loading">Wait SDK init and preload...</string>
+    <string name="show_test_view">Show Test View</string>
+    <string name="could_to_get_reward">You could to get reward :-)</string>
+    <string name="not_to_get_reward">Oh you could not to get reward :-(</string>
+    <string name="close_banner">Close Banner</string>
+    <string name="reward_text">Could Reward</string>
+    <string name="currentsdk">CurrentSDk:\t</string>
+    <string name="currentscene">CurrentScene:\t</string>
+</resources>
