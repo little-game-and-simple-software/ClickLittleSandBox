@@ -25,6 +25,11 @@
 
         </activity>
         <activity
+            android:name=".MoreGame"
+        >
+
+        </activity>
+        <activity
             android:name=".Splash"
         >
             <intent-filter>
