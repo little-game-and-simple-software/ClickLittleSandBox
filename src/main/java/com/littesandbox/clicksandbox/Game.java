@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 public class Game 
 {
-    //static FileWriter writer;
-
     public void save(Adapter data,Activity a) throws IOException
     { 
         FileWriter write;
@@ -33,34 +31,29 @@ public class Game
                 //每个元素
                 String tmp= (String) data.getItem(i);
                 result+=tmp+"\n";
-                //数组中每个元素存一行
-                // writer.write(tmp); 
             }
             write.write(result);
         }
         write.close();  
     }
-  public static ArrayList<String> load(File file,Activity a) throws IOException
+  public  void load(String filename,Activity a) throws FileNotFoundException, IOException 
    {
-       String finalResult="";
+      // String finalResult="";
 	   ArrayList<String> currentStnArray=new ArrayList<String>();
-       Toast.makeText(a,file.getPath(),1000).show();
-	    String path=file.getPath()+"/test.txt";
+       File dir=a.getFilesDir();
+       String path=dir.getPath()+"/"+filename;
         File toread=new File(path);
         FileReader fileReader=new FileReader(toread);
        BufferedReader reader = new BufferedReader(fileReader);
-     int i;
-
          String tmp_line;
        while((tmp_line=reader.readLine())!=null)
        {
            currentStnArray.add(tmp_line);
        }
-  //     BufferedWriter n;
-    
+     reader.close();
    //处理
-        Toast.makeText(a,finalResult,1000).show();
-       return currentStnArray;
+        Toast.makeText(a,"数组长度"+currentStnArray.size(),1000).show();
+     //  return currentStnArray;
    }
       /* for(int index=0;i<finalResult.length()-1;index++)
        {

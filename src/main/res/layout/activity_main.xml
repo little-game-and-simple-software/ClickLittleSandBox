@@ -130,14 +130,14 @@
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="已经解锁的句子(共20个句子)"
+			android:text="已经解锁的句子(共28个句子)"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:id="@+id/unlock_stn"/>
 
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="解锁个数0/20"
+			android:text="解锁个数0/28"
 			android:id="@+id/unlocked"
 			android:textAppearance="?android:attr/textAppearanceMedium"/>
 

@@ -16,27 +16,24 @@ import android.view.View;
 
 public class Splash extends Activity {
     ImageView image;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-        //Timer timer=new Timer();
         image =  findViewById(R.id.main);
         image.setOnClickListener(new OnClickListener()
             {
 
                 @Override
                 public void onClick(View p1) {
-                    Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(i);      
+                    Intent i=new Intent(getApplicationContext(), Error.class);
+                 startActivity(i);      
                 }
             });
 
         Animation anim;
         anim = new AlphaAnimation(0f, 1f);
         anim.setDuration(1000);
-
         image.setAnimation(anim);
         anim.setAnimationListener(new Animation.AnimationListener()
             {
@@ -47,8 +44,8 @@ public class Splash extends Activity {
 
                 @Override
                 public void onAnimationEnd(Animation p1) {
-                    Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(i);
+                    Intent i=new Intent(getApplicationContext(), Error.class);
+         startActivity(i);
                 }
 
                 @Override
@@ -57,12 +54,7 @@ public class Splash extends Activity {
 
 
             });
-        /*timer.schedule(new TimerTask()
-         {
-         @Override
-         public void run() {
-         }
-         },1000);*/
+    
     }
 
 
