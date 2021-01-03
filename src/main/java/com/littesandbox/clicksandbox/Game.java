@@ -11,6 +11,8 @@ import java.io.BufferedWriter;
 import android.widget.Adapter;
 import android.app.Activity;
 import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import java.lang.reflect.Array;
 
 public class Game 
 {
@@ -36,7 +38,7 @@ public class Game
         }
         write.close();  
     }
-  public  void load(String filename,Activity a) throws FileNotFoundException, IOException 
+  public  void load(String filename,Activity a,ArrayAdapter adapter,ArrayList<String> stn,String[] sentence) throws FileNotFoundException, IOException 
    {
       // String finalResult="";
 	   ArrayList<String> currentStnArray=new ArrayList<String>();
@@ -48,30 +50,28 @@ public class Game
          String tmp_line;
        while((tmp_line=reader.readLine())!=null)
        {
-           currentStnArray.add(tmp_line);
+           adapter.add(tmp_line);
+        //   stn.add(tmp_line);
        }
-     reader.close();
-   //处理
-        Toast.makeText(a,"数组长度"+currentStnArray.size(),1000).show();
-     //  return currentStnArray;
+       //获得最后一个值 原始数组
+     String t=  (String) adapter.getItem(adapter.getCount()-1);
+     //获取最后一个值在原始数组的位置
+     for(int i=0;i<sentence.length;i++)
+     {
+         currentStnArray.add(sentence[i]);
+     }
+   //  int index=currentStnArray.indexOf(t);
+     Toast.makeText(a,"最后"+t,1000).show();
+   int index=  currentStnArray.indexOf(t);
+   Toast.makeText(a,"最后一个句子在原始数组的位置"+index,1000).show();
+   //重置数组
+   stn.clear();
+   for(int ii=index+1;ii<sentence.length;ii++)
+   {
+       stn.add(sentence[ii]);
    }
-      /* for(int index=0;i<finalResult.length()-1;index++)
-       {
-           //总字符串转每个字符串，存到arraylist
-         Character c=  finalResult.charAt(index);
-         String  tmp=c.toString();
-         currentStnArray.add(tmp);
-           
-       }*/
-        //currentStnArray.add();
-       //读取
-       /*  while((i=reader.read())!=-1)
-        {
-        Character tmp_char= (char)i;
-        String tmp= tmp_char.toString();
-        finalResult+=tmp;
-        currentStnArray.add(tmp);
-        }*/
- 
+     reader.close();
+
+   }
          }
 

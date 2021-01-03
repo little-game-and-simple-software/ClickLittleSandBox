@@ -73,16 +73,18 @@ public class MainActivity extends Activity
         //   requestPermissions();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,getData());
+        adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
        // list.setAdapter(adapter);
 		initView();
-     //   initData();
-     String f="kkkjn";
-    //    adapter.add(f);
+        try
+        {
+            initData();
+        } catch(IOException e)
+        {}
+        list.setAdapter(adapter);
 		playBgm();
 		//listadapter数据长度
-		//创建数组适配器，4个参数
-        
+		//创建数组适配器，4个参数 
     }
 //初始化界面
 	private void initView()
@@ -96,25 +98,24 @@ public class MainActivity extends Activity
 		unlockT=findViewById(R.id.unlocked);
         randView=findViewById(R.id.rand);
         unlocked_stn=findViewById(R.id.unlock_stn);
+        //显示有多少个句子
 		list=findViewById(R.id.list);
 	}
     //初始化数据
-    public void initData()  
+    public void initData() throws IOException  
     {
         String  dir=getFilesDir().getPath();
         File gameDataFile=new File(dir+"/test.txt");
         if(gameDataFile.exists())
         {
             Toast.makeText(ctx,"游戏文件存在",1000).show();
-           //new Game().load("test.txt",MainActivity.this);
-            //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();
-            //   adapter.clear();
-          /*  for(int i=0;i<test.size()-1;i++)
+            for(int i=0;i<sentences.length;i++)
             {
-                String tmp=test.get(i);
-                adapter.add(tmp);
-                //  Toast.makeText(ctx,stn.get(i),1000).show();
-            }     */
+                stn.add(sentences[i]);
+            } 
+            new Game().load("test.txt",MainActivity.this,adapter,stn,sentences);
+            //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();
+            
         }
         if(gameDataFile.exists()==false)
         {
@@ -149,13 +150,15 @@ public class MainActivity extends Activity
                 public void onClick(DialogInterface p1,int p2)
                 {
                     Toast.makeText(ctx,"外部调用",1000).show();
-              /*      String dir=getFilesDir().getPath();
+                    String dir=getFilesDir().getPath();
                     File f=new File(dir+"/test.txt");
                     if(f.exists())
                     {
                     boolean result= f.delete();
                     Toast.makeText(ctx,"删除状态"+result,1000).show();
-                    }*/
+                    }
+                    //重置界面
+                   recreate();
                 }
             });
         tool.show();
@@ -173,12 +176,6 @@ public class MainActivity extends Activity
 		super.onDestroy();
 		bgm.stop();
 	}
-
-	public ArrayList<String> getData()
-    {
-        ArrayList<String> data = new ArrayList<String>();
-        return data;
-    }
 	//赞助作者的按钮
 	public void showad(View v)
 	{
@@ -252,8 +249,15 @@ public class MainActivity extends Activity
 		//todo 添加一个每次点击按钮时的音效 留住玩家
 		//数组长度
 		int size=stn.size();
-
-		if(progress>=100)
+   //     Toast.makeText(ctx,"临时数组长度"+size,500).show();
+        //可变句子数组
+        if(size>0)
+        {
+            adapter.add(stn.get(0));
+            stn.remove(0);
+            }
+        unlockT.setText("解锁句子个数"+adapter.getCount()+"/"+sentences.length);
+		/*if(progress>=100)
 		{
 			progress=0;
 			bar.setProgress(progress);
@@ -263,16 +267,17 @@ public class MainActivity extends Activity
 			//todo 添加一个进度满了的胜利音效 留住玩家
 			if(size>0)
 			{
-				String toadd=stn.get(iindex);
-			//	adapter.add(toadd);
-			//	stn.remove(iindex);
+				String toadd=stn.get(0);
+				adapter.add(toadd);
+                adapter.notifyDataSetChanged();
+				stn.remove(0);
 			}
 			randView.setText("当前数组长度"+size);
 			int count=adapter.getCount();
 			len_T.setText("adapter长度"+count);
-			unlockT.setText("解锁句子个数"+count+"/"+"20");
-			//Toast.makeText(ctx,"句子数组length"+len,1000).show();
+			
+			//Toast.makeText(ctx,"句子数组length"+len,1000).show();*/
         }	
-    }
+    
 }
 	
