@@ -79,29 +79,26 @@ public class MainActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) 
 	{
+     //   requestPermissions();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 		initView();
-        
+        initData();
+      
 		playBgm();
-		tool=initSoundPool();
+	
 		//todo 添加一个循环背景音乐，留住玩家
-		for(int i=0;i<sentences.length;i++)
-		{
-			stn.add(sentences[i]);
-		}
+		
 		
 		//显示随机数
-		randView=	findViewById(R.id.rand);
-		unlocked_stn=findViewById(R.id.unlock_stn);
-		list=findViewById(R.id.list);
+		
 		//listadapter数据长度
 		len_T=findViewById(R.id.len);
 		//创建数组适配器，4个参数
             adapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,getData());
 			list.setAdapter(adapter);
     }
-
+//初始化界面
 	private void initView()
 	{
 		bar=findViewById(R.id.bar);
@@ -111,14 +108,75 @@ public class MainActivity extends Activity
 		scoreT=findViewById(R.id.score);
 		unlocked_stn=findViewById(R.id.unlock_stn);
 		unlockT=findViewById(R.id.unlocked);
+        randView=   findViewById(R.id.rand);
+        unlocked_stn=findViewById(R.id.unlock_stn);
+		list=findViewById(R.id.list);
 	}
-
+ //初始化数据
+ public void initData()
+ {
+   String  dir=getFilesDir().getPath();
+   File gameDataFile=new File(dir+"/test.txt");
+   if(gameDataFile.exists())
+   {
+       Toast.makeText(ctx,"游戏文件存在",1000).show();
+        try
+        {
+        load();
+        } catch(IOException e)
+        {e.printStackTrace();}
+   }
+   if(gameDataFile.exists()==false)
+     {
+         Toast.makeText(ctx,"游戏文件不存在",1000).show();
+         //原始数据
+         for(int i=0;i<sentences.length;i++)
+         {
+             stn.add(sentences[i]);
+         }
+   }
+ }
+    //加载进度
+    public void load() throws IOException
+    {
+        //stn是文字arraylist
+        stn = Game.load(getFilesDir(),MainActivity.this);
+        Toast.makeText(ctx,stn.toString(),1000).show();
+        for(int i=0;i<stn.size()-3;i++)
+        {
+            String tmp=(String)stn.get(i);
+            adapter.add(tmp);
+          //  Toast.makeText(ctx,stn.get(i),1000).show();
+        }
+         
+    }
+ 
+ 
 	private EasySoundPool initSoundPool() 
 	{
 		EasySoundPool tool=new EasySoundPool();
 		return tool;
 	}
-
+    //重置进度
+public void reset(View v)
+{
+  EasyDialog tool= new EasyDialog();
+  tool.show(MainActivity.this,"注意!","确定要重置吗,将会清除数据所有游戏数据");
+  tool.builder.setButton("确认",new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface p1,int p2)
+            {
+                Toast.makeText(ctx,"外部调用",1000).show();
+                String dir=getFilesDir().getPath();
+                File f=new File(dir+"/test.txt");
+               boolean result= f.delete();
+               Toast.makeText(ctx,"删除状态"+result,1000).show();
+               adapter.clear();
+            }
+  });
+  
+}
 	private void playBgm()
 	{
 	    bgm=new Bgm();
@@ -191,9 +249,18 @@ public class MainActivity extends Activity
     //保存进度
     public void save(View v)
     {
+        
    //     File file = new File("/sdcard/test.txt");
-           String result= new Game().save(adapter);
-           len_T.setText(result);
+        //   String result
+        try {
+            new Game().save(adapter, MainActivity.this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //len_T.setText(result);
+           
+           
+       
     }
     @Override
     public void onBackPressed() {
@@ -229,7 +296,6 @@ public class MainActivity extends Activity
 		
 		if(progress>=100)
 		{
-			
 			progress=0;
 			bar.setProgress(progress);
 			score+=5;
