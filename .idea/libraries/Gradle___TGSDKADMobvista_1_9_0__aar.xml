@@ -1,17 +1,17 @@
 <component name="libraryTable">
   <library name="Gradle: :TGSDKADMobvista.1.9.0:@aar">
     <CLASSES>
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/classes.jar!/" />
-      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/res" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_china_common.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_interstitial.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_interstitialvideo.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_mtgdownloads.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_mtgjscommon.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_playercommon.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_reward.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_videocommon.14.5.1.jar!/" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2b32a2d6863526c9df9ae050b411c46f/TGSDKADMobvista.1.9.0/jars/libs/mintegral_videojs.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_china_common.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_interstitial.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_interstitialvideo.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_mtgdownloads.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_mtgjscommon.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_playercommon.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_reward.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_videocommon.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d9d5e583d12a4f3788b07e417b4d1f98/jars/libs/mintegral_videojs.14.5.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

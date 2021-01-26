@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: :TGSDKADOneway.1.9.0:@aar">
     <CLASSES>
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/b3f727e944afab6ebf3a3f3952b78d5f/TGSDKADOneway.1.9.0/jars/classes.jar!/" />
-      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/b3f727e944afab6ebf3a3f3952b78d5f/TGSDKADOneway.1.9.0/res" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/b3f727e944afab6ebf3a3f3952b78d5f/TGSDKADOneway.1.9.0/jars/libs/Oneway-2.4.3-release.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/f8d09b1b2093832ca68dfff9ff060fc8/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/f8d09b1b2093832ca68dfff9ff060fc8/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/f8d09b1b2093832ca68dfff9ff060fc8/jars/libs/Oneway-2.4.3-release.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

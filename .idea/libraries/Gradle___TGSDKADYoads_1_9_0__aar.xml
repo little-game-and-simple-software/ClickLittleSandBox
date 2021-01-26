@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: :TGSDKADYoads.1.9.0:@aar">
     <CLASSES>
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/a3f87e0c48b70a1f1672965a7efdb179/TGSDKADYoads.1.9.0/jars/classes.jar!/" />
-      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/a3f87e0c48b70a1f1672965a7efdb179/TGSDKADYoads.1.9.0/res" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/a3f87e0c48b70a1f1672965a7efdb179/TGSDKADYoads.1.9.0/jars/libs/yomobads-1.2.0.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/5b83c4017350e893abdd667d5eac16c9/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/5b83c4017350e893abdd667d5eac16c9/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/5b83c4017350e893abdd667d5eac16c9/jars/libs/yomobads-1.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

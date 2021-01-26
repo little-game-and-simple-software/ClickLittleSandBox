@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: :TGSDKADWangmai.1.9.0:@aar">
     <CLASSES>
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0357d32b3fb3f8a311c01280bf5bef61/TGSDKADWangmai.1.9.0/jars/classes.jar!/" />
-      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/0357d32b3fb3f8a311c01280bf5bef61/TGSDKADWangmai.1.9.0/res" />
-      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0357d32b3fb3f8a311c01280bf5bef61/TGSDKADWangmai.1.9.0/jars/libs/wm_mobads_sdk4.7.0.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/bc5b263ee3c09613f89b71e0d0d46983/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/bc5b263ee3c09613f89b71e0d0d46983/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/bc5b263ee3c09613f89b71e0d0d46983/jars/libs/wm_mobads_sdk4.7.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
