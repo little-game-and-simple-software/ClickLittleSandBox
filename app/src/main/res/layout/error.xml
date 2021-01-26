@@ -26,8 +26,8 @@
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="获取游戏数据信息"
-		android:onClick="get"/>
+		android:onClick="get"
+		android:text="获取游戏数据信息" />
 
 	<ScrollView
 		android:layout_width="match_parent"

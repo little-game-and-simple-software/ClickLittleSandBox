@@ -3,8 +3,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 
+import com.soulgame.sgsdk.tgsdklib.TGSDK;
+
 public class adActivity extends Activity
 {
+	String appid="";
+	String sceneid="";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -20,9 +24,11 @@ public class adActivity extends Activity
 		startActivity(i);
 	}
 
-	private void initYomob() 
+	private void initYomob()
 	{
-	//	Tgsdk.init();	
+		//TGSDK.initialize(this);
+
+
 	}
 	
 }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDKADWangmai.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0357d32b3fb3f8a311c01280bf5bef61/TGSDKADWangmai.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/0357d32b3fb3f8a311c01280bf5bef61/TGSDKADWangmai.1.9.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0357d32b3fb3f8a311c01280bf5bef61/TGSDKADWangmai.1.9.0/jars/libs/wm_mobads_sdk4.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

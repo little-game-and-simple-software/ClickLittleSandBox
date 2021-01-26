@@ -190,6 +190,7 @@ public class MainActivity extends Activity
                 @Override
                 public void onClick(DialogInterface p1,int p2) 
                 {
+
                     Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
                 }
             });

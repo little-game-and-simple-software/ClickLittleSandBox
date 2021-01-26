@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDKADBytedance.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/761dc639a4b8cb64c713823625ef575c/TGSDKADBytedance.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/761dc639a4b8cb64c713823625ef575c/TGSDKADBytedance.1.9.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

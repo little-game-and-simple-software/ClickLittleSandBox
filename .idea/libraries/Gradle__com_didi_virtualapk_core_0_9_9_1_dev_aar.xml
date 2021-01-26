@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.didi.virtualapk:core:0.9.9.1-dev@aar">
+    <ANNOTATIONS>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/376368d9ab5630d81885bf1361f3d31d/core-0.9.9.1-dev/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/376368d9ab5630d81885bf1361f3d31d/core-0.9.9.1-dev/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/376368d9ab5630d81885bf1361f3d31d/core-0.9.9.1-dev/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/.gradle/caches/modules-2/files-2.1/com.didi.virtualapk/core/0.9.9.1-dev/a453e506c330a1e1ea3027be0af7c6540e6cdad4/core-0.9.9.1-dev-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

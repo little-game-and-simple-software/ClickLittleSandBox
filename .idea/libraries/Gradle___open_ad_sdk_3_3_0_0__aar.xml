@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: :open_ad_sdk.3.3.0.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0f0d41eac864edfca48e703ce7a22e1b/open_ad_sdk.3.3.0.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/0f0d41eac864edfca48e703ce7a22e1b/open_ad_sdk.3.3.0.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0f0d41eac864edfca48e703ce7a22e1b/open_ad_sdk.3.3.0.0/jars/libs/adhost.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/0f0d41eac864edfca48e703ce7a22e1b/open_ad_sdk.3.3.0.0/jars/libs/ttmd5-0.0.2-alpha.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

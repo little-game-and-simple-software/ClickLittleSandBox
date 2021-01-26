@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: mobi.oneway.common:core:1.0.8@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/b725b964d95f006a687565547ed1d611/core-1.0.8/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/b725b964d95f006a687565547ed1d611/core-1.0.8/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/.gradle/caches/modules-2/files-2.1/mobi.oneway.common/core/1.0.8/202983442d8bc5cb90f4624ebf4c5370440fa95f/core-1.0.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/.gradle/caches/modules-2/files-2.1/mobi.oneway.common/core/1.0.8/1f9fddf25a7c813ae4680500358fe0ef798529f7/core-1.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

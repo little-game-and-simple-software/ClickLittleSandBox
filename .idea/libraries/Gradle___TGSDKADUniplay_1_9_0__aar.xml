@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDKADUniplay.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/6be93ecd2d4c144b35c5823cf36b6213/TGSDKADUniplay.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/6be93ecd2d4c144b35c5823cf36b6213/TGSDKADUniplay.1.9.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/6be93ecd2d4c144b35c5823cf36b6213/TGSDKADUniplay.1.9.0/jars/libs/JooMobAdSDK_6.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
