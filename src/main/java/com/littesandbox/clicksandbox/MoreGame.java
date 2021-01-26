@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 import android.net.Uri;
+import android.webkit.WebView;
 
 public class MoreGame extends Activity {
 
@@ -12,6 +13,8 @@ public class MoreGame extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.MoreGame);
+    //  WebView web=  (WebView) $.select_id(this,R.id.web);
+    //  web.loadUrl("https://indienova.com/u/2439905184");
        
     }
     public void indienova(View v)

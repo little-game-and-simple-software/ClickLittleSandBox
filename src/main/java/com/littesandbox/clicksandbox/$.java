@@ -2,7 +2,6 @@ package com.littesandbox.clicksandbox;
 import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;
-
 public class $ {
     //仿jquery
     public static Object select_id(Activity activity,int id)
@@ -19,4 +18,6 @@ public class $ {
 	{
 		Toast.makeText(ctx,obj,Toast.LENGTH_SHORT).show();
 	}
+    
 }
+

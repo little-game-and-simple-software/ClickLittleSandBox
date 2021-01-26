@@ -116,11 +116,30 @@
 
 	</LinearLayout>
 
-	<Button
+	<HorizontalScrollView
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="赞助作者"
-		android:onClick="showad"/>
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="赞助作者"
+				android:onClick="showad"/>
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="关于此游戏"
+				android:onClick="about"/>
+
+		</LinearLayout>
+
+	</HorizontalScrollView>
 
 	<LinearLayout
 		android:orientation="horizontal"
