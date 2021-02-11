@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FF000000"
+	android:gravity="center">
+
+	<ImageView
+		android:src="@drawable/ic_tools"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:scaleX="1"
+		android:scaleY="1"
+		android:scaleType="fitCenter"
+		android:id="@+id/main"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Made with AIDE"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:background="#FFFFFFFF"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="请点击图标进入游戏"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:background="#FFFFFFFF"/>
+
+</LinearLayout>
+

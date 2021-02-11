@@ -1,0 +1,1072 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.littlesandbox.clicksandbox"
+4    android:versionCode="1"
+5    android:versionName="1.9.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:4:5-67
+11-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:5:1-75
+12-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:5:18-72
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:6:1-71
+13-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:6:18-68
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:7:1-77
+14-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:7:18-74
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:8:1-72
+15-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:8:18-69
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:9:1-75
+16-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:9:18-72
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:10:1-77
+17-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:10:18-74
+18    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+18-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:11:1-72
+18-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:11:18-69
+19    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+19-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:12:1-79
+19-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:12:18-76
+20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+20-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:13:1-76
+20-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:13:18-73
+21    <uses-permission android:name="android.permission.GET_TASKS" />
+21-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:14:1-64
+21-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:14:18-61
+22    <uses-permission android:name="android.permission.WAKE_LOCK" />
+22-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:15:1-64
+22-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:15:18-61
+23    <uses-permission android:name="android.permission.WRITE_SETTINGSWAKE_LOCK" />
+23-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:16:1-78
+23-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:16:18-75
+24    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />
+24-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:18:5-76
+24-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:18:22-73
+25    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+25-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:13:5-79
+25-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:13:22-76
+26
+27    <application
+27-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:19:5-186:19
+28        android:name="androidx.multidex.MultiDexApplication"
+28-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:20:9-61
+29        android:allowBackup="true"
+29-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:21:9-35
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.0.0] D:\.gradle\caches\transforms-2\files-2.1\54a2187665d45812565b71c58c21d69c\core-1.0.0\AndroidManifest.xml:22:18-86
+31        android:debuggable="true"
+32        android:hardwareAccelerated="true"
+32-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:27:9-43
+33        android:icon="@drawable/sand"
+33-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:22:9-38
+34        android:label="@string/app_name"
+34-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:24:9-41
+35        android:networkSecurityConfig="@xml/network_security_config"
+35-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:23:9-69
+36        android:supportsRtl="true"
+36-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:25:9-35
+37        android:theme="@style/AppTheme"
+37-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:26:9-40
+38        android:usesCleartextTraffic="true" >
+38-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:16:18-53
+39
+40        <!-- <meta-data android:name="TGSDK_APPID" android:value="${TGSDK_APPID_VALUE}" /> -->
+41        <!-- <meta-data android:name="TGSDK_CHANNELID" android:value="${TGSDK_CHANNELID_VALUE}" /> -->
+42
+43        <activity
+43-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:31:9-39:20
+44            android:name="com.littesandbox.clicksandbox.Splash"
+44-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:32:13-64
+45            android:screenOrientation="portrait" >
+45-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:33:13-49
+46            <intent-filter>
+46-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:34:13-38:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:35:17-69
+47-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:35:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:37:17-77
+49-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:37:27-74
+50            </intent-filter>
+51        </activity>
+52        <activity android:name="com.littesandbox.clicksandbox.Error" />
+52-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:41:6-78
+52-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:41:16-66
+53        <activity android:name="com.littesandbox.clicksandbox.MainActivity" />
+53-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:44:9-88
+53-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:44:19-76
+54        <activity android:name="com.littesandbox.clicksandbox.MoreGame" />
+54-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:46:9-84
+54-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:46:19-72
+55        <activity android:name="com.littesandbox.clicksandbox.wechat" />
+55-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:48:9-82
+55-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:48:19-70
+56
+57        <!-- Guangdiantong -->
+58        <provider
+59            android:name="androidx.core.content.FileProvider"
+59-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:52:13-62
+60            android:authorities="com.littlesandbox.clicksandbox.fileprovider"
+60-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:53:13-64
+61            android:exported="false"
+61-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:54:13-37
+62            android:grantUriPermissions="true" >
+62-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:55:13-47
+63            <meta-data
+63-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+65                android:resource="@xml/gdt_file_path" />
+65-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+66        </provider>
+67
+68        <!-- Baidu -->
+69        <provider
+70            android:name="com.baidu.mobads.openad.FileProvider"
+70-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:64:13-64
+71            android:authorities="com.littlesandbox.clicksandbox.bd.provider"
+71-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:65:13-63
+72            android:exported="false"
+72-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:66:13-37
+73            android:grantUriPermissions="true" >
+73-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:67:13-47
+74            <meta-data
+74-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+75                android:name="android.support.FILE_PROVIDER_PATHS"
+75-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+76                android:resource="@xml/bd_file_paths" />
+76-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+77        </provider>
+78
+79        <!-- SigMob For Android Support -->
+80        <provider
+81            android:name="com.sigmob.sdk.SigmobFileProvider"
+81-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:75:13-61
+82            android:authorities="com.littlesandbox.clicksandbox.sigprovider"
+82-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:76:13-63
+83            android:exported="false"
+83-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:77:13-37
+84            android:grantUriPermissions="true" >
+84-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:78:13-47
+85            <meta-data
+85-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+87                android:resource="@xml/sigmob_provider_paths" />
+87-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+88        </provider>
+89
+90        <!-- SigMob For AndroidX -->
+91        <provider
+92            android:name="com.sigmob.sdk.SigmobXFileProvider"
+92-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:86:13-62
+93            android:authorities="com.littlesandbox.clicksandbox.sigprovider"
+93-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:87:13-63
+94            android:exported="false"
+94-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:88:13-37
+95            android:grantUriPermissions="true" >
+95-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:89:13-47
+96            <meta-data
+96-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+97                android:name="android.support.FILE_PROVIDER_PATHS"
+97-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+98                android:resource="@xml/sigmob_provider_paths" />
+98-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+99        </provider>
+100
+101        <!-- Mobvista -->
+102        <provider
+103            android:name="com.mintegral.msdk.base.utils.MTGFileProvider"
+103-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:97:13-73
+104            android:authorities="com.littlesandbox.clicksandbox.mtgFileProvider"
+104-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:98:13-67
+105            android:exported="false"
+105-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:99:13-37
+106            android:grantUriPermissions="true" >
+106-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:100:13-47
+107            <meta-data
+107-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+108                android:name="android.support.FILE_PROVIDER_PATHS"
+108-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+109                android:resource="@xml/mtg_provider_paths" />
+109-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+110        </provider>
+111
+112        <!-- HyTech For AndroidX -->
+113        <provider
+114            android:name="com.hytt.hyadxopensdk.fileprovider.HyAdXOpenFileProvider"
+114-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:108:13-84
+115            android:authorities="com.littlesandbox.clicksandbox.HyAdXOpenFileProvider"
+115-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:109:13-73
+116            android:exported="false"
+116-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:110:13-37
+117            android:grantUriPermissions="true" >
+117-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:111:13-47
+118            <meta-data
+118-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+119                android:name="android.support.FILE_PROVIDER_PATHS"
+119-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+120                android:resource="@xml/hytech_provider_paths" />
+120-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+121        </provider>
+122        <!-- HyTech For Android Support -->
+123        <provider
+124            android:name="com.hytt.hyadxopensdk.fileprovider.v4.HyAdXOpenV4FileProvider"
+124-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:118:13-89
+125            android:authorities="com.littlesandbox.clicksandbox.HyAdXOpenFileProvider"
+125-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:119:13-73
+126            android:exported="false"
+126-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:120:13-37
+127            android:grantUriPermissions="true" >
+127-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:121:13-47
+128            <meta-data
+128-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+129                android:name="android.support.FILE_PROVIDER_PATHS"
+129-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+130                android:resource="@xml/hytech_provider_paths" />
+130-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+131        </provider>
+132
+133        <!-- OneWay -->
+134        <provider
+135            android:name="mobi.oneway.export.OWProvider"
+135-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:130:13-57
+136            android:authorities="com.littlesandbox.clicksandbox.OWProvider"
+136-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:131:13-62
+137            android:exported="false"
+137-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:132:13-37
+138            android:grantUriPermissions="true" >
+138-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:133:13-47
+139            <meta-data
+139-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+140                android:name="android.support.FILE_PROVIDER_PATHS"
+140-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+141                android:resource="@xml/ow_file_paths" />
+141-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+142        </provider>
+143
+144        <!-- Yoads -->
+145        <provider
+146            android:name="com.yomob.yomobads.ad.YomobFileProvider"
+146-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:141:13-67
+147            android:authorities="com.littlesandbox.clicksandbox.yomob.fileprovider"
+147-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:142:13-70
+148            android:exported="false"
+148-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:143:13-37
+149            android:grantUriPermissions="true" >
+149-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:144:13-47
+150            <meta-data
+150-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+151                android:name="android.support.FILE_PROVIDER_PATHS"
+151-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+152                android:resource="@xml/yomob_paths" />
+152-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+153        </provider>
+154
+155        <!-- Wangmai -->
+156        <provider
+157            android:name="com.wangmai.appsdkdex.WangMaiFileProvider"
+157-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:152:13-69
+158            android:authorities="com.littlesandbox.clicksandbox.fileprovider"
+158-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:153:13-64
+159            android:exported="false"
+159-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:154:13-37
+160            android:grantUriPermissions="true" >
+160-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:155:13-47
+161            <meta-data
+161-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+162                android:name="android.support.FILE_PROVIDER_PATHS"
+162-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+163                android:resource="@xml/yomob_wm_file_paths" />
+163-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+164        </provider>
+165        <!-- ByteDance -->
+166        <provider
+167            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+167-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:162:13-70
+168            android:authorities="com.littlesandbox.clicksandbox.TTFileProvider"
+168-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:163:13-66
+169            android:exported="false"
+169-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:164:13-37
+170            android:grantUriPermissions="true" >
+170-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:165:13-47
+171            <meta-data
+171-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+172                android:name="android.support.FILE_PROVIDER_PATHS"
+172-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+173                android:resource="@xml/tt_file_paths" />
+173-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+174        </provider>
+175        <provider
+176            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+176-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:171:13-80
+177            android:authorities="com.littlesandbox.clicksandbox.TTMultiProvider"
+177-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:172:13-67
+178            android:exported="false" />
+178-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:173:13-37
+179
+180        <!-- UniPlay -->
+181        <provider
+182            android:name="com.uniplay.adsdk.UniPlayFileProvider"
+182-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:177:13-65
+183            android:authorities="com.littlesandbox.clicksandbox.uniplay.fileprovider"
+183-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:178:13-72
+184            android:exported="false"
+184-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:179:13-37
+185            android:grantUriPermissions="true" >
+185-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:180:13-47
+186            <meta-data
+186-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+187                android:name="android.support.FILE_PROVIDER_PATHS"
+187-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+188                android:resource="@xml/uniplay_file_path" />
+188-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+189        </provider>
+190        <provider
+190-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:13:9-21:20
+191            android:name="mobi.oneway.common.provider.OwCommonFileProvider"
+191-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:14:13-76
+192            android:authorities="com.littlesandbox.clicksandbox.fileprovider"
+192-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:15:13-64
+193            android:exported="false"
+193-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:16:13-37
+194            android:grantUriPermissions="true" >
+194-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:17:13-47
+195            <meta-data
+195-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+196                android:name="android.support.FILE_PROVIDER_PATHS"
+196-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+197                android:resource="@xml/ow_same_file_path" />
+197-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+198        </provider>
+199        <provider
+199-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:22:9-30:20
+200            android:name="mobi.oneway.common.provider.OwBFileProvider"
+200-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:23:13-71
+201            android:authorities="com.littlesandbox.clicksandbox.bd.provider"
+201-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:24:13-63
+202            android:exported="false"
+202-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:25:13-37
+203            android:grantUriPermissions="true" >
+203-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:26:13-47
+204            <meta-data
+204-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:56:13-58:57
+205                android:name="android.support.FILE_PROVIDER_PATHS"
+205-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:57:17-67
+206                android:resource="@xml/ow_b_file_paths" />
+206-->D:\download\YomobSdk\TGSDKDemo.cn.android.1.9.0\app\src\main\AndroidManifest.xml:58:17-54
+207        </provider>
+208
+209        <service android:name="mobi.oneway.common.service.OwFrontService" />
+209-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:32:9-77
+209-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:32:18-74
+210        <service android:name="mobi.oneway.common.service.OwCancleService" />
+210-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:33:9-78
+210-->[mobi.oneway.common:core:1.0.8] D:\.gradle\caches\transforms-2\files-2.1\9a86bc2a9ddd15851d68e6883d6abc2e\jetified-core-1.0.8\AndroidManifest.xml:33:18-75
+211
+212        <uses-library
+212-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:10:9-12:40
+213            android:name="org.apache.http.legacy"
+213-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:11:13-50
+214            android:required="false" />
+214-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:12:13-37
+215
+216        <activity
+216-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:14:9-18:74
+217            android:name="com.yomob.tgsdklib.TGVideoActivity"
+217-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:15:13-62
+218            android:configChanges="keyboardHidden|orientation|screenSize"
+218-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:16:13-74
+219            android:launchMode="singleTask"
+219-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:17:13-44
+220            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+220-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:18:13-71
+221        <activity
+221-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:19:9-23:74
+222            android:name="com.yomob.tgsdklib.TGWebActivity"
+222-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:20:13-60
+223            android:configChanges="keyboardHidden|orientation|screenSize"
+223-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:21:13-74
+224            android:launchMode="singleTask"
+224-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:22:13-44
+225            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> <!-- 声明SDK所需要的组件 -->
+225-->[:TGSDK.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\08ee1b98050c30ba2c4e05365ef3f93e\jetified-TGSDK.1.9.0\AndroidManifest.xml:23:13-71
+226        <service
+226-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:19:9-22:43
+227            android:name="com.qq.e.comm.DownloadService"
+227-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:20:13-57
+228            android:exported="false"
+228-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:21:13-37
+229            android:multiprocess="true" /> <!-- 请开发者注意字母的大小写，ADActivity，而不是AdActivity -->
+229-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:22:13-40
+230        <activity
+230-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:24:9-27:43
+231            android:name="com.qq.e.ads.ADActivity"
+231-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:25:13-51
+232            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+232-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:26:13-83
+233            android:multiprocess="true" />
+233-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:27:13-40
+234        <activity
+234-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:28:9-32:52
+235            android:name="com.qq.e.ads.PortraitADActivity"
+235-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:29:13-59
+236            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+236-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:30:13-83
+237            android:multiprocess="true"
+237-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:31:13-40
+238            android:screenOrientation="portrait" />
+238-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:32:13-49
+239        <activity
+239-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:33:9-37:59
+240            android:name="com.qq.e.ads.LandscapeADActivity"
+240-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:34:13-60
+241            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+241-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:35:13-83
+242            android:multiprocess="true"
+242-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:36:13-40
+243            android:screenOrientation="sensorLandscape" /> <!-- 用于激励视频可选广告的竖屏透明背景activity -->
+243-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:37:13-56
+244        <activity
+244-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:39:9-47:20
+245            android:name="com.qq.e.ads.RewardvideoPortraitADActivity"
+245-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:40:13-70
+246            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+246-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:41:13-83
+247            android:multiprocess="true"
+247-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:42:13-40
+248            android:theme="@android:style/Theme.Translucent" >
+248-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:43:13-61
+249            <meta-data
+249-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:44:13-46:40
+250                android:name="android.notch_support"
+250-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:45:17-53
+251                android:value="true" />
+251-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:46:17-37
+252        </activity> <!-- 用于激励视频可选广告的横屏透明背景activity -->
+253        <activity
+253-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:49:9-57:20
+254            android:name="com.qq.e.ads.RewardvideoLandscapeADActivity"
+254-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:50:13-71
+255            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+255-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:51:13-83
+256            android:multiprocess="true"
+256-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:52:13-40
+257            android:theme="@android:style/Theme.Translucent" >
+257-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:53:13-61
+258            <meta-data
+258-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:44:13-46:40
+259                android:name="android.notch_support"
+259-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:45:17-53
+260                android:value="true" />
+260-->[:GDTSDK.unionNoPlugin.4.270.1140:] D:\.gradle\caches\transforms-2\files-2.1\50d1a81dcd76b906a38cea7ca26ee575\jetified-GDTSDK.unionNoPlugin.4.270.1140\AndroidManifest.xml:46:17-37
+261        </activity> <!-- baidu -->
+262        <activity
+262-->[:TGSDKADBaidu.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\02afee92c665460b323bca969700144b\TGSDKADBaidu.1.9.0\AndroidManifest.xml:12:9-15:75
+263            android:name="com.baidu.mobads.AppActivity"
+263-->[:TGSDKADBaidu.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\02afee92c665460b323bca969700144b\TGSDKADBaidu.1.9.0\AndroidManifest.xml:13:13-56
+264            android:configChanges="keyboard|keyboardHidden|orientation"
+264-->[:TGSDKADBaidu.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\02afee92c665460b323bca969700144b\TGSDKADBaidu.1.9.0\AndroidManifest.xml:14:13-72
+265            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- SigMob -->
+265-->[:TGSDKADBaidu.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\02afee92c665460b323bca969700144b\TGSDKADBaidu.1.9.0\AndroidManifest.xml:15:13-72
+266        <activity
+266-->[:TGSDKADSigmob.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\d7e06ea182d1756756031e7f69f7bb1a\jetified-TGSDKADSigmob.1.9.0\AndroidManifest.xml:12:9-14:77
+267            android:name="com.sigmob.sdk.base.common.AdActivity"
+267-->[:TGSDKADSigmob.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\d7e06ea182d1756756031e7f69f7bb1a\jetified-TGSDKADSigmob.1.9.0\AndroidManifest.xml:13:13-65
+268            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- Mobvista -->
+268-->[:TGSDKADSigmob.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\d7e06ea182d1756756031e7f69f7bb1a\jetified-TGSDKADSigmob.1.9.0\AndroidManifest.xml:14:13-74
+269        <activity
+269-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:12:9-18:20
+270            android:name="com.mintegral.msdk.activity.MTGCommonActivity"
+270-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:13:13-73
+271            android:configChanges="keyboard|orientation"
+271-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:14:13-57
+272            android:exported="true"
+272-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:15:13-36
+273            android:screenOrientation="portrait"
+273-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:16:13-49
+274            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+274-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:17:13-72
+275        </activity>
+276        <activity
+276-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:19:9-22:74
+277            android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
+277-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:20:13-83
+278            android:configChanges="orientation|keyboardHidden|screenSize"
+278-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:21:13-74
+279            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+279-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:22:13-71
+280        <activity
+280-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:23:9-26:52
+281            android:name="com.mintegral.msdk.interstitial.view.MTGInterstitialActivity"
+281-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:24:13-88
+282            android:configChanges="orientation|screenSize"
+282-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:25:13-59
+283            android:screenOrientation="portrait" />
+283-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:26:13-49
+284
+285        <receiver android:name="com.mintegral.msdk.click.AppReceiver" >
+285-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:28:9-34:20
+285-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:28:19-70
+286            <intent-filter>
+286-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:29:13-33:29
+287                <action android:name="android.intent.action.PACKAGE_ADDED" />
+287-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:30:17-78
+287-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:30:25-75
+288
+289                <data android:scheme="package" />
+289-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:32:17-50
+289-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:32:23-47
+290            </intent-filter>
+291        </receiver>
+292
+293        <service android:name="com.mintegral.msdk.shell.MTGService" >
+293-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:36:9-40:19
+293-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:36:18-68
+294            <intent-filter>
+294-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:37:13-39:29
+295                <action android:name="com.mintegral.msdk.download.action" />
+295-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:38:17-77
+295-->[:TGSDKADMobvista.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\2d62035f77fc85650dd9c7acf8678669\jetified-TGSDKADMobvista.1.9.0\AndroidManifest.xml:38:25-74
+296            </intent-filter>
+297        </service> <!-- HyTech -->
+298        <activity
+298-->[:TGSDKADHytech.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\b14c51e80f225e2866048a0d720600cc\jetified-TGSDKADHytech.1.9.0\AndroidManifest.xml:12:9-15:75
+299            android:name="com.hytt.hyadxsdk.opensdk.HyAdXOpenProxyActivity"
+299-->[:TGSDKADHytech.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\b14c51e80f225e2866048a0d720600cc\jetified-TGSDKADHytech.1.9.0\AndroidManifest.xml:13:13-76
+300            android:configChanges="keyboard|keyboardHidden|orientation"
+300-->[:TGSDKADHytech.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\b14c51e80f225e2866048a0d720600cc\jetified-TGSDKADHytech.1.9.0\AndroidManifest.xml:14:13-72
+301            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- OneWay -->
+301-->[:TGSDKADHytech.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\b14c51e80f225e2866048a0d720600cc\jetified-TGSDKADHytech.1.9.0\AndroidManifest.xml:15:13-72
+302        <activity
+302-->[:TGSDKADOneway.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\22ede151398419234d20b01879693a1d\jetified-TGSDKADOneway.1.9.0\AndroidManifest.xml:12:9-17:74
+303            android:name="mobi.oneway.export.AdShowActivity"
+303-->[:TGSDKADOneway.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\22ede151398419234d20b01879693a1d\jetified-TGSDKADOneway.1.9.0\AndroidManifest.xml:13:13-61
+304            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+304-->[:TGSDKADOneway.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\22ede151398419234d20b01879693a1d\jetified-TGSDKADOneway.1.9.0\AndroidManifest.xml:14:13-170
+305            android:hardwareAccelerated="true"
+305-->[:TGSDKADOneway.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\22ede151398419234d20b01879693a1d\jetified-TGSDKADOneway.1.9.0\AndroidManifest.xml:15:13-47
+306            android:launchMode="singleTask"
+306-->[:TGSDKADOneway.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\22ede151398419234d20b01879693a1d\jetified-TGSDKADOneway.1.9.0\AndroidManifest.xml:16:13-44
+307            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+307-->[:TGSDKADOneway.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\22ede151398419234d20b01879693a1d\jetified-TGSDKADOneway.1.9.0\AndroidManifest.xml:17:13-71
+308        <activity
+308-->[:TGSDKADYoads.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\9fa20c4dc32e2e1747bb97515cacfda2\jetified-TGSDKADYoads.1.9.0\AndroidManifest.xml:10:9-12:77
+309            android:name="com.yomob.yomobads.AdActivity"
+309-->[:TGSDKADYoads.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\9fa20c4dc32e2e1747bb97515cacfda2\jetified-TGSDKADYoads.1.9.0\AndroidManifest.xml:11:13-57
+310            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- Wangmai -->
+310-->[:TGSDKADYoads.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\9fa20c4dc32e2e1747bb97515cacfda2\jetified-TGSDKADYoads.1.9.0\AndroidManifest.xml:12:13-74
+311        <activity
+311-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:12:9-14:52
+312            android:name="com.wangmai.appsdkdex.WmAdActivity"
+312-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:13:13-62
+313            android:screenOrientation="portrait" />
+313-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:14:13-49
+314        <activity
+314-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:15:9-18:52
+315            android:name="com.wangmai.appsdkdex.WMRewardPortraitADActivity"
+315-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:16:13-76
+316            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+316-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:17:13-83
+317            android:screenOrientation="portrait" />
+317-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:18:13-49
+318        <activity
+318-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:19:9-22:53
+319            android:name="com.wangmai.appsdkdex.WMRewardLandscapeADActivity"
+319-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:20:13-77
+320            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+320-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:21:13-83
+321            android:screenOrientation="landscape" />
+321-->[:TGSDKADWangmai.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\090eb8b9867ec2483d81bd93092c2086\jetified-TGSDKADWangmai.1.9.0\AndroidManifest.xml:22:13-50
+322
+323        <service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService" />
+323-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:25:9-113
+323-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:25:18-110
+324        <service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService" />
+324-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:26:9-99
+324-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:26:18-96
+325        <service
+325-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:27:9-34:19
+326            android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService"
+326-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:28:13-109
+327            android:exported="false"
+327-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:29:13-37
+328            android:process=":downloader" >
+328-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:30:13-42
+329            <intent-filter>
+329-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:31:13-33:29
+330                <action android:name="com.ss.android.socialbase.downloader.remote" />
+330-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:32:17-86
+330-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:32:25-83
+331            </intent-filter>
+332        </service>
+333        <service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService" /> <!-- <receiver android:name="com.ss.android.socialbase.downloader.downloader.DownloadReceiver"> -->
+333-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:35:9-100
+333-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:35:18-97
+334        <!-- <intent-filter> -->
+335        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/> -->
+336        <!-- </intent-filter> -->
+337        <!-- </receiver> -->
+338        <service
+338-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:43:9-47:72
+339            android:name="com.ss.android.socialbase.downloader.impls.RetryJobSchedulerService"
+339-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:44:13-95
+340            android:enabled="true"
+340-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:45:13-35
+341            android:exported="false"
+341-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:46:13-37
+342            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- 数据库更新service -->
+342-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:47:13-69
+343        <service android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService" /> <!-- APP DOWNLOADER START -->
+343-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:49:9-107
+343-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:49:18-104
+344        <service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService" /> <!-- <receiver android:name="com.ss.android.socialbase.appdownloader.DownloadReceiver"> -->
+344-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:51:9-98
+344-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:51:18-95
+345        <!-- <intent-filter> -->
+346        <!-- <action android:name="android.intent.action.BOOT_COMPLETED"/> -->
+347        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/> -->
+348        <!-- <action android:name="android.ss.intent.action.DOWNLOAD_COMPLETE"/> -->
+349        <!-- </intent-filter> -->
+350        <!-- <intent-filter> -->
+351        <!-- <action android:name="android.intent.action.PACKAGE_ADDED"/> -->
+352        <!-- <action android:name="android.intent.action.PACKAGE_REPLACED"/> -->
+353        <!-- <data android:scheme="package"/> -->
+354        <!-- </intent-filter> -->
+355        <!-- <intent-filter> -->
+356        <!-- <action android:name="android.intent.action.MEDIA_MOUNTED"/> -->
+357        <!-- <data android:scheme="file"/> -->
+358        <!-- </intent-filter> -->
+359        <!-- </receiver> -->
+360        <activity
+360-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:67:9-70:59
+361            android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity"
+361-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:68:13-99
+362            android:launchMode="singleTask"
+362-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:69:13-44
+363            android:theme="@android:style/Theme.Dialog" />
+363-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:70:13-56
+364        <activity
+364-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:71:9-74:59
+365            android:name="com.ss.android.socialbase.appdownloader.view.JumpUnknownSourceActivity"
+365-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:72:13-98
+366            android:launchMode="singleTask"
+366-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:73:13-44
+367            android:theme="@android:style/Theme.Dialog" />
+367-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:74:13-56
+368        <activity
+368-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:75:9-78:75
+369            android:name="com.ss.android.downloadlib.activity.TTDelegateActivity"
+369-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:76:13-82
+370            android:launchMode="singleTask"
+370-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:77:13-44
+371            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+371-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:78:13-72
+372        <activity
+372-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:79:9-82:75
+373            android:name="com.ss.android.downloadlib.guide.install.InstallGuideActivity"
+373-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:80:13-89
+374            android:launchMode="singleTask"
+374-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:81:13-44
+375            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+375-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:82:13-72
+376
+377        <receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver" /> <!-- 下面的activity和service必须注册 -->
+377-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:84:9-94
+377-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:84:19-91
+378        <activity
+378-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:85:9-89:57
+379            android:name="com.bytedance.sdk.openadsdk.activity.base.TTWebPageActivity"
+379-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:86:13-87
+380            android:configChanges="keyboardHidden|orientation|screenSize"
+380-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:87:13-74
+381            android:launchMode="standard"
+381-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:88:13-42
+382            android:windowSoftInputMode="stateHidden" />
+382-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:89:13-54
+383        <activity
+383-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:90:9-94:57
+384            android:name="com.bytedance.sdk.openadsdk.activity.base.TTPlayableWebPageActivity"
+384-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:91:13-95
+385            android:configChanges="keyboardHidden|orientation|screenSize"
+385-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:92:13-74
+386            android:launchMode="standard"
+386-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:93:13-42
+387            android:windowSoftInputMode="stateHidden" />
+387-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:94:13-54
+388        <activity
+388-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:95:9-99:57
+389            android:name="com.bytedance.sdk.openadsdk.activity.base.TTVideoWebPageActivity"
+389-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:96:13-92
+390            android:configChanges="keyboardHidden|orientation|screenSize"
+390-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:97:13-74
+391            android:launchMode="standard"
+391-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:98:13-42
+392            android:windowSoftInputMode="stateHidden" />
+392-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:99:13-54
+393        <activity
+393-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:100:9-104:57
+394            android:name="com.bytedance.sdk.openadsdk.activity.base.TTVideoScrollWebPageActivity"
+394-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:101:13-98
+395            android:configChanges="keyboardHidden|orientation|screenSize"
+395-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:102:13-74
+396            android:launchMode="standard"
+396-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:103:13-42
+397            android:windowSoftInputMode="stateHidden" />
+397-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:104:13-54
+398        <activity
+398-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:105:9-108:75
+399            android:name="com.bytedance.sdk.openadsdk.activity.base.TTDelegateActivity"
+399-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:106:13-88
+400            android:launchMode="standard"
+400-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:107:13-42
+401            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+401-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:108:13-72
+402        <activity
+402-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:109:9-112:45
+403            android:name="com.bytedance.sdk.openadsdk.activity.base.TTRewardVideoActivity"
+403-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:110:13-91
+404            android:configChanges="keyboardHidden|orientation|screenSize"
+404-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:111:13-74
+405            android:launchMode="standard" />
+405-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:112:13-42
+406        <activity
+406-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:113:9-116:45
+407            android:name="com.bytedance.sdk.openadsdk.activity.base.TTRewardExpressVideoActivity"
+407-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:114:13-98
+408            android:configChanges="keyboardHidden|orientation|screenSize"
+408-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:115:13-74
+409            android:launchMode="standard" />
+409-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:116:13-42
+410        <activity
+410-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:117:9-120:45
+411            android:name="com.bytedance.sdk.openadsdk.activity.base.TTFullScreenVideoActivity"
+411-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:118:13-95
+412            android:configChanges="keyboardHidden|orientation|screenSize"
+412-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:119:13-74
+413            android:launchMode="standard" />
+413-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:120:13-42
+414        <activity
+414-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:121:9-124:45
+415            android:name="com.bytedance.sdk.openadsdk.activity.base.TTFullScreenExpressVideoActivity"
+415-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:122:13-102
+416            android:configChanges="keyboardHidden|orientation|screenSize"
+416-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:123:13-74
+417            android:launchMode="standard" />
+417-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:124:13-42
+418
+419        <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
+419-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:126:9-95
+419-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:126:18-92
+420
+421        <receiver
+421-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:128:9-131:40
+422            android:name="com.bytedance.embedapplog.collector.Collector"
+422-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:129:13-73
+423            android:enabled="true"
+423-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:130:13-35
+424            android:exported="false" />
+424-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:131:13-37
+425
+426        <service
+426-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:133:9-135:39
+427            android:name="com.bytedance.tea.crash.upload.CrashUploadService"
+427-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:134:13-77
+428            android:process=":npth" /> <!-- Uniplay -->
+428-->[:open_ad_sdk.3.3.0.0:] D:\.gradle\caches\transforms-2\files-2.1\c2afba4db6c6cbe98403fb1a2446ac80\jetified-open_ad_sdk.3.3.0.0\AndroidManifest.xml:135:13-36
+429        <activity
+429-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:12:9-15:20
+430            android:name="com.uniplay.adsdk.AdActivity"
+430-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:13:13-56
+431            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
+431-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:14:13-83
+432        </activity>
+433        <activity
+433-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:16:9-19:64
+434            android:name="com.uniplay.adsdk.InterstitialAdActivity"
+434-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:17:13-68
+435            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+435-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:18:13-83
+436            android:theme="@android:style/Theme.Translucent" />
+436-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:19:13-61
+437        <activity
+437-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:20:9-22:86
+438            android:name="com.uniplay.adsdk.NetworkChangeActivity"
+438-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:21:13-67
+439            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+439-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:22:13-83
+440        <activity
+440-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:23:9-25:86
+441            android:name="com.joomob.activity.AdVideoActivity"
+441-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:24:13-63
+442            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+442-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:25:13-83
+443
+444        <service android:name="com.uniplay.adsdk.DownloadService" />
+444-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:27:9-69
+444-->[:TGSDKADUniplay.1.9.0:] D:\.gradle\caches\transforms-2\files-2.1\f2d3aac17433e0d0463490112404f1a4\TGSDKADUniplay.1.9.0\AndroidManifest.xml:27:18-66
+445
+446        <activity
+446-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:18:9-21:45
+447            android:name="com.didi.virtualapk.delegate.StubActivity"
+447-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:19:13-69
+448            android:exported="false"
+448-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:20:13-37
+449            android:launchMode="standard" /> <!-- Stub Activities -->
+449-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:21:13-42
+450        <activity
+450-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:23:9-26:45
+451            android:name="com.didi.virtualapk.core.A$1"
+451-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:24:13-56
+452            android:exported="false"
+452-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:25:13-37
+453            android:launchMode="standard" />
+453-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:26:13-42
+454        <activity
+454-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:27:9-31:64
+455            android:name="com.didi.virtualapk.core.A$2"
+455-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:28:13-56
+456            android:exported="false"
+456-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:29:13-37
+457            android:launchMode="standard"
+457-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:30:13-42
+458            android:theme="@android:style/Theme.Translucent" /> <!-- Stub Activities -->
+458-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:31:13-61
+459        <activity
+459-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:34:9-37:46
+460            android:name="com.didi.virtualapk.core.B$1"
+460-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:35:13-56
+461            android:exported="false"
+461-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:36:13-37
+462            android:launchMode="singleTop" />
+462-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:37:13-43
+463        <activity
+463-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:38:9-41:46
+464            android:name="com.didi.virtualapk.core.B$2"
+464-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:39:13-56
+465            android:exported="false"
+465-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:40:13-37
+466            android:launchMode="singleTop" />
+466-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:41:13-43
+467        <activity
+467-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:42:9-45:46
+468            android:name="com.didi.virtualapk.core.B$3"
+468-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:43:13-56
+469            android:exported="false"
+469-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:44:13-37
+470            android:launchMode="singleTop" />
+470-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:45:13-43
+471        <activity
+471-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:46:9-49:46
+472            android:name="com.didi.virtualapk.core.B$4"
+472-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:47:13-56
+473            android:exported="false"
+473-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:48:13-37
+474            android:launchMode="singleTop" />
+474-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:49:13-43
+475        <activity
+475-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:50:9-53:46
+476            android:name="com.didi.virtualapk.core.B$5"
+476-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:51:13-56
+477            android:exported="false"
+477-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:52:13-37
+478            android:launchMode="singleTop" />
+478-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:53:13-43
+479        <activity
+479-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:54:9-57:46
+480            android:name="com.didi.virtualapk.core.B$6"
+480-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:55:13-56
+481            android:exported="false"
+481-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:56:13-37
+482            android:launchMode="singleTop" />
+482-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:57:13-43
+483        <activity
+483-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:58:9-61:46
+484            android:name="com.didi.virtualapk.core.B$7"
+484-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:59:13-56
+485            android:exported="false"
+485-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:60:13-37
+486            android:launchMode="singleTop" />
+486-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:61:13-43
+487        <activity
+487-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:62:9-65:46
+488            android:name="com.didi.virtualapk.core.B$8"
+488-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:63:13-56
+489            android:exported="false"
+489-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:64:13-37
+490            android:launchMode="singleTop" /> <!-- Stub Activities -->
+490-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:65:13-43
+491        <activity
+491-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:68:9-71:47
+492            android:name="com.didi.virtualapk.core.C$1"
+492-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:69:13-56
+493            android:exported="false"
+493-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:70:13-37
+494            android:launchMode="singleTask" />
+494-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:71:13-44
+495        <activity
+495-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:72:9-75:47
+496            android:name="com.didi.virtualapk.core.C$2"
+496-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:73:13-56
+497            android:exported="false"
+497-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:74:13-37
+498            android:launchMode="singleTask" />
+498-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:75:13-44
+499        <activity
+499-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:76:9-79:47
+500            android:name="com.didi.virtualapk.core.C$3"
+500-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:77:13-56
+501            android:exported="false"
+501-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:78:13-37
+502            android:launchMode="singleTask" />
+502-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:79:13-44
+503        <activity
+503-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:80:9-83:47
+504            android:name="com.didi.virtualapk.core.C$4"
+504-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:81:13-56
+505            android:exported="false"
+505-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:82:13-37
+506            android:launchMode="singleTask" />
+506-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:83:13-44
+507        <activity
+507-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:84:9-87:47
+508            android:name="com.didi.virtualapk.core.C$5"
+508-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:85:13-56
+509            android:exported="false"
+509-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:86:13-37
+510            android:launchMode="singleTask" />
+510-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:87:13-44
+511        <activity
+511-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:88:9-91:47
+512            android:name="com.didi.virtualapk.core.C$6"
+512-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:89:13-56
+513            android:exported="false"
+513-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:90:13-37
+514            android:launchMode="singleTask" />
+514-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:91:13-44
+515        <activity
+515-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:92:9-95:47
+516            android:name="com.didi.virtualapk.core.C$7"
+516-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:93:13-56
+517            android:exported="false"
+517-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:94:13-37
+518            android:launchMode="singleTask" />
+518-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:95:13-44
+519        <activity
+519-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:96:9-99:47
+520            android:name="com.didi.virtualapk.core.C$8"
+520-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:97:13-56
+521            android:exported="false"
+521-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:98:13-37
+522            android:launchMode="singleTask" /> <!-- Stub Activities -->
+522-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:99:13-44
+523        <activity
+523-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:102:9-105:51
+524            android:name="com.didi.virtualapk.core.D$1"
+524-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:103:13-56
+525            android:exported="false"
+525-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:104:13-37
+526            android:launchMode="singleInstance" />
+526-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:105:13-48
+527        <activity
+527-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:106:9-109:51
+528            android:name="com.didi.virtualapk.core.D$2"
+528-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:107:13-56
+529            android:exported="false"
+529-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:108:13-37
+530            android:launchMode="singleInstance" />
+530-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:109:13-48
+531        <activity
+531-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:110:9-113:51
+532            android:name="com.didi.virtualapk.core.D$3"
+532-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:111:13-56
+533            android:exported="false"
+533-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:112:13-37
+534            android:launchMode="singleInstance" />
+534-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:113:13-48
+535        <activity
+535-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:114:9-117:51
+536            android:name="com.didi.virtualapk.core.D$4"
+536-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:115:13-56
+537            android:exported="false"
+537-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:116:13-37
+538            android:launchMode="singleInstance" />
+538-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:117:13-48
+539        <activity
+539-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:118:9-121:51
+540            android:name="com.didi.virtualapk.core.D$5"
+540-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:119:13-56
+541            android:exported="false"
+541-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:120:13-37
+542            android:launchMode="singleInstance" />
+542-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:121:13-48
+543        <activity
+543-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:122:9-125:51
+544            android:name="com.didi.virtualapk.core.D$6"
+544-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:123:13-56
+545            android:exported="false"
+545-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:124:13-37
+546            android:launchMode="singleInstance" />
+546-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:125:13-48
+547        <activity
+547-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:126:9-129:51
+548            android:name="com.didi.virtualapk.core.D$7"
+548-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:127:13-56
+549            android:exported="false"
+549-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:128:13-37
+550            android:launchMode="singleInstance" />
+550-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:129:13-48
+551        <activity
+551-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:130:9-133:51
+552            android:name="com.didi.virtualapk.core.D$8"
+552-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:131:13-56
+553            android:exported="false"
+553-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:132:13-37
+554            android:launchMode="singleInstance" /> <!-- Local Service running in main process -->
+554-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:133:13-48
+555        <service
+555-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:136:9-138:40
+556            android:name="com.didi.virtualapk.delegate.LocalService"
+556-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:137:13-69
+557            android:exported="false" /> <!-- Daemon Service running in child process -->
+557-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:138:13-37
+558        <service
+558-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:141:9-148:19
+559            android:name="com.didi.virtualapk.delegate.RemoteService"
+559-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:142:13-70
+560            android:exported="false"
+560-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:143:13-37
+561            android:process=":daemon" >
+561-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:144:13-38
+562            <intent-filter>
+562-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:145:13-147:29
+563                <action android:name="com.littlesandbox.clicksandbox.intent.ACTION_DAEMON_SERVICE" />
+563-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:146:17-88
+563-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:146:25-85
+564            </intent-filter>
+565        </service>
+566
+567        <provider
+567-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:150:9-154:41
+568            android:name="com.didi.virtualapk.delegate.RemoteContentProvider"
+568-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:151:13-78
+569            android:authorities="com.littlesandbox.clicksandbox.VirtualAPK.Provider"
+569-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:152:13-71
+570            android:exported="false"
+570-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:153:13-37
+571            android:process=":daemon" />
+571-->[com.didi.virtualapk:core:0.9.9.1-dev] D:\.gradle\caches\transforms-2\files-2.1\ce6ae30c22491b83a22e8f395dd23f87\jetified-core-0.9.9.1-dev\AndroidManifest.xml:154:13-38
+572    </application>
+573
+574</manifest>

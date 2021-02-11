@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.soulgame.tgsdksampleapp.android">
-
+    package="com.littlesandbox.clicksandbox">
     <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -20,20 +19,17 @@
     <application
         android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/sand"
         android:networkSecurityConfig="@xml/network_security_config"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true">
-
-        
-
-        <meta-data android:name="TGSDK_APPID" android:value="${TGSDK_APPID_VALUE}" />
-        <meta-data android:name="TGSDK_CHANNELID" android:value="${TGSDK_CHANNELID_VALUE}" />
+<!--        <meta-data android:name="TGSDK_APPID" android:value="${TGSDK_APPID_VALUE}" />-->
+<!--        <meta-data android:name="TGSDK_CHANNELID" android:value="${TGSDK_CHANNELID_VALUE}" />-->
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.littesandbox.clicksandbox.Splash"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +37,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
+     <activity android:name="com.littesandbox.clicksandbox.Error"></activity>
+
+
+        <activity android:name="com.littesandbox.clicksandbox.MainActivity"></activity>
+
+        <activity android:name="com.littesandbox.clicksandbox.MoreGame"></activity>
+
+        <activity android:name="com.littesandbox.clicksandbox.wechat"></activity>
+
         <!-- Guangdiantong -->
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -65,7 +70,7 @@
                 android:resource="@xml/bd_file_paths" />
         </provider>
 
-        <!-- SigMob For Android Support
+        <!-- SigMob For Android Support-->
         <provider
             android:name="com.sigmob.sdk.SigmobFileProvider"
             android:authorities="${applicationId}.sigprovider"
@@ -75,7 +80,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/sigmob_provider_paths"/>
         </provider>
-        -->
+
         <!-- SigMob For AndroidX -->
         <provider
             android:name="com.sigmob.sdk.SigmobXFileProvider"
@@ -108,7 +113,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/hytech_provider_paths" />
         </provider>
-        <!-- HyTech For Android Support
+        <!-- HyTech For Android Support-->
         <provider
             android:name="com.hytt.hyadxopensdk.fileprovider.v4.HyAdXOpenV4FileProvider"
             android:authorities="${applicationId}.HyAdXOpenFileProvider"
@@ -118,7 +123,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/hytech_provider_paths" />
         </provider>
-        -->
+
 
         <!-- OneWay -->
         <provider

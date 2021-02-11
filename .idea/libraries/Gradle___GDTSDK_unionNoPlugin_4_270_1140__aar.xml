@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :GDTSDK.unionNoPlugin.4.270.1140:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/50d1a81dcd76b906a38cea7ca26ee575/jetified-GDTSDK.unionNoPlugin.4.270.1140/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/50d1a81dcd76b906a38cea7ca26ee575/jetified-GDTSDK.unionNoPlugin.4.270.1140/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

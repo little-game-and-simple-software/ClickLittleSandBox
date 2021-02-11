@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDKADHytech.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/b14c51e80f225e2866048a0d720600cc/jetified-TGSDKADHytech.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/b14c51e80f225e2866048a0d720600cc/jetified-TGSDKADHytech.1.9.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/b14c51e80f225e2866048a0d720600cc/jetified-TGSDKADHytech.1.9.0/jars/libs/hyadxopensdk.1.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

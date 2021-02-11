@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDKADSigmob.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d7e06ea182d1756756031e7f69f7bb1a/jetified-TGSDKADSigmob.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/d7e06ea182d1756756031e7f69f7bb1a/jetified-TGSDKADSigmob.1.9.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/d7e06ea182d1756756031e7f69f7bb1a/jetified-TGSDKADSigmob.1.9.0/jars/libs/windAd-2.21.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

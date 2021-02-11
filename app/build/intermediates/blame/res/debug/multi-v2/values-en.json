@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\download\\YomobSdk\\TGSDKDemo.cn.android.1.9.0\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "D:\\.gradle\\caches\\transforms-2\\files-2.1\\2d62035f77fc85650dd9c7acf8678669\\jetified-TGSDKADMobvista.1.9.0\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,195,281,397,514,592,674,740,820,894,978,1091",
+                        "endColumns": "67,71,85,115,116,77,81,65,79,73,83,112,102",
+                        "endOffsets": "118,190,276,392,509,587,669,735,815,889,973,1086,1189"
+                    }
+                }
+            ]
+        }
+    ]
+}

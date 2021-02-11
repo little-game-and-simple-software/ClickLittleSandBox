@@ -2,45 +2,36 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "com.soulgame.tgsdksampleapp.android"
+        applicationId "com.littlesandbox.clicksandbox"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1603354620
+        versionCode 1
         versionName "1.9.0"
         multiDexEnabled true
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
         }
     }
-    signingConfigs {
-        releaseConfig {
-            keyAlias 'tgsdk_sample_app'
-            keyPassword 'tgsdk.soulgame.com'
-            storeFile file('./../tgsdk_sample_app.keystore')
-            storePassword 'tgsdk.soulgame.com'
-        }
-    }
+
     buildTypes {
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
-            signingConfig signingConfigs.releaseConfig
-            manifestPlaceholders = [
-                    TGSDK_APPID_VALUE: "59t5rJH783hEQ3Jd7Zqr",
-                    TGSDK_CHANNELID_VALUE: 10035,
-            ]
+//            manifestPlaceholders = [
+//                    TGSDK_APPID_VALUE: "59t5rJH783hEQ3Jd7Zqr",
+//                    TGSDK_CHANNELID_VALUE: 10035,
+//            ]
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
-            signingConfig signingConfigs.releaseConfig
-            manifestPlaceholders = [
-                    TGSDK_APPID_VALUE: "59t5rJH783hEQ3Jd7Zqr",
-                    TGSDK_CHANNELID_VALUE: 10035,
-            ]
+//            manifestPlaceholders = [
+//                    TGSDK_APPID_VALUE: "59t5rJH783hEQ3Jd7Zqr",
+//                    TGSDK_CHANNELID_VALUE: 10035,
+//            ]
         }
     }
     lintOptions {
@@ -58,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
     
     implementation 'androidx.multidex:multidex:2.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'

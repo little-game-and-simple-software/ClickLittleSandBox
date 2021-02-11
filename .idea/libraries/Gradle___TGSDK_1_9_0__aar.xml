@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDK.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/08ee1b98050c30ba2c4e05365ef3f93e/jetified-TGSDK.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/08ee1b98050c30ba2c4e05365ef3f93e/jetified-TGSDK.1.9.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/08ee1b98050c30ba2c4e05365ef3f93e/jetified-TGSDK.1.9.0/jars/libs/tgadsdk-1.0.9.cn.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/08ee1b98050c30ba2c4e05365ef3f93e/jetified-TGSDK.1.9.0/jars/libs/tgsdkadtgadsdk.1.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

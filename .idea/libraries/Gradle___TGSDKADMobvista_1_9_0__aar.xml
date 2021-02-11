@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: :TGSDKADMobvista.1.9.0:@aar">
+    <CLASSES>
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/classes.jar!/" />
+      <root url="file://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/res" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_china_common.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_interstitial.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_interstitialvideo.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_mtgdownloads.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_mtgjscommon.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_playercommon.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_reward.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_videocommon.14.5.1.jar!/" />
+      <root url="jar://D:/.gradle/caches/transforms-2/files-2.1/2d62035f77fc85650dd9c7acf8678669/jetified-TGSDKADMobvista.1.9.0/jars/libs/mintegral_videojs.14.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Yomob示例</string>
+    <string name="app_name">点击小沙盒</string>
     <string name="ad_tips">广告场景:</string>
     <string name="showad">播放广告</string>
     <string name="ad_click">广告被点击了</string>
