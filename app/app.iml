@@ -99,7 +99,6 @@
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:multidex:1.0.2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: androidx.multidex:multidex:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.0.0@aar" level="project" />
@@ -138,7 +137,6 @@
     <orderEntry type="library" name="Gradle: :TGSDKADSigmob.1.9.0:@aar" level="project" />
     <orderEntry type="library" name="Gradle: :TGSDKADMobvista.1.9.0:@aar" level="project" />
     <orderEntry type="library" name="Gradle: :TGSDKADHytech.1.9.0:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TGSDKADOneway.1.9.0:@aar" level="project" />
     <orderEntry type="library" name="Gradle: :TGSDKADYoads.1.9.0:@aar" level="project" />
     <orderEntry type="library" name="Gradle: :TGSDKADWangmai.1.9.0:@aar" level="project" />
     <orderEntry type="library" name="Gradle: :open_ad_sdk.3.3.0.0:@aar" level="project" />

@@ -14,6 +14,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            //signingConfig signingConfigs.releaseConfig ]
+        }
         release {
             minifyEnabled false
        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -28,18 +33,14 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.multidex:multidex:2.0.0'
+    //强制依赖库
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.squareup.okio:okio:1.14.0'
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-	//api project(':EasyFileAccessLib')
-    //apply plugin: 'groovy'
-  //  classpath 'com.android.tools.build:gradle:3.5.0'
-	// classpath 'io.fabric.tools:gradle:1.27.1'
-    //implementation fileTree(dir: "libs", include: ["*.jar"])
-	//implementation 'com.squareup.okhttp3:mockwebserver:4.9.0'
+   // implementation 'androidx.multidex:multidex:2.0.0'
+
+    //第三方插件依赖库
     // By wangmai
     implementation 'com.google.code.gson:gson:2.8.2'
     // By oneway
@@ -49,6 +50,7 @@ dependencies {
     // By wangmai
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
+    //TGSDK
     implementation(name:'TGSDK.1.9.0', ext: 'aar')
     implementation(name: 'GDTSDK.unionNoPlugin.4.270.1140', ext: 'aar')
     implementation(name: 'TGSDKADGuangdiantong.1.9.0', ext: 'aar')
@@ -56,7 +58,7 @@ dependencies {
     implementation(name: 'TGSDKADSigmob.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADMobvista.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADHytech.1.9.0', ext: 'aar')
-    implementation(name: 'TGSDKADOneway.1.9.0', ext: 'aar')
+   // implementation(name: 'TGSDKADOneway.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADYoads.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADWangmai.1.9.0', ext: 'aar')
     implementation(name: 'open_ad_sdk.3.3.0.0', ext: 'aar')

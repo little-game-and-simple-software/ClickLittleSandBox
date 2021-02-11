@@ -4,40 +4,41 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.soulgame.sgsdk.tgsdklib.TGSDK;
+
 
 public class adActivity extends Activity
 {
-	String appid="";
-	String sceneid="";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
-		initYomob();
+		//initYomob();
 	//	Tgsdk.showad();
-		startGame();
+		//startGame();
 	}
 
 	private void startGame()
 	{
-		Intent i=new Intent(getApplicationContext(),MainActivity.class);
-		startActivity(i);
+		//Intent i=new Intent(getApplicationContext(),MainActivity.class);
+		//startActivity(i);
 	}
 
 	private void initYomob()
 	{
-		//TGSDK.initialize(this,appid,sceneid,null);
-		boolean could=TGSDK.couldShowAd(sceneid);
+		/*TGSDK.setDebugModel(true);
+		TGSDK.initialize(this,Global.appid,null);
+        TGSDK.preloadAd(this);
+		boolean could=TGSDK.couldShowAd(Global.sceneid);
 		if(could)
 		{
-			TGSDK.showAd(this,sceneid);
+			//TGSDK.showAd(this,Global.sceneid);
 			Toast.makeText(this,"可以展示广告",Toast.LENGTH_LONG).show();
 		}
 		else
 			{
 				Toast.makeText(this,"不可以展示广告",Toast.LENGTH_LONG).show();
-			}
+			}*/
 	}
 	
 }

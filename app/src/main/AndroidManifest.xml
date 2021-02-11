@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
     <!--sdk必备权限-->
-    <!--<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGSWAKE_LOCK" />-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGSWAKE_LOCK" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/sand"
@@ -139,7 +139,7 @@
         -->
 
         <!-- OneWay -->
-        <provider
+     <!--   <provider
             android:name="mobi.oneway.export.OWProvider"
             android:authorities="${applicationId}.OWProvider"
             android:exported="false"
@@ -147,7 +147,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/ow_file_paths" />
-        </provider>
+        </provider>-->
 
         <!-- Yoads -->
         <provider
