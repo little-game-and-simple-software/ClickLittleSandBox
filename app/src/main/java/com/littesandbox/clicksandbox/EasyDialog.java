@@ -1,29 +1,29 @@
 package com.littesandbox.clicksandbox;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.widget.Toast;
 
 public class EasyDialog
 {
-	public AlertDialog builder;
+	public AlertDialog.Builder dialog;
 	//**纯文字dialog**/
     public void setButtonListener()
     {
-   //     builder.setButton();
+   //     dialog.setButton();
     }
     public void init(Context ctx)
     {
-        builder=new AlertDialog.Builder(ctx).create();
+        //dialog =new AlertDialog.Builder(ctx).create();
+        dialog=new AlertDialog.Builder(ctx);
+
     }
     
    public void setMessage(String title,String message)
    {//ctx必须是this getappcontext会闪退
-	   builder.setMessage(message);
-	   builder.setTitle(title);
+	   dialog.setMessage(message);
+	   dialog.setTitle(title);
    }
    public void show()
    {
-       builder.show();
+       dialog.show();
    }
 }

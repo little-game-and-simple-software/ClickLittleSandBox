@@ -56,11 +56,11 @@
 			android:text="点击"
 			android:onClick="clickit"/>
 
-		<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="自动点击"
-			android:onClick="auto"/>
+<!--		<Button-->
+<!--			android:layout_width="wrap_content"-->
+<!--			android:layout_height="wrap_content"-->
+<!--			android:text="自动点击"-->
+<!--			android:onClick="auto"/>-->
 
 		<Button
 			android:layout_width="wrap_content"
@@ -113,7 +113,11 @@
 			android:layout_height="wrap_content"
 			android:text="联系作者"
 			android:onClick="contect"/>
-
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="停止播放音乐"
+			android:onClick="stopBgm"/>
 	</LinearLayout>
 
 	<HorizontalScrollView
@@ -125,11 +129,11 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content">
 
-			<Button
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="赞助作者"
-				android:onClick="showad"/>
+<!--			<Button-->
+<!--				android:layout_width="wrap_content"-->
+<!--				android:layout_height="wrap_content"-->
+<!--				android:text="赞助作者"-->
+<!--				android:onClick="showad"/>-->
 
 			<Button
 				android:layout_width="wrap_content"

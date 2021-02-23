@@ -722,7 +722,8 @@ drawable gdt_ic_volume_off
 drawable gdt_ic_volume_on
 drawable ic_launcher
 drawable ic_tools
-drawable image1
+drawable icon_taptap
+drawable icon_taptap_alpha
 drawable mintegral_cm_alertview_bg
 drawable mintegral_cm_alertview_cancel_bg
 drawable mintegral_cm_alertview_cancel_bg_nor
@@ -1378,7 +1379,6 @@ id unlocked
 id up
 id useLogo
 id web_frame
-id wechat
 id withText
 id wm_act_wmad_pro
 id wm_act_wmad_web

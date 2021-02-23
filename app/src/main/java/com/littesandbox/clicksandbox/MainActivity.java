@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import com.littesandbox.clicksandbox.EasyDialog;
+
 import com.littlesandbox.clicksandbox.R;
 import com.soulgame.sgsdk.tgsdklib.TGSDK;
 
@@ -29,6 +29,8 @@ public class MainActivity extends Activity
     TextView randView;
     TextView unlocked_stn;
     ListView list;
+    //原来的文本
+    String aaaa_raw_about_text="小沙盒温馨提示，如果你点了赞助我，会播放一段视频广告，这些广告大多数都是虚假宣传，建议不要下载，我添加自愿赞助功能也是相当于接受捐赠。因为我是自学编程的学生，所以没有收入，而我又想做好的游戏，小软件工具，等，光靠用爱发电是早晚撑不住的，所以，你喜欢我的这个游戏或者开发的其他游戏，想提供一点帮助的话，可以通过观看广告来赞助我。目前我面临的是没有团队和资金的问题，我是学的多媒体制作专业，和编程没什么关系，但我喜欢编程";
     String sentences[]={"道可道，非常道","有空去看看《国际歌》，不要忘记了前人的努力","上学时，不要整天想着玩游戏，等放了假，随便玩。",".如果感到焦虑不安，可以试试正念疗法。","学历代表过去，学习能力代表将来","生于忧患，死于安乐","我的世界是一款自由的沙盒游戏，你可以试试","游戏是世界第九大艺术","金坷垃是检验神曲的唯一标准","github是全球最大的软件技术开源平台","在《光遇》遇见每一个温柔的人","一根葱这种零食挺好吃的","如果对网页制作感兴趣，可以试试easypage","真正有目标的人，不会整天看电视，只有闲人才会从早看到晚","学历不能代表一切，没有高学历，一样可以从事自己喜欢的事情并去开公司，只是会更加艰难一点。","读书不能死读书，要活学活用","身体简况是做其他事情的基础条件","要做大事，先从小事做起","在追求梦想的时候，不能被资本腐蚀了心志，要明白你转来的钱都是广大劳动人民的。","学习任何东西，不管是自学还是老师教，都要记得做笔记，如果不练习，不使用，很快就会遗忘","如果觉得思维混乱，可以试试思维导图",".透写台是个好工具，可以帮助你更好地临摹","到了初中以后，可以思考下学习是为了什么，不要变成学习机器，不能过于功利主义","字典上的字都是互相解释的","赚钱不能吃香太难看，不能恶心人，要取一种平衡状态","是金子总会发光","音乐最擅长表达的是情绪，但不擅长表达理性逻辑","出名的方式有很多种，出臭名还是出美名，我的观点是出美名更好"};
     TextView tmptext;
     //存档临时数据的arraylist
@@ -126,7 +128,7 @@ public class MainActivity extends Activity
         EasyDialog tool= new EasyDialog();
         tool.init(MainActivity.this);
         tool.setMessage("注意!","确定要重置吗,将会清除数据所有游戏数据");
-        tool.builder.setButton("确认",new DialogInterface.OnClickListener()
+        tool.dialog.setPositiveButton("确认",new DialogInterface.OnClickListener()
             {
                 @Override
                 public void onClick(DialogInterface p1,int p2)
@@ -151,6 +153,11 @@ public class MainActivity extends Activity
 		bgm.init(ctx);
 		bgm.play();
 	}
+	//停止播放bgm
+	public void stopBgm(View v)
+    {
+        bgm.stop();
+    }
 	@Override
 	protected void onDestroy()
     {
@@ -162,8 +169,8 @@ public class MainActivity extends Activity
     {
         EasyDialog tool=new EasyDialog();
         tool.init(this);
-        tool.setMessage("关于此游戏","小沙盒温馨提示，如果你点了赞助我，会播放一段视频广告，这些广告大多数都是虚假宣传，建议不要下载，我添加自愿赞助功能也是相当于接受捐赠。因为我是自学编程的学生，所以没有收入，而我又想做好的游戏，小软件工具，等，光靠用爱发电是早晚撑不住的，所以，你喜欢我的这个游戏或者开发的其他游戏，想提供一点帮助的话，可以通过观看广告来赞助我。目前我面临的是没有团队和资金的问题，我是学的多媒体制作专业，和编程没什么关系，但我喜欢编程。");
-        tool.builder.setButton("确认",new DialogInterface.OnClickListener()
+        tool.setMessage("关于此游戏","点击来增加进度，收集新的文本，争取把所有的文本都收集完成吧！。");
+        tool.dialog.setPositiveButton("确认",new DialogInterface.OnClickListener()
             {
                 @Override
                 public void onClick(DialogInterface p1,int p2)
@@ -174,41 +181,41 @@ public class MainActivity extends Activity
         tool.show();
     }
 	//赞助作者的按钮
-	public void showad(View v)
-	{
-        AlertDialog builder=new AlertDialog.Builder(this).create();
-        builder.setTitle("请选择赞助方式");
-        builder.setMessage("1.微信赞助,2.观看广告赞助作者");
-        builder.setButton("微信赞助",new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick(DialogInterface p1,int p2)
-                {
-                    Intent i =new Intent(ctx,wechat.class);
-                    startActivity(i);
-                }
-            });
-        builder.setButton2("观看广告",new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick(DialogInterface p1,int p2) 
-                {
-                    Toast.makeText(ctx,"等待广告响应",Toast.LENGTH_SHORT).show();
-                    //暂停bgm
-                    bgm.pause();
-                    if(TGSDK.couldShowAd(sceneId2))
-                    {
-                        Toast.makeText(ctx,"可以显示广告，即将显示广告",Toast.LENGTH_LONG).show();
-                        TGSDK.showAd(MainActivity.this,sceneId2);
-                    }
-                    else{
-                        Toast.makeText(ctx,"不能显示广告",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-        builder.show();
-		Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
-	}
+//	public void showad(View v)
+//	{
+//        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+//        builder.setTitle("请选择赞助方式");
+//        builder.setMessage("1.微信赞助,2.观看广告赞助作者");
+//        builder.setPositiveButton("微信赞助",new DialogInterface.OnClickListener()
+//            {
+//                @Override
+//                public void onClick(DialogInterface p1,int p2)
+//                {
+//                    Intent i =new Intent(ctx,wechat.class);
+//                    startActivity(i);
+//                }
+//            });
+//        builder.setNeutralButton("观看广告",new DialogInterface.OnClickListener()
+//            {
+//                @Override
+//                public void onClick(DialogInterface p1,int p2)
+//                {
+//                    Toast.makeText(ctx,"等待广告响应",Toast.LENGTH_SHORT).show();
+//                    //暂停bgm
+//                    bgm.pause();
+//                    if(TGSDK.couldShowAd(sceneId2))
+//                    {
+//                        Toast.makeText(ctx,"可以显示广告，即将显示广告",Toast.LENGTH_LONG).show();
+//                        TGSDK.showAd(MainActivity.this,sceneId2);
+//                    }
+//                    else{
+//                        Toast.makeText(ctx,"不能显示广告",Toast.LENGTH_LONG).show();
+//                    }
+//                }
+//            });
+//        builder.show();
+//		Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
+//	}
 	//跳转到每日一句
 	public void openWeb(View v)
 	{
@@ -232,7 +239,7 @@ public class MainActivity extends Activity
     public void onBackPressed()
     {
         super.onBackPressed();
-
+        bgm.stop();
         //File file = new File("/sdcard/Download/test.txt");
         /*      try{
          Game.save(stn, file);
@@ -247,7 +254,7 @@ public class MainActivity extends Activity
 		EasyDialog tool=new EasyDialog();
         tool.init(this);
         tool.setMessage("联系作者","请加qq2439905184");
-        tool.builder.setButton("确认",new DialogInterface.OnClickListener()
+        tool.dialog.setPositiveButton("确认",new DialogInterface.OnClickListener()
         {
                 @Override
                 public void onClick(DialogInterface p1,int p2)

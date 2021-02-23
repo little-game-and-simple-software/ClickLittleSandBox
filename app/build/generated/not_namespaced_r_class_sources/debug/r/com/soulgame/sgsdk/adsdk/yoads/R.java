@@ -12,12 +12,12 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int yomob_ad_close = 0x7f060148;
-        public static final int yomob_circle_black = 0x7f060149;
-        public static final int yomob_logo = 0x7f06014a;
-        public static final int yomob_play_again = 0x7f06014b;
-        public static final int yomob_vioceoff = 0x7f06014c;
-        public static final int yomob_vioceon = 0x7f06014d;
+        public static final int yomob_ad_close = 0x7f060149;
+        public static final int yomob_circle_black = 0x7f06014a;
+        public static final int yomob_logo = 0x7f06014b;
+        public static final int yomob_play_again = 0x7f06014c;
+        public static final int yomob_vioceoff = 0x7f06014d;
+        public static final int yomob_vioceon = 0x7f06014e;
     }
     public static final class id {
         private id() {}
@@ -30,7 +30,7 @@ public final class R {
         public static final int tvYomobClose = 0x7f0701ad;
         public static final int tvYomobDesc = 0x7f0701ae;
         public static final int tvYomobTitle = 0x7f0701af;
-        public static final int yomob_webview = 0x7f070211;
+        public static final int yomob_webview = 0x7f070210;
     }
     public static final class layout {
         private layout() {}
