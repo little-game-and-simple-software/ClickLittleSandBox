@@ -13,8 +13,10 @@ import android.view.animation.AlphaAnimation;
 import android.content.Intent;
 import android.view.View.OnClickListener;
 import android.view.View;
+import android.widget.Toast;
 
 import com.littlesandbox.clicksandbox.R;
+import com.soulgame.sgsdk.tgsdklib.TGSDK;
 
 public class Splash extends Activity {
     ImageView image;
@@ -22,6 +24,22 @@ public class Splash extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+        new Thread(){
+            @Override
+            public void run()
+            {
+                //初始化tgsdk
+                TGSDK.initialize(Splash.this,Global.appid,null);
+                TGSDK.preloadAd(Splash.this);
+                if(TGSDK.couldShowAd(Global.sceneid))
+                {
+                    Toast.makeText(Splash.this,"初始化完毕",Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(Splash.this,"不能显示广告",Toast.LENGTH_LONG).show();
+                }
+            }
+        }.run();
         image =  findViewById(R.id.main);
         image.setOnClickListener(new OnClickListener()
             {

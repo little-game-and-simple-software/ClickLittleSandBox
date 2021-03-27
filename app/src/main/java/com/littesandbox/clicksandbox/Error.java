@@ -33,23 +33,23 @@ public class Error extends Activity {
         root=   (LinearLayout) $.select_id(this,R.id.root);
         gameDataView=(TextView) $.select_id(this,R.id.gameData);
         arrayView= (TextView) $.select_id(this,R.id.arraylist);
-        new Thread(){
-            @Override
-            public void run()
-            {
-                //初始化tgsdk
-                TGSDK.initialize(Error.this,appid,null);
-                TGSDK.preloadAd(Error.this);
-                if(TGSDK.couldShowAd(sceneId2))
-                {
-                    Toast.makeText(Error.this,"初始化完毕",Toast.LENGTH_LONG).show();
-                }
-                else{
-                    //Toast.makeText(Error.this,"不能显示广告",Toast.LENGTH_LONG).show();
-                }
-                //super.run();
-            }
-        }.run();
+//        new Thread(){
+//            @Override
+//            public void run()
+//            {
+//                //初始化tgsdk
+//                TGSDK.initialize(Error.this,appid,null);
+//                TGSDK.preloadAd(Error.this);
+//                if(TGSDK.couldShowAd(sceneId2))
+//                {
+//                    Toast.makeText(Error.this,"初始化完毕",Toast.LENGTH_LONG).show();
+//                }
+//                else{
+//                    //Toast.makeText(Error.this,"不能显示广告",Toast.LENGTH_LONG).show();
+//                }
+//                //super.run();
+//            }
+//        }.run();
     }
     //测试广告
     public void testAd(View v)
