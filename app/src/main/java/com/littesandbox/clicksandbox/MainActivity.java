@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 import com.littlesandbox.clicksandbox.R;
 import com.soulgame.sgsdk.tgsdklib.TGSDK;
+import com.soulgame.sgsdk.tgsdklib.ad.ITGADListener;
 
 public class MainActivity extends Activity
 {
@@ -68,7 +69,31 @@ public class MainActivity extends Activity
         list.setAdapter(adapter);
 		playBgm();
 		//listadapter数据长度
-		//创建数组适配器，4个参数 
+		//创建数组适配器，4个参数
+        //NOTE:TGSDK 绑定Listener
+        TGSDK.setADListener(new ITGADListener() {
+            @Override
+            public void onShowSuccess(String scene, String s1) {
+                Toast.makeText(ctx,"展示成功",Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onShowFailed(String s, String s1, String s2) {
+                Toast.makeText(ctx,"展示失败",Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onADClick(String s, String s1) {
+                Toast.makeText(ctx,"点击了广告",Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onADClose(String scene, String s1, boolean b) {
+                Toast.makeText(ctx,"关闭了广告",Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
+            }
+        });
     }
 //初始化界面
 	private void initView()
@@ -227,6 +252,14 @@ public class MainActivity extends Activity
     public void auto(View v)
     {
         Toast.makeText(this,"此功能未实现",Toast.LENGTH_LONG).show();
+        if(TGSDK.couldShowAd(sceneId2))
+        {
+            Toast.makeText(ctx,"可以显示广告，即将显示广告",Toast.LENGTH_LONG).show();
+            TGSDK.showAd(MainActivity.this,sceneId2);
+        }
+        else{
+            Toast.makeText(ctx,"不能显示广告",Toast.LENGTH_LONG).show();
+        }
     }
     //展示更多游戏
 	public void showothergames(View v)

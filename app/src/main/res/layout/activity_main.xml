@@ -56,11 +56,11 @@
 			android:text="点击"
 			android:onClick="clickit"/>
 
-<!--		<Button-->
-<!--			android:layout_width="wrap_content"-->
-<!--			android:layout_height="wrap_content"-->
-<!--			android:text="自动点击"-->
-<!--			android:onClick="auto"/>-->
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="自动点击"
+			android:onClick="auto"/>
 
 		<Button
 			android:layout_width="wrap_content"
