@@ -47,7 +47,7 @@ public class Error extends Activity {
                 else{
                     //Toast.makeText(Error.this,"不能显示广告",Toast.LENGTH_LONG).show();
                 }
-                super.run();
+                //super.run();
             }
         }.run();
     }

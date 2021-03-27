@@ -14,9 +14,7 @@ public class EasyDialog
     {
         //dialog =new AlertDialog.Builder(ctx).create();
         dialog=new AlertDialog.Builder(ctx);
-
     }
-    
    public void setMessage(String title,String message)
    {//ctx必须是this getappcontext会闪退
 	   dialog.setMessage(message);

@@ -74,24 +74,24 @@ public class MainActivity extends Activity
         TGSDK.setADListener(new ITGADListener() {
             @Override
             public void onShowSuccess(String scene, String s1) {
-                Toast.makeText(ctx,"展示成功",Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx,"展示成功",Toast.LENGTH_SHORT).show();
                 Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onShowFailed(String s, String s1, String s2) {
-                Toast.makeText(ctx,"展示失败",Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx,"展示失败",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onADClick(String s, String s1) {
-                Toast.makeText(ctx,"点击了广告",Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx,"点击了广告",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onADClose(String scene, String s1, boolean b) {
-                Toast.makeText(ctx,"关闭了广告",Toast.LENGTH_LONG).show();
-                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx,"关闭了广告",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ctx,scene,Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -251,15 +251,28 @@ public class MainActivity extends Activity
     //自动点击 对接tgsdk
     public void auto(View v)
     {
-        Toast.makeText(this,"此功能未实现",Toast.LENGTH_LONG).show();
-        if(TGSDK.couldShowAd(sceneId2))
-        {
-            Toast.makeText(ctx,"可以显示广告，即将显示广告",Toast.LENGTH_LONG).show();
-            TGSDK.showAd(MainActivity.this,sceneId2);
-        }
-        else{
-            Toast.makeText(ctx,"不能显示广告",Toast.LENGTH_LONG).show();
-        }
+        EasyDialog dialog_builder=new EasyDialog();
+        dialog_builder.init(this);
+        dialog_builder.setMessage("观看视频，奖励自动点击","是否观看视频？");
+        dialog_builder.dialog.setNegativeButton("观看", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i)
+            {
+                if(TGSDK.couldShowAd(sceneId2))
+                {
+                    Toast.makeText(ctx,"可以显示广告，即将显示广告",Toast.LENGTH_LONG).show();
+                    bgm.stop();
+                    TGSDK.showAd(MainActivity.this,sceneId2);
+                }
+                else{
+                    Toast.makeText(ctx,"不能显示广告",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        dialog_builder.dialog.setPositiveButton("不观看",null);
+        dialog_builder.show();
+       // Toast.makeText(this,"此功能未实现",Toast.LENGTH_LONG).show();
+
     }
     //展示更多游戏
 	public void showothergames(View v)
