@@ -53,7 +53,7 @@ public class Splash extends Activity {
             {
                 // 广告配置获取成功
                 preload_state=true;
-                Toast.makeText(Splash.this,"广告预加载成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Splash.this,"ad preload ok",Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -61,7 +61,7 @@ public class Splash extends Activity {
             {
                 // 广告配置获取失败
                 preload_state=false;
-                Toast.makeText(Splash.this,"广告预加载失败"+error,Toast.LENGTH_SHORT).show();
+                Toast.makeText(Splash.this,"ad preload false"+error,Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -74,14 +74,14 @@ public class Splash extends Activity {
             @Override
             public void onInterstitialLoaded(String result) {
                 //静态插屏已就绪
-                Toast.makeText(Splash.this,"静态插屏已就绪",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Splash.this,"static ad already",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialVideoLoaded(String result)
             {
                 //插屏视频已就绪
-                Toast.makeText(Splash.this,"插屏视频已就绪",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Splash.this,"video ad already",Toast.LENGTH_SHORT).show();
             }
         });
 

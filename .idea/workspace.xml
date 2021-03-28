@@ -18,15 +18,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/debug/app-debug.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Global.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/splash.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,24 +71,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="128" column="26" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
+            <state relative-caret-position="336">
+              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
               <folding>
-                <element signature="e#4111#4645#0" expanded="true" />
-                <element signature="e#4262#4619#0" expanded="true" />
-                <element signature="e#4618#4619#0" expanded="true" />
-                <element signature="e#4644#4645#0" expanded="true" />
+                <element signature="e#1938#1946#0" expanded="true" />
+                <element signature="e#4083#5009#0" expanded="true" />
+                <element signature="e#4234#4983#0" expanded="true" />
+                <element signature="e#4982#4983#0" expanded="true" />
+                <element signature="e#5008#5009#0" expanded="true" />
                 <element signature="method#initData#0;class#MainActivity#0" />
                 <element signature="method#save#0;class#MainActivity#0" />
                 <element signature="method#reset#0;class#MainActivity#0" />
-                <element signature="e#6583#7231#0" expanded="true" />
-                <element signature="e#7230#7231#0" expanded="true" />
+                <element signature="e#6947#7595#0" expanded="true" />
+                <element signature="e#7594#7595#0" expanded="true" />
                 <element signature="method#playBgm#0;class#MainActivity#0" />
-                <element signature="e#7386#7387#0" expanded="true" />
-                <element signature="e#7412#7413#0" expanded="true" />
+                <element signature="e#7814#7815#0" expanded="true" />
                 <element signature="method#onDestroy#0;class#MainActivity#0" />
-                <element signature="e#8185#8731#0" expanded="true" />
-                <element signature="e#8730#8731#0" expanded="true" />
+                <element signature="e#8549#9095#0" expanded="true" />
+                <element signature="e#9094#9095#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
-              <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
+            <state relative-caret-position="-39">
+              <caret line="83" column="60" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#756:1598" />
@@ -185,15 +179,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/EasyDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Error.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Global.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/EasyTimer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/MyHandle.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/$.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Easy.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/splash.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Global.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java" />
       </list>
     </option>
   </component>
@@ -242,6 +236,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TGSDKDemo.cn.android.1.9.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TGSDKDemo.cn.android.1.9.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clicksandbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TGSDKDemo.cn.android.1.9.0" type="b2602c69:ProjectViewProjectNode" />
@@ -378,7 +381,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8129032" visible="true" weight="0.21026012" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.8129032" visible="true" weight="0.21026012" />
       <window_info id="设计器" order="2" />
       <window_info id="Resources Explorer" order="3" weight="0.32947975" />
       <window_info id="Structure" order="4" sideWeight="0.18709677" side_tool="true" weight="0.22976878" />
@@ -391,7 +394,7 @@
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49927744" weight="0.32729805" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49855492" weight="0.08077995" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50216764" side_tool="true" weight="0.27019498" />
-      <window_info active="true" anchor="bottom" id="Build" order="5" sideWeight="0.49783236" visible="true" weight="0.27019498" />
+      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49783236" visible="true" weight="0.27019498" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Debug" order="8" />
@@ -621,13 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Easy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/EasyDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -648,13 +644,6 @@
             <element signature="e#694#695#0" expanded="true" />
             <element signature="e#756#757#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Global.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -708,14 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Global.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
-          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#756:1598" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -727,26 +712,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Easy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="83" column="60" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#756:1598" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/littesandbox/clicksandbox/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="128" column="26" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
+        <state relative-caret-position="336">
+          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
           <folding>
-            <element signature="e#4111#4645#0" expanded="true" />
-            <element signature="e#4262#4619#0" expanded="true" />
-            <element signature="e#4618#4619#0" expanded="true" />
-            <element signature="e#4644#4645#0" expanded="true" />
+            <element signature="e#1938#1946#0" expanded="true" />
+            <element signature="e#4083#5009#0" expanded="true" />
+            <element signature="e#4234#4983#0" expanded="true" />
+            <element signature="e#4982#4983#0" expanded="true" />
+            <element signature="e#5008#5009#0" expanded="true" />
             <element signature="method#initData#0;class#MainActivity#0" />
             <element signature="method#save#0;class#MainActivity#0" />
             <element signature="method#reset#0;class#MainActivity#0" />
-            <element signature="e#6583#7231#0" expanded="true" />
-            <element signature="e#7230#7231#0" expanded="true" />
+            <element signature="e#6947#7595#0" expanded="true" />
+            <element signature="e#7594#7595#0" expanded="true" />
             <element signature="method#playBgm#0;class#MainActivity#0" />
-            <element signature="e#7386#7387#0" expanded="true" />
-            <element signature="e#7412#7413#0" expanded="true" />
+            <element signature="e#7814#7815#0" expanded="true" />
             <element signature="method#onDestroy#0;class#MainActivity#0" />
-            <element signature="e#8185#8731#0" expanded="true" />
-            <element signature="e#8730#8731#0" expanded="true" />
+            <element signature="e#8549#9095#0" expanded="true" />
+            <element signature="e#9094#9095#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -83,20 +83,17 @@ public class MainActivity extends Activity
             {
                 Toast.makeText(ctx,"展示成功",Toast.LENGTH_SHORT).show();
 //                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
-
             }
             @Override
             public void onShowFailed(String s, String s1, String s2)
             {
                 Toast.makeText(ctx,"展示失败",Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onADClick(String s, String s1)
             {
                 Toast.makeText(ctx,"点击了广告",Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onADClose(String scene, String s1, boolean b)
             {
@@ -105,6 +102,7 @@ public class MainActivity extends Activity
                 {
                     Toast.makeText(MainActivity.this,"开始自动点击",Toast.LENGTH_SHORT).show();
                     M_AutoClick();
+                    playBgm();
                 }
             }
         });
@@ -112,7 +110,7 @@ public class MainActivity extends Activity
     //自动点击
     public void M_AutoClick()
     {
-        Timer timer=new Timer();
+        final Timer timer=new Timer();
         TimerTask task=new TimerTask()
         {
             @Override
@@ -126,6 +124,15 @@ public class MainActivity extends Activity
                         showprogress.setText(progress+"/"+"100");
                         timeleft-=1;
                         timeleftView.setText("剩余时间："+Integer.toString(timeleft));
+                        if(progress>=100)
+                        {
+                            add_stn();
+                        }
+                        if(timeleft<=0)
+                        {
+                            timer.cancel();
+                            Easy.tip(ctx,"时间到");
+                        }
                         //Toast.makeText(ctx,"1秒到",Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -310,10 +317,31 @@ public class MainActivity extends Activity
             });
         tool.show();
 	}
+	//当进度值到达100
+	public void add_stn()
+    {
+        if(progress>=100) {
+            progress = 0;
+            score += 5;
+            scoreT.setText("积分:" + score);
+            bar.setProgress(progress);
+            int size=stn.size();
+            //todo 添加一个进度满了的胜利音效 留住玩家
+            if (size > 0) {
+                String toadd = stn.get(0);
+                adapter.add(toadd);
+                adapter.notifyDataSetChanged();
+                stn.remove(0);
+            }
+            randView.setText("当前数组长度" + size);
+            int count = adapter.getCount();
+            len_T.setText("adapter长度" + count);
+        }
+    }
 	//点击事件
 	public void clickit(View v)
 	{
-		progress+=5;
+		progress+=Global.progress_add_delta;
 		bar.setProgress(progress);
 		showprogress.setText(progress+"/"+"100");
 		//todo 添加一个每次点击按钮时的音效 留住玩家
