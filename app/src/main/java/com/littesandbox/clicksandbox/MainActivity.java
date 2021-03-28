@@ -29,10 +29,13 @@ public class MainActivity extends Activity
 	//句子索引
 	int iindex=0;
     int progress=0;
-    //进度条
+    /**自动点击的剩余时间 秒**/
+    int timeleft=60;
+
     ProgressBar bar;
     TextView randView;
     TextView unlocked_stn;
+    TextView timeleftView;
     ListView list;
     //原来的文本
     String aaaa_raw_about_text="小沙盒温馨提示，如果你点了赞助我，会播放一段视频广告，这些广告大多数都是虚假宣传，建议不要下载，我添加自愿赞助功能也是相当于接受捐赠。因为我是自学编程的学生，所以没有收入，而我又想做好的游戏，小软件工具，等，光靠用爱发电是早晚撑不住的，所以，你喜欢我的这个游戏或者开发的其他游戏，想提供一点帮助的话，可以通过观看广告来赞助我。目前我面临的是没有团队和资金的问题，我是学的多媒体制作专业，和编程没什么关系，但我喜欢编程";
@@ -58,7 +61,6 @@ public class MainActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) 
 	{
-        //   requestPermissions();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
@@ -81,26 +83,8 @@ public class MainActivity extends Activity
             {
                 Toast.makeText(ctx,"展示成功",Toast.LENGTH_SHORT).show();
 //                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
-                if(scene.equals(Global.sceneid))
-                {
-                    //开始自动点击
-                    Timer timer=new Timer();
-                    TimerTask task=new TimerTask()
-                    {
-                        @Override
-                        public void run()
-                        {
-                            progress+=2;
-                            //bar.setProgress(progress);
-                           // showprogress.setText(progress+"/"+"100");
-                        }
-                    };
-                    Toast.makeText(MainActivity.this,"开始自动点击",Toast.LENGTH_SHORT).show();
-                    timer.scheduleAtFixedRate(task,0,1000);
 
-                }
             }
-
             @Override
             public void onShowFailed(String s, String s1, String s2)
             {
@@ -117,9 +101,37 @@ public class MainActivity extends Activity
             public void onADClose(String scene, String s1, boolean b)
             {
                 Toast.makeText(ctx,"关闭了广告",Toast.LENGTH_SHORT).show();
-                Toast.makeText(ctx,scene,Toast.LENGTH_SHORT).show();
+                if(scene.equals(Global.sceneid))
+                {
+                    Toast.makeText(MainActivity.this,"开始自动点击",Toast.LENGTH_SHORT).show();
+                    M_AutoClick();
+                }
             }
         });
+    }
+    //自动点击
+    public void M_AutoClick()
+    {
+        Timer timer=new Timer();
+        TimerTask task=new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                progress+=2;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        bar.setProgress(progress);
+                        showprogress.setText(progress+"/"+"100");
+                        timeleft-=1;
+                        timeleftView.setText("剩余时间："+Integer.toString(timeleft));
+                        //Toast.makeText(ctx,"1秒到",Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        };
+        timer.schedule(task,0,1000);
     }
     //handle处理
     public void myHandler()
@@ -139,6 +151,7 @@ public class MainActivity extends Activity
 		unlocked_stn=findViewById(R.id.unlock_stn);
 		unlockT=findViewById(R.id.unlocked);
         randView=findViewById(R.id.rand);
+        timeleftView=findViewById(R.id.timeleft);
         unlocked_stn=findViewById(R.id.unlock_stn);
         //显示有多少个句子
 		list=findViewById(R.id.list);
