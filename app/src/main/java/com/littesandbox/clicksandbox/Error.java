@@ -3,7 +3,6 @@ package com.littesandbox.clicksandbox;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.app.*;
 import android.content.Intent;
 import java.io.File;
 import android.widget.Toast;
@@ -30,9 +29,9 @@ public class Error extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.error);
-        root=   (LinearLayout) $.select_id(this,R.id.root);
-        gameDataView=(TextView) $.select_id(this,R.id.gameData);
-        arrayView= (TextView) $.select_id(this,R.id.arraylist);
+        root=   (LinearLayout) Easy.select_id(this,R.id.root);
+        gameDataView=(TextView) Easy.select_id(this,R.id.gameData);
+        arrayView= (TextView) Easy.select_id(this,R.id.arraylist);
 //        new Thread(){
 //            @Override
 //            public void run()

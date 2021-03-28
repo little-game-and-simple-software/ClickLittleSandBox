@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.littlesandbox.clicksandbox.R;
 import com.soulgame.sgsdk.tgsdklib.TGSDK;
@@ -26,6 +29,7 @@ public class MainActivity extends Activity
 	//句子索引
 	int iindex=0;
     int progress=0;
+    //进度条
     ProgressBar bar;
     TextView randView;
     TextView unlocked_stn;
@@ -47,7 +51,7 @@ public class MainActivity extends Activity
 	TextView unlockT;
 	//封装类
 	Bgm bgm;
-	EasySoundPool tool;
+//	EasySoundPool tool;
     //防止多次点击自动按钮
     boolean canClickAutoBtn;
     public String sceneId2="TunK2jGMTlP7i2cFHgm";
@@ -73,27 +77,56 @@ public class MainActivity extends Activity
         //NOTE:TGSDK 绑定Listener
         TGSDK.setADListener(new ITGADListener() {
             @Override
-            public void onShowSuccess(String scene, String s1) {
+            public void onShowSuccess(String scene, String s1)
+            {
                 Toast.makeText(ctx,"展示成功",Toast.LENGTH_SHORT).show();
-                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
+//                Toast.makeText(ctx,scene,Toast.LENGTH_LONG).show();
+                if(scene.equals(Global.sceneid))
+                {
+                    //开始自动点击
+                    Timer timer=new Timer();
+                    TimerTask task=new TimerTask()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            progress+=2;
+                            //bar.setProgress(progress);
+                           // showprogress.setText(progress+"/"+"100");
+                        }
+                    };
+                    Toast.makeText(MainActivity.this,"开始自动点击",Toast.LENGTH_SHORT).show();
+                    timer.scheduleAtFixedRate(task,0,1000);
+
+                }
             }
 
             @Override
-            public void onShowFailed(String s, String s1, String s2) {
+            public void onShowFailed(String s, String s1, String s2)
+            {
                 Toast.makeText(ctx,"展示失败",Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onADClick(String s, String s1) {
+            public void onADClick(String s, String s1)
+            {
                 Toast.makeText(ctx,"点击了广告",Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onADClose(String scene, String s1, boolean b) {
+            public void onADClose(String scene, String s1, boolean b)
+            {
                 Toast.makeText(ctx,"关闭了广告",Toast.LENGTH_SHORT).show();
                 Toast.makeText(ctx,scene,Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    //handle处理
+    public void myHandler()
+    {
+        Handler handler=new Handler();
+       // handler.getMessageName();
+
     }
 //初始化界面
 	private void initView()
@@ -124,7 +157,6 @@ public class MainActivity extends Activity
             } 
             new Game().load("test.txt",MainActivity.this,adapter,stn,sentences);
             //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();
-
         }
         if(gameDataFile.exists()==false)
         {
@@ -195,52 +227,9 @@ public class MainActivity extends Activity
         EasyDialog tool=new EasyDialog();
         tool.init(this);
         tool.setMessage("关于此游戏","点击来增加进度，收集新的文本，争取把所有的文本都收集完成吧！。");
-        tool.dialog.setPositiveButton("确认",new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick(DialogInterface p1,int p2)
-                {
-
-                }
-            });
+        tool.dialog.setPositiveButton("确认",null);
         tool.show();
     }
-	//赞助作者的按钮
-//	public void showad(View v)
-//	{
-//        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-//        builder.setTitle("请选择赞助方式");
-//        builder.setMessage("1.微信赞助,2.观看广告赞助作者");
-//        builder.setPositiveButton("微信赞助",new DialogInterface.OnClickListener()
-//            {
-//                @Override
-//                public void onClick(DialogInterface p1,int p2)
-//                {
-//                    Intent i =new Intent(ctx,wechat.class);
-//                    startActivity(i);
-//                }
-//            });
-//        builder.setNeutralButton("观看广告",new DialogInterface.OnClickListener()
-//            {
-//                @Override
-//                public void onClick(DialogInterface p1,int p2)
-//                {
-//                    Toast.makeText(ctx,"等待广告响应",Toast.LENGTH_SHORT).show();
-//                    //暂停bgm
-//                    bgm.pause();
-//                    if(TGSDK.couldShowAd(sceneId2))
-//                    {
-//                        Toast.makeText(ctx,"可以显示广告，即将显示广告",Toast.LENGTH_LONG).show();
-//                        TGSDK.showAd(MainActivity.this,sceneId2);
-//                    }
-//                    else{
-//                        Toast.makeText(ctx,"不能显示广告",Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//            });
-//        builder.show();
-//		Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
-//	}
 	//跳转到每日一句
 	public void openWeb(View v)
 	{
@@ -293,7 +282,6 @@ public class MainActivity extends Activity
          {}*/
         Toast.makeText(ctx,"如果不小心退出，请按图片重新进入主界面",Toast.LENGTH_LONG).show();
     }
-
 	//联系作者
 	public void contect(View v)
 	{
