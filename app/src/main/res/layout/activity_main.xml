@@ -9,7 +9,7 @@
 		android:id="@+id/timeleft"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="剩余时间：" />
+		android:text="剩余时间：60" />
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="match_parent"

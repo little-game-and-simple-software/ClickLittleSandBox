@@ -131,6 +131,8 @@ public class MainActivity extends Activity
                         if(timeleft<=0)
                         {
                             timer.cancel();
+                            timeleft=60;
+                            timeleftView.setText("剩余时间：60");
                             Easy.tip(ctx,"时间到");
                         }
                         //Toast.makeText(ctx,"1秒到",Toast.LENGTH_SHORT).show();
@@ -253,7 +255,7 @@ public class MainActivity extends Activity
 	//跳转到每日一句
 	public void openWeb(View v)
 	{
-		Uri uri=Uri.parse("http://everydayonesentence.biu8.top");
+		Uri uri=Uri.parse("http://godotjstest.4uv.top/index.html");
 		Intent i=new Intent(Intent.ACTION_VIEW,uri);
 		startActivity(i);
 	}
