@@ -2,7 +2,7 @@ package com.littesandbox.clicksandbox;
 import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;
-public class $ {
+public class Select {
     //仿jquery
     public static Object select_id(Activity activity,int id)
 	{

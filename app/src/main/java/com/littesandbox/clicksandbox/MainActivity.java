@@ -13,10 +13,12 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+//import com.soulgame.sgsdk.tgsdklib.TGSDK;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import com.littesandbox.clicksandbox.EasyDialog;
 
 public class MainActivity extends Activity
 {
@@ -87,7 +89,7 @@ public class MainActivity extends Activity
         File gameDataFile=new File(dir+"/test.txt");
         if(gameDataFile.exists())
         {
-            Toast.makeText(ctx,"游戏文件存在",1000).show();
+            Toast.makeText(ctx,"游戏文件存在",Toast.LENGTH_LONG).show();
             for(int i=0;i<sentences.length;i++)
             {
                 stn.add(sentences[i]);
@@ -98,7 +100,7 @@ public class MainActivity extends Activity
         }
         if(gameDataFile.exists()==false)
         {
-            Toast.makeText(ctx,"游戏文件不存在",1000).show();
+            Toast.makeText(ctx,"游戏文件不存在",Toast.LENGTH_LONG).show();
             //原始数据
             for(int i=0;i<sentences.length;i++)
             {
@@ -128,13 +130,13 @@ public class MainActivity extends Activity
                 @Override
                 public void onClick(DialogInterface p1,int p2)
                 {
-                    Toast.makeText(ctx,"外部调用",1000).show();
+                    Toast.makeText(ctx,"外部调用",Toast.LENGTH_LONG).show();
                     String dir=getFilesDir().getPath();
                     File f=new File(dir+"/test.txt");
                     if(f.exists())
                     {
                         boolean result= f.delete();
-                        Toast.makeText(ctx,"删除状态"+result,1000).show();
+                        Toast.makeText(ctx,"删除状态"+result,Toast.LENGTH_LONG).show();
                     }
                     //重置界面
                     recreate();
@@ -206,7 +208,18 @@ public class MainActivity extends Activity
 	}
     //自动点击 对接tgsdk
     public void auto(View v)
-    {}
+    {
+        /*boolean could= TGSDK.couldShowAd(Global.sceneid);
+        if(could)
+        {
+            TGSDK.showAd(this,Global.sceneid);
+            Toast.makeText(this,"ok",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(this,"failed",Toast.LENGTH_LONG).show();
+        }*/
+    }
     //展示更多游戏
 	public void showothergames(View v)
 	{
@@ -242,6 +255,12 @@ public class MainActivity extends Activity
             });
         tool.show();
 	}
+	//点击成就按钮
+    public void achievement(View v)
+    {
+        Intent i = new Intent(this,Achievement.class);
+        startActivity(i);
+    }
 	public void clickit(View v)
 	{
 		progress+=5;

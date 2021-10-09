@@ -45,7 +45,7 @@ public class Splash extends Activity {
                 @Override
                 public void onAnimationEnd(Animation p1) {
                     Intent i=new Intent(getApplicationContext(), Error.class);
-         startActivity(i);
+                     startActivity(i);
                 }
 
                 @Override

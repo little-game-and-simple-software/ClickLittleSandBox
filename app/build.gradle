@@ -38,7 +38,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.squareup.okio:okio:1.14.0'
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-   // implementation 'androidx.multidex:multidex:2.0.0'
+    //implementation 'androidx.multidex:multidex:2.0.0'
 
     //第三方插件依赖库
     // By wangmai
@@ -51,19 +51,21 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     //TGSDK
-    implementation(name:'TGSDK.1.9.0', ext: 'aar')
+    /*implementation(name:'TGSDK.1.9.0', ext: 'aar')
     implementation(name: 'GDTSDK.unionNoPlugin.4.270.1140', ext: 'aar')
     implementation(name: 'TGSDKADGuangdiantong.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADBaidu.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADSigmob.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADMobvista.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADHytech.1.9.0', ext: 'aar')
-   // implementation(name: 'TGSDKADOneway.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADOneway.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADYoads.1.9.0', ext: 'aar')
     implementation(name: 'TGSDKADWangmai.1.9.0', ext: 'aar')
     implementation(name: 'open_ad_sdk.3.3.0.0', ext: 'aar')
     implementation(name: 'TGSDKADBytedance.1.9.0', ext: 'aar')
-    implementation(name: 'TGSDKADUniplay.1.9.0', ext: 'aar')
+    implementation(name: 'TGSDKADUniplay.1.9.0', ext: 'aar')*/
 
+  //  implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 
 }
