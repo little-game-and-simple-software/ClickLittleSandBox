@@ -136,8 +136,8 @@
 			<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="赞助作者"
-				android:onClick="showad"/>
+				android:onClick="showad"
+				android:text="帮帮开发者" />
 
 			<Button
 				android:layout_width="wrap_content"

@@ -35,20 +35,20 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //强制依赖库
     implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.squareup.okio:okio:1.14.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //implementation 'com.squareup.okio:okio:1.14.0'
+   // implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     //implementation 'androidx.multidex:multidex:2.0.0'
 
     //第三方插件依赖库
     // By wangmai
-    implementation 'com.google.code.gson:gson:2.8.2'
+   /* implementation 'com.google.code.gson:gson:2.8.2'
     // By oneway
     implementation 'mobi.oneway.common:core:1.0.8'
     // By wangmai
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
     // By wangmai
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'*/
 
     //TGSDK
     /*implementation(name:'TGSDK.1.9.0', ext: 'aar')

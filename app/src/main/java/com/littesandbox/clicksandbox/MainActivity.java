@@ -172,32 +172,21 @@ public class MainActivity extends Activity
             });
         tool.show();
     }
-	//赞助作者的按钮
+	//赞助作者的按钮 todo 移除并改为帮帮开发者
 	public void showad(View v)
 	{
         AlertDialog builder=new AlertDialog.Builder(this).create();
-        builder.setTitle("请选择赞助方式");
-        builder.setMessage("1.微信赞助,2.观看广告赞助作者");
-        builder.setButton("微信赞助",new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick(DialogInterface p1,int p2)
-                {
-                    Intent i =new Intent(ctx,wechat.class);
-                    startActivity(i);
-                }
-            });
+        builder.setTitle("帮帮开发者");
+        builder.setMessage("观看广告帮助作者");
         builder.setButton2("观看广告",new DialogInterface.OnClickListener()
             {
                 @Override
                 public void onClick(DialogInterface p1,int p2) 
                 {
-
-                    Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ctx,"感谢帮助",Toast.LENGTH_SHORT).show();
                 }
             });
         builder.show();
-		Toast.makeText(ctx,"对接yomob广告联盟或者其他广告联盟",Toast.LENGTH_SHORT).show();
 	}
 	//跳转到每日一句
 	public void openWeb(View v)
