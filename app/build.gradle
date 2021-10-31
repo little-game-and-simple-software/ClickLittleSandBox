@@ -1,16 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.littesandbox.clicksandbox"
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode 2
         versionName "1.4"
-        multiDexEnabled true
+      //  multiDexEnabled true
     }
 
     buildTypes {
@@ -18,6 +18,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             //signingConfig signingConfigs.releaseConfig ]
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
+            }
         }
         release {
             minifyEnabled false
@@ -26,6 +30,7 @@ android {
     }
 }
 repositories {
+    maven { url 'https://jitpack.io' }
     flatDir {
         dirs 'libs'
     }
@@ -34,7 +39,9 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //强制依赖库
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
     implementation(name: 'csj_ad_sdk_0622', ext: 'aar')
     implementation(name: 'gdt_ad_sdk_0621', ext: 'aar')
     implementation(name: 'ks_ad_sdk_0608', ext: 'aar')
@@ -48,6 +55,4 @@ dependencies {
     //implementation 'androidx.multidex:multidex:2.0.0'
 
   //  implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-
 }
