@@ -35,9 +35,16 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //强制依赖库
     implementation 'androidx.appcompat:appcompat:1.0.0'
-    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    //implementation 'com.squareup.okio:okio:1.14.0'
-   // implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation(name: 'csj_ad_sdk_0622', ext: 'aar')
+    implementation(name: 'gdt_ad_sdk_0621', ext: 'aar')
+    implementation(name: 'ks_ad_sdk_0608', ext: 'aar')
+    implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
+    implementation(name: 'pocket_ad_sdk_1.8.0', ext: 'aar')
+
+    //retrofit网络
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //json解析工具
+    implementation 'com.google.code.gson:gson:2.8.6'
     //implementation 'androidx.multidex:multidex:2.0.0'
 
   //  implementation 'com.android.support:appcompat-v7:28.0.0'

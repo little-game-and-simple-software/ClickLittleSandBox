@@ -16,6 +16,10 @@ import android.widget.Toast;
 
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
 
+import com.zh.pocket.ads.interstitial.InterstitialAD;
+import com.zh.pocket.ads.interstitial.InterstitialADListener;
+import com.zh.pocket.http.bean.ADError;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -184,7 +188,41 @@ public class MainActivity extends Activity
                 @Override
                 public void onClick(DialogInterface p1,int p2) 
                 {
+                    InterstitialAD interstitialAD = new InterstitialAD(MainActivity.this, "52781");
+                    interstitialAD.setInterstitialADListener(new InterstitialADListener()
+                    {
 
+                        @Override
+                        public void onAdLoader() {
+
+                        }
+
+                        @Override
+                        public void onADExposure() {
+
+                        }
+
+                        @Override
+                        public void onADClicked() {
+
+                        }
+
+                        @Override
+                        public void onADClosed() {
+
+                        }
+
+                        @Override
+                        public void onSuccess() {
+
+                        }
+
+                        @Override
+                        public void onFailed(ADError adError) {
+
+                        }
+                    });
+                    interstitialAD.show();
                     Toast.makeText(ctx,"感谢帮助",Toast.LENGTH_SHORT).show();
                 }
             });

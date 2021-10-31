@@ -9,6 +9,7 @@ public class Select {
 	Object obj=	activity.findViewById(id);
 		return obj;
 	}
+	//忘记干什么用的了
 	public static void set_val(Object obj,Object val)
 	{
 		
