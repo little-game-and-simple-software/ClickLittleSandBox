@@ -23,7 +23,7 @@ public class Game
         File dir=a.getFilesDir();
         String path=dir.getPath()+"/test.txt";
         File towrite=new File(path);
-        Toast.makeText(a,towrite.toString(),100).show();
+        Toast.makeText(a,towrite.toString(),Toast.LENGTH_SHORT).show();
         write=new FileWriter(towrite);
         //writer=new FileWriter(file);
         if(data.getCount()>0) 
@@ -61,7 +61,7 @@ public class Game
          currentStnArray.add(sentence[i]);
      }
    //  int index=currentStnArray.indexOf(t);
-     Toast.makeText(a,"最后"+t,1000).show();
+     Toast.makeText(a,"最后"+t,Toast.LENGTH_SHORT).show();
    int index=  currentStnArray.indexOf(t);
    Toast.makeText(a,"最后一个句子在原始数组的位置"+index,1000).show();
    //重置数组
