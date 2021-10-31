@@ -63,7 +63,7 @@ public class Game
    //  int index=currentStnArray.indexOf(t);
      Toast.makeText(a,"最后"+t,Toast.LENGTH_SHORT).show();
    int index=  currentStnArray.indexOf(t);
-   Toast.makeText(a,"最后一个句子在原始数组的位置"+index,1000).show();
+   Toast.makeText(a,"最后一个句子在原始数组的位置"+index,Toast.LENGTH_SHORT).show();
    //重置数组
    stn.clear();
    for(int ii=index+1;ii<sentence.length;ii++)
