@@ -172,6 +172,7 @@ public class MainActivity extends Activity
             });
         tool.show();
     }
+
 	//赞助作者的按钮 todo 移除并改为帮帮开发者
 	public void showad(View v)
 	{
@@ -183,6 +184,7 @@ public class MainActivity extends Activity
                 @Override
                 public void onClick(DialogInterface p1,int p2) 
                 {
+
                     Toast.makeText(ctx,"感谢帮助",Toast.LENGTH_SHORT).show();
                 }
             });
