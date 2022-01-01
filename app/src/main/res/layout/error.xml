@@ -29,6 +29,13 @@
 		android:onClick="get"
 		android:text="获取游戏数据信息" />
 
+	<Button
+		android:id="@+id/button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:onClick="testAd"
+		android:text="测试广告" />
+
 	<ScrollView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">

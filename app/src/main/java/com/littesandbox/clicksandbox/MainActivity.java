@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -15,9 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
-
 import com.zh.pocket.ads.interstitial.InterstitialAD;
 import com.zh.pocket.ads.interstitial.InterstitialADListener;
+import com.zh.pocket.ads.reward_video.RewardVideoAD;
+import com.zh.pocket.ads.reward_video.RewardVideoADListener;
 import com.zh.pocket.http.bean.ADError;
 
 import java.io.File;
@@ -68,6 +70,7 @@ public class MainActivity extends Activity
         {}
         list.setAdapter(adapter);
 		playBgm();
+
 		//listadapter数据长度
 		//创建数组适配器，4个参数 
     }
@@ -177,17 +180,18 @@ public class MainActivity extends Activity
         tool.show();
     }
 
-	//赞助作者的按钮 todo 移除并改为帮帮开发者
+	//赞助作者的按钮 todo 移除并改为帮帮开发者 插屏广告id不对
 	public void showad(View v)
 	{
-        AlertDialog builder=new AlertDialog.Builder(this).create();
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setTitle("帮帮开发者");
         builder.setMessage("观看广告帮助作者");
-        builder.setButton2("观看广告",new DialogInterface.OnClickListener()
+        builder.setNegativeButton("观看广告",new DialogInterface.OnClickListener()
             {
                 @Override
                 public void onClick(DialogInterface p1,int p2) 
                 {
+                    Toast.makeText(MainActivity.this,"观看广告",Toast.LENGTH_LONG).show();
                     InterstitialAD interstitialAD = new InterstitialAD(MainActivity.this, "52781");
                     interstitialAD.setInterstitialADListener(new InterstitialADListener()
                     {
@@ -218,12 +222,13 @@ public class MainActivity extends Activity
                         }
 
                         @Override
-                        public void onFailed(ADError adError) {
-
+                        public void onFailed(ADError adError)
+                        {
+                            Log.d("ADError",adError.getMessage());
                         }
                     });
                     interstitialAD.show();
-                    Toast.makeText(ctx,"感谢帮助",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(ctx,"感谢帮助",Toast.LENGTH_SHORT).show();
                 }
             });
         builder.show();

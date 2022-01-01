@@ -11,7 +11,8 @@ public class MyApplication extends Application
     public void onCreate() {
         super.onCreate();
         ADConfig.setEnableLogger(true);
-        PocketSdk.initSDK(this, "ylh", "10827");
+        //PocketSdk.initSDK(this, "ylh", "10827");
+        PocketSdk.initSDK(getApplicationContext(), "TapTap", "10827");
     }
 
 }
