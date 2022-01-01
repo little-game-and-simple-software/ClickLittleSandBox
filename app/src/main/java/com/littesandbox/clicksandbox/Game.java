@@ -13,7 +13,7 @@ import android.app.Activity;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import java.lang.reflect.Array;
-
+//存档读档
 public class Game 
 {
     public void save(Adapter data,Activity a) throws IOException
