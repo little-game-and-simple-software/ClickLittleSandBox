@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import com.zh.pocket.ads.banner.BannerAD;
 import com.zh.pocket.ads.banner.BannerADListener;
+import com.zh.pocket.ads.interstitial.InterstitialAD;
+import com.zh.pocket.ads.interstitial.InterstitialADListener;
 import com.zh.pocket.ads.reward_video.RewardVideoAD;
 import com.zh.pocket.ads.reward_video.RewardVideoADListener;
 import com.zh.pocket.http.bean.ADError;
@@ -68,9 +70,12 @@ public class Error extends Activity {
         //  s.add(result);
         arrayView.setText(s.toString() + "arrayLsit长度" + s.size());
     }
-
-    public void testAd(View v) {
-        /*BannerAD banner = new BannerAD(Error.this, "53655");
+    //测试banner
+    public void testBanner(View v)
+    {
+        Toast.makeText(getApplicationContext(), "测试banner", Toast.LENGTH_LONG).show();
+        Log.d("Error.class","测试banner");
+        BannerAD banner = new BannerAD(Error.this, "53655");
         banner.setBannerADListener(new BannerADListener() {
             @Override
             public void onSuccess() {
@@ -98,11 +103,14 @@ public class Error extends Activity {
 
             }
         });
-        banner.loadAD((ViewGroup) findViewById(R.id.error_root));*/
-        //测试播放激励视频广告 穿山甲id
+        banner.loadAD((ViewGroup) findViewById(R.id.error_root));
+    }
+    //测试播放激励视频广告
+    public void testReward(View v)
+    {
+        Toast.makeText(getApplicationContext(), "测试激励视频", Toast.LENGTH_LONG).show();
         //广告位已经被冻结 解冻需要2-3个小时 晚点试试
         RewardVideoAD rv = new RewardVideoAD(Error.this, "52783");
-        Toast.makeText(this, "测试播放激励视频广告", Toast.LENGTH_LONG);
         rv.setRewardVideoADListener(new RewardVideoADListener() {
             @Override
             public void onADLoaded() {
@@ -153,6 +161,7 @@ public class Error extends Activity {
             public void onFailed(ADError adError)
             {
                 Log.d("ADError", adError.getMessage());
+                Log.d("ADError", String.valueOf(adError));
             }
 
             @Override
@@ -166,5 +175,47 @@ public class Error extends Activity {
             }
         });
         rv.loadAD();
+    }
+    //测试静态插屏广告
+    public void testInter(View v)
+    {
+        Toast.makeText(getApplicationContext(), "测试静态插屏", Toast.LENGTH_LONG).show();
+        InterstitialAD inter = new InterstitialAD(Error.this, "53657");
+        inter.setInterstitialADListener(new InterstitialADListener()
+        {
+            @Override
+            public void onAdLoader() {
+
+            }
+
+            @Override
+            public void onADExposure() {
+
+            }
+
+            @Override
+            public void onADClicked() {
+
+            }
+
+            @Override
+            public void onADClosed() {
+
+            }
+
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFailed(ADError adError) {
+                Log.d("ADError", adError.getMessage());
+                Log.d("ADError", String.valueOf(adError));
+            }
+        });
+        //inter.show();
+        inter.loadAD();
+        inter.show();
     }
 }
