@@ -39,7 +39,10 @@
             android:id="@+id/hand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/hand" />
+            android:background="#FF0000"
+            android:contentDescription="hand"
+            android:isScrollContainer="false"
+            android:src="@drawable/hand" />
 
         <TextView
             android:layout_width="wrap_content"
