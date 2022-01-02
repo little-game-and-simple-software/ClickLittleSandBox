@@ -289,7 +289,7 @@ public class MainActivity extends Activity
 	//点击成就按钮
     public void achievement(View v)
     {
-        Intent i = new Intent(this,Achievement.class);
+        Intent i = new Intent(MainActivity.this,Achievement.class);
         startActivity(i);
     }
     //手动点击

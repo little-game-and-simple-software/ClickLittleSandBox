@@ -3,20 +3,29 @@ package com.littlesandbox.clicksandbox;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
-//import com.soulgame.sgsdk.tgsdklib.TGSDK;
-//import com.soulgame.sgsdk.tgsdklib.ad.ITGADListener;
+import com.littlesandbox.clicksandbox.AdListener.BannerListener;
+import com.zh.pocket.ads.banner.BannerAD;
 
-public class Achievement extends Activity //implements ITGADListener
+public class Achievement extends Activity
 {
     //立即获得成就按钮
     protected View get_achievement;
+    protected LinearLayout achive_banner_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achievement);
-        //TGSDK.setADListener(this);
+        achive_banner_layout = findViewById(R.id.achive_banner);
+    }
+    //立刻获得手废了没成就
+    public void hand(View v)
+    {
+        BannerAD bannerAD = new BannerAD(Achievement.this,"53655");
+        bannerAD.setBannerADListener(new BannerListener());
+        bannerAD.loadAD(achive_banner_layout);
     }
     public void get_achievement(View v)
     {
