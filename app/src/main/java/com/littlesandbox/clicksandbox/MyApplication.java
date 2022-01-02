@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 
 import android.app.Application;
 
@@ -12,7 +12,8 @@ public class MyApplication extends Application
         super.onCreate();
         ADConfig.setEnableLogger(true);
         //PocketSdk.initSDK(this, "ylh", "10827");
-        PocketSdk.initSDK(getApplicationContext(), "TapTap", "10827");
+       // PocketSdk.initSDK(getApplicationContext(), "TapTap", "10827");
+        PocketSdk.initSDK(getApplicationContext(), "点击小沙盒", "10827");
     }
 
 }

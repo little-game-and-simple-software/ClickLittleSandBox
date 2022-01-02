@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/error_root"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="为防止软件出现问题，特意添加此测试页面"
-		android:textAppearance="?android:attr/textAppearanceLarge"/>
+		android:textAppearance="?android:attr/textAppearanceLarge" />
 
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="重置此游戏"
-		android:onClick="reset"/>
+		android:onClick="reset"
+		android:text="重置此游戏" />
 
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="进入游戏"
-		android:onClick="enter"/>
+		android:onClick="enter"
+		android:text="进入游戏" />
 
 	<Button
 		android:layout_width="wrap_content"
@@ -41,32 +41,32 @@
 		android:layout_height="match_parent">
 
 		<LinearLayout
-			android:orientation="vertical"
+			android:id="@+id/root"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:id="@+id/root">
+			android:orientation="vertical">
 
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="纯文本:"/>
+				android:text="纯文本:" />
+
+			<TextView
+				android:id="@+id/gameData"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Text" />
 
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Text"
-				android:id="@+id/gameData"/>
+				android:text="arraylist:" />
 
 			<TextView
+				android:id="@+id/arraylist"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="arraylist:"/>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Text"
-				android:id="@+id/arraylist"/>
+				android:text="Text" />
 
 		</LinearLayout>
 

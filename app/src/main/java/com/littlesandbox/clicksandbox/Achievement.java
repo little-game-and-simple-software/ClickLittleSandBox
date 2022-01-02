@@ -1,12 +1,8 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
-import android.widget.TextView;
-import android.widget.Toast;
 
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
 //import com.soulgame.sgsdk.tgsdklib.ad.ITGADListener;

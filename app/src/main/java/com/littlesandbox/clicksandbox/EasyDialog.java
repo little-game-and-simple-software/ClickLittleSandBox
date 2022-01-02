@@ -1,8 +1,6 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.widget.Toast;
 
 public class EasyDialog
 {

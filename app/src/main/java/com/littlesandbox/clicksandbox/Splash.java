@@ -1,14 +1,8 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 import android.app.Activity;
 import android.os.Bundle;
-import java.util.Timer;
-import java.util.TimerTask;
 import android.widget.ImageView;
 import android.view.animation.Animation;
-import android.animation.ObjectAnimator;
-import android.view.animation.AnimationUtils;
-import android.view.animation.AnimationSet;
-import android.util.Property;
 import android.view.animation.AlphaAnimation;
 import android.content.Intent;
 import android.view.View.OnClickListener;

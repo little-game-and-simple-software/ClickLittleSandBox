@@ -1,10 +1,9 @@
-package com.littesandbox.clicksandbox.unused;
+package com.littlesandbox.clicksandbox.unused;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
-import android.widget.Toast;
 
-import com.littesandbox.clicksandbox.MainActivity;
+import com.littlesandbox.clicksandbox.MainActivity;
 
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
 

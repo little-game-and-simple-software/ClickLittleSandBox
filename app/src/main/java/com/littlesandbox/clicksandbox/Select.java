@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;

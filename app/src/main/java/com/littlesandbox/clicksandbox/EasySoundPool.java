@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 import java.io.File;
 import android.media.SoundPool;
 import android.content.Context;

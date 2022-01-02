@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -18,8 +18,6 @@ import android.widget.Toast;
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
 import com.zh.pocket.ads.interstitial.InterstitialAD;
 import com.zh.pocket.ads.interstitial.InterstitialADListener;
-import com.zh.pocket.ads.reward_video.RewardVideoAD;
-import com.zh.pocket.ads.reward_video.RewardVideoADListener;
 import com.zh.pocket.http.bean.ADError;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 //内部句子类
 public class Data
 {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.littesandbox.clicksandbox">
-    <!--com.littesandbox.clicksandbox-->
+    package="com.littlesandbox.clicksandbox">
+    <!--com.littlesandbox.clicksandbox-->
     <!-- 修改或删除 SD 卡中的内容 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />

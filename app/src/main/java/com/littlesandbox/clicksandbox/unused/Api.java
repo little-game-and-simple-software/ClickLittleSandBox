@@ -1,6 +1,5 @@
-package com.littesandbox.clicksandbox.unused;
-import android.os.Build;
-import android.system.Os;
+package com.littlesandbox.clicksandbox.unused;
+
 //安卓API对照表 暂定类
 public class Api 
 {

@@ -7,7 +7,7 @@ android {
           abortOnError false
       }
     defaultConfig {
-        applicationId "com.littesandbox.clicksandbox"
+        applicationId "com.littlesandbox.clicksandbox"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 2

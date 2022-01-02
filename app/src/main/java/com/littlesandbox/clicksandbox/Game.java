@@ -1,18 +1,17 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.util.ArrayList;
-import android.os.Environment;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.BufferedWriter;
+
 import android.widget.Adapter;
 import android.app.Activity;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
-import java.lang.reflect.Array;
+
 //存档读档
 public class Game 
 {

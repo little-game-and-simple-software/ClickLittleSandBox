@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -68,6 +68,8 @@ public class Error extends Activity {
     }
 
     public void testAd(View v) {
+        /*BannerAD banner = new BannerAD(Error.this,"53655");
+        banner.loadAD((ViewGroup)findViewById(R.id.error_root));*/
         //测试播放激励视频广告 穿山甲id
         //广告位已经被冻结 解冻需要2-3个小时 晚点试试
         RewardVideoAD rv = new RewardVideoAD(Error.this, "52783");

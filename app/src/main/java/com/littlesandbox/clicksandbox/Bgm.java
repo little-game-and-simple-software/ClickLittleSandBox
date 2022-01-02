@@ -1,4 +1,4 @@
-package com.littesandbox.clicksandbox;
+package com.littlesandbox.clicksandbox;
 import java.io.File;
 import android.media.MediaPlayer;
 import android.content.Context;
@@ -10,7 +10,7 @@ public class Bgm
 	public void init(Context ctx)
 	{
 		//bgmfile=new File("");
-		player=MediaPlayer.create(ctx,R.raw.greippi);
+		player=MediaPlayer.create(ctx, R.raw.greippi);
 		// bgm.setLooping(true);
 	}
      public void play()

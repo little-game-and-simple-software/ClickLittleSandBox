@@ -1,9 +1,6 @@
-package com.littesandbox.clicksandbox;
-import android.widget.ListAdapter;
+package com.littlesandbox.clicksandbox;
 import android.view.View;
 import android.view.ViewGroup;
-import android.database.DataSetObserver;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 //import android.widget.SimpleAdapter;
 
