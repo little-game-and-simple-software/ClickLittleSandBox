@@ -8,6 +8,7 @@ import android.content.Intent;
 
 import java.io.File;
 
+import android.view.ViewGroup;
 import android.widget.Toast;
 import android.widget.LinearLayout;
 
@@ -17,6 +18,8 @@ import java.io.IOException;
 
 import android.widget.TextView;
 
+import com.zh.pocket.ads.banner.BannerAD;
+import com.zh.pocket.ads.banner.BannerADListener;
 import com.zh.pocket.ads.reward_video.RewardVideoAD;
 import com.zh.pocket.ads.reward_video.RewardVideoADListener;
 import com.zh.pocket.http.bean.ADError;
@@ -30,8 +33,7 @@ public class Error extends Activity {
     ArrayList<String> s = new ArrayList<String>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.error);
         root = (LinearLayout) Select.select_id(this, R.id.root);
@@ -68,8 +70,35 @@ public class Error extends Activity {
     }
 
     public void testAd(View v) {
-        /*BannerAD banner = new BannerAD(Error.this,"53655");
-        banner.loadAD((ViewGroup)findViewById(R.id.error_root));*/
+        /*BannerAD banner = new BannerAD(Error.this, "53655");
+        banner.setBannerADListener(new BannerADListener() {
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFailed(ADError adError) {
+                Log.d("ADError", adError.getMessage());
+                Log.d("ADError", String.valueOf(adError.getCode()));
+            }
+
+            @Override
+            public void onADExposure() {
+
+            }
+
+            @Override
+            public void onADClicked() {
+
+            }
+
+            @Override
+            public void onADClosed() {
+
+            }
+        });
+        banner.loadAD((ViewGroup) findViewById(R.id.error_root));*/
         //测试播放激励视频广告 穿山甲id
         //广告位已经被冻结 解冻需要2-3个小时 晚点试试
         RewardVideoAD rv = new RewardVideoAD(Error.this, "52783");
