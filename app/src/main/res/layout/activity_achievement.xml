@@ -27,13 +27,32 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:text="状态" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="1"
+            android:text="获得条件" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/achievement1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="手废了没"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="14dp" />
 
         <ImageView
             android:id="@+id/hand"
@@ -56,8 +75,8 @@
             android:id="@+id/achievement_status1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:text="未获得" />
+            android:layout_marginLeft="30dp"
+            android:text="点击次数达到500次" />
 
         <Button
             android:layout_width="wrap_content"
@@ -146,6 +165,8 @@
         android:id="@+id/achive_banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
 </LinearLayout>
