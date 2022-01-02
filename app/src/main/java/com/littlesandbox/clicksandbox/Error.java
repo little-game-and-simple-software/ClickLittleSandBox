@@ -18,8 +18,11 @@ import java.io.IOException;
 
 import android.widget.TextView;
 
+import com.zh.pocket.PocketSdk;
 import com.zh.pocket.ads.banner.BannerAD;
 import com.zh.pocket.ads.banner.BannerADListener;
+import com.zh.pocket.ads.fullscreen_video.FullscreenVideoAD;
+import com.zh.pocket.ads.fullscreen_video.FullscreenVideoADListener;
 import com.zh.pocket.ads.interstitial.InterstitialAD;
 import com.zh.pocket.ads.interstitial.InterstitialADListener;
 import com.zh.pocket.ads.reward_video.RewardVideoAD;
@@ -32,6 +35,7 @@ public class Error extends Activity {
     LinearLayout root;
     TextView gameDataView;
     TextView arrayView;
+    LinearLayout test_banner;
     ArrayList<String> s = new ArrayList<String>();
 
     @Override
@@ -41,8 +45,106 @@ public class Error extends Activity {
         root = (LinearLayout) Select.select_id(this, R.id.root);
         gameDataView = (TextView) Select.select_id(this, R.id.gameData);
         arrayView = (TextView) Select.select_id(this, R.id.arraylist);
+        test_banner = findViewById(R.id.test_banner);
+        auto_banner();
     }
+    public void auto_banner()
+    {
+        Log.d("Error.class","测试banner");
+        BannerAD banner = new BannerAD(Error.this, "53655");
+        banner.setBannerADListener(new BannerADListener() {
+            @Override
+            public void onSuccess() {
 
+            }
+
+            @Override
+            public void onFailed(ADError adError) {
+                Log.d("ADError", adError.getMessage());
+                Log.d("ADError", String.valueOf(adError.getCode()));
+            }
+
+            @Override
+            public void onADExposure() {
+
+            }
+
+            @Override
+            public void onADClicked() {
+
+            }
+
+            @Override
+            public void onADClosed() {
+
+            }
+        });
+        banner.loadAD(test_banner);
+    }
+    public void testFullAd(View v)
+    {
+        Toast.makeText(Error.this,"测试全屏视频",Toast.LENGTH_LONG).show();
+        FullscreenVideoAD full = new FullscreenVideoAD(Error.this,"53663");
+        full.setFullscreenVideoADListener(new FullscreenVideoADListener() {
+            @Override
+            public void onADLoaded() {
+
+            }
+
+            @Override
+            public void onVideoCached() {
+
+            }
+
+            @Override
+            public void onADShow() {
+
+            }
+
+            @Override
+            public void onADExposure() {
+
+            }
+
+            @Override
+            public void onADClicked() {
+
+            }
+
+            @Override
+            public void onVideoComplete() {
+
+            }
+
+            @Override
+            public void onADClosed() {
+
+            }
+
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onError(ADError adError)
+            {
+                Log.d("ADError", adError.getMessage());
+                Log.d("ADError", String.valueOf(adError.getCode()));
+            }
+
+            @Override
+            public void onSkippedVideo() {
+
+            }
+
+            @Override
+            public void onPreload() {
+
+            }
+        });
+        full.loadAD();
+    }
     public void reset(View v) {
         String dir = getFilesDir().getPath();
         File f = new File(dir + "/test.txt");
@@ -103,18 +205,19 @@ public class Error extends Activity {
 
             }
         });
-        banner.loadAD((ViewGroup) findViewById(R.id.error_root));
+        banner.loadAD(test_banner);
     }
     //测试播放激励视频广告
     public void testReward(View v)
     {
         Toast.makeText(getApplicationContext(), "测试激励视频", Toast.LENGTH_LONG).show();
         //广告位已经被冻结 解冻需要2-3个小时 晚点试试
-        RewardVideoAD rv = new RewardVideoAD(Error.this, "52783");
+        RewardVideoAD rv = new RewardVideoAD(Error.this, "52781");
         rv.setRewardVideoADListener(new RewardVideoADListener() {
             @Override
-            public void onADLoaded() {
-
+            public void onADLoaded()
+            {
+                Log.d("Error class", "on ad loaded");
             }
 
             @Override
@@ -154,7 +257,7 @@ public class Error extends Activity {
 
             @Override
             public void onSuccess() {
-
+                Log.d("Error class", "reward on success");
             }
 
             @Override
@@ -179,6 +282,7 @@ public class Error extends Activity {
     //测试静态插屏广告
     public void testInter(View v)
     {
+        //加载广告失败，切换其他平台广告，错误信息是：ADError{code=6000, message='未知错误，详细码：102006'}
         Toast.makeText(getApplicationContext(), "测试静态插屏", Toast.LENGTH_LONG).show();
         InterstitialAD inter = new InterstitialAD(Error.this, "53657");
         inter.setInterstitialADListener(new InterstitialADListener()

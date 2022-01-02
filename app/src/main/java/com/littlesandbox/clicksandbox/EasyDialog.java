@@ -4,7 +4,7 @@ import android.content.Context;
 
 public class EasyDialog
 {
-	public AlertDialog builder;
+	public AlertDialog.Builder builder;
 	//**纯文字dialog**/
     public void setButtonListener()
     {
@@ -12,7 +12,7 @@ public class EasyDialog
     }
     public void init(Context ctx)
     {
-        builder=new AlertDialog.Builder(ctx).create();
+        builder=new AlertDialog.Builder(ctx);
     }
     
    public void setMessage(String title,String message)

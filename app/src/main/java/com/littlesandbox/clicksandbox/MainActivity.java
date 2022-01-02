@@ -45,7 +45,7 @@ public class MainActivity extends Activity
 	TextView scoreT;
 	int score=0;
 	//解锁的句子个数
-	TextView unlockT;
+	TextView unlockTv;
 	//封装类
 	Bgm bgm;
 	EasySoundPool tool;
@@ -81,7 +81,7 @@ public class MainActivity extends Activity
         len_T=findViewById(R.id.len);
 		scoreT=findViewById(R.id.score);
 		unlocked_stn=findViewById(R.id.unlock_stn);
-		unlockT=findViewById(R.id.unlocked);
+		unlockTv =findViewById(R.id.unlocked);
         randView=findViewById(R.id.rand);
         unlocked_stn=findViewById(R.id.unlock_stn);
         //显示有多少个句子
@@ -130,7 +130,7 @@ public class MainActivity extends Activity
         EasyDialog tool= new EasyDialog();
         tool.init(MainActivity.this);
         tool.setMessage("注意!","确定要重置吗,将会清除数据所有游戏数据");
-        tool.builder.setButton("确认",new DialogInterface.OnClickListener()
+        tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener()
             {
                 @Override
                 public void onClick(DialogInterface p1,int p2)
@@ -167,7 +167,7 @@ public class MainActivity extends Activity
         EasyDialog tool=new EasyDialog();
         tool.init(this);
         tool.setMessage("关于此游戏","66666");
-        tool.builder.setButton("确认",new DialogInterface.OnClickListener()
+        tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener()
             {
                 @Override
                 public void onClick(DialogInterface p1,int p2)
@@ -278,8 +278,7 @@ public class MainActivity extends Activity
 		EasyDialog tool=new EasyDialog();
         tool.init(this);
         tool.setMessage("联系作者","请加qq2439905184");
-        tool.builder.setButton("确认",new DialogInterface.OnClickListener(){
-
+        tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener(){
                 @Override
                 public void onClick(DialogInterface p1,int p2)
                 {
@@ -293,43 +292,40 @@ public class MainActivity extends Activity
         Intent i = new Intent(this,Achievement.class);
         startActivity(i);
     }
-	public void clickit(View v)
-	{
-		progress+=5;
-		bar.setProgress(progress);
-		showprogress.setText(progress+"/"+"100");
-		//todo 添加一个每次点击按钮时的音效 留住玩家
-		//数组长度
-		int size=stn.size();
-        //     Toast.makeText(ctx,"临时数组长度"+size,500).show();
+    //手动点击
+	public void clickit(View v) {
+        progress += 5;
+        bar.setProgress(progress);
+        showprogress.setText(progress + "/" + "100");
+        //todo 添加一个每次点击按钮时的音效 留住玩家
+        //数组长度
+        int size = stn.size();
+        //Toast.makeText(ctx,"临时数组长度"+size,500).show();
         //可变句子数组
-        if(size>0)
+        /*if(size>0)
         {
             adapter.add(stn.get(0));
             stn.remove(0);
+        }*/
+        unlockTv.setText("解锁句子个数" + adapter.getCount() + "/" + sentences.length);
+        if (progress >= 100) {
+            progress = 0;
+            bar.setProgress(progress);
+            score += 5;
+            scoreT.setText("积分:" + score);
+            //int len=sentences.length;
+            //todo 添加一个进度满了的胜利音效 留住玩家
+            if (size > 0) {
+                String toadd = stn.get(0);
+                adapter.add(toadd);
+                adapter.notifyDataSetChanged();
+                stn.remove(0);
+            }
+            randView.setText("当前数组长度" + size);
+            int count = adapter.getCount();
+            len_T.setText("adapter长度" + count);
+            //Toast.makeText(ctx,"句子数组length"+len,1000).show();*/
         }
-        unlockT.setText("解锁句子个数"+adapter.getCount()+"/"+sentences.length);
-		/*if(progress>=100)
-         {
-         progress=0;
-         bar.setProgress(progress);
-         score+=5;
-         scoreT.setText("积分:"+score);
-         //int len=sentences.length;
-         //todo 添加一个进度满了的胜利音效 留住玩家
-         if(size>0)
-         {
-         String toadd=stn.get(0);
-         adapter.add(toadd);
-         adapter.notifyDataSetChanged();
-         stn.remove(0);
-         }
-         randView.setText("当前数组长度"+size);
-         int count=adapter.getCount();
-         len_T.setText("adapter长度"+count);
-
-         //Toast.makeText(ctx,"句子数组length"+len,1000).show();*/
-    }	
-
+    }
 }
 	
