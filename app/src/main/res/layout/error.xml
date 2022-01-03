@@ -40,13 +40,15 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="0"
 			android:onClick="testFullAd"
-			android:text="测试全屏广告" />
+			android:text="测试全屏广告"
+			android:visibility="gone" />
 	</LinearLayout>
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:orientation="horizontal">
+		android:orientation="horizontal"
+		android:visibility="gone">
 
 		<Button
 			android:id="@+id/button"

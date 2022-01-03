@@ -25,7 +25,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:onClick="auto"
-				android:text="自动点击" />
+				android:text="自动点击"
+				android:visibility="gone" />
 
 			<Button
 				android:layout_width="wrap_content"

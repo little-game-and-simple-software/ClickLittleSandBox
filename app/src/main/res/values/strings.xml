@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">点击小沙盒</string>
+    <string name="app_name_en">clickSandBox</string>
+    <!--句子-->
+    <!--共20个句子-->
+    <string name="senten1">道可道，非常道</string>
+    <string name="senten2">"有空去看看《国际歌》，不要忘记了前人的努力。</string>
+    <string name="senten3"></string>
+    <string name="senten4"></string>
+    <string name="senten5"></string>
+    <string name="senten6"></string>
+    <string name="senten7"></string>
+    <string name="senten8"></string>
+    <string name="senten9"></string>
+    <string name="senten10"></string>
+    <string name="senten11"></string>
+    <string name="senten12"></string>
+    <string name="senten13"></string>
+    <string name="sentn14"></string>
+    <string name="senten15"></string>
+    <string name="senten16"></string>
+    <string name="senten17"></string>
+    <string name="senten18"></string>
+    <string name="senten19"></string>
+    <string name="senten20"></string>
+    <!--成就-->
+    <string name="achivement1">手废了没</string>
+    <string name="achivement2">2</string>
+    <string name="achivement3">3</string>
+    <string name="achivement4">4</string>
+    <string name="no_get">未获得此成就</string>
+    <string name="yes_get">已获得此成就</string>
 </resources>
