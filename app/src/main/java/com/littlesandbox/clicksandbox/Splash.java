@@ -20,11 +20,11 @@ public class Splash extends Activity {
 
                 @Override
                 public void onClick(View p1) {
-                    Intent i=new Intent(getApplicationContext(), Error.class);
-                 startActivity(i);      
+                    Intent i=new Intent(Splash.this, Error.class);
+                    startActivity(i);
                 }
             });
-
+        /*
         Animation anim;
         anim = new AlphaAnimation(0f, 1f);
         anim.setDuration(1000);
@@ -47,8 +47,7 @@ public class Splash extends Activity {
                 }
 
 
-            });
-    
+            });*/
     }
 
 

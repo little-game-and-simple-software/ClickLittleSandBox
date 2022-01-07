@@ -20,7 +20,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:background="#FFFFFFFF"
-		android:text="Made with Android Studio \n加载中，请勿点击屏幕！ "
+		android:text="Made with Android Studio \n请点击图标开始游戏"
 		android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>
