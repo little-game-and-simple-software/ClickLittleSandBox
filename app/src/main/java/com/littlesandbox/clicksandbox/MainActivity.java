@@ -90,28 +90,31 @@ public class MainActivity extends Activity
     //初始化数据
     public void initData() throws IOException  
     {
+        //从xml文件载入所有的句子
+        String[] all_sentens = getResources().getStringArray(R.array.sentens);
         String  dir = getFilesDir().getPath();
         File gameDataFile=new File(dir+"/test.txt");
         if(gameDataFile.exists())
         {
             Toast.makeText(ctx,"游戏文件存在",Toast.LENGTH_LONG).show();
-            /*for(int i =0;i < sentences.length;i++)
+            //载入所有的句子
+            for(int i =0; i < all_sentens.length; i++)
             {
-                stn.add(sentences[i]);
-            } 
-            new Game().load("test.txt",MainActivity.this,adapter,stn,sentences);
-            //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();*/
+                stn.add(all_sentens[i]);
+            }
+            //加载已完成的句子
+            new Game().load("test.txt",MainActivity.this,adapter,stn,all_sentens);
+            //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();
 
         }
         else
             {
                 Toast.makeText(ctx,"游戏文件不存在",Toast.LENGTH_LONG).show();
-                String[] all_sentens = getResources().getStringArray(R.array.sentens);
-                //getString(R.string.senten1);
-                /*for(int i =0;i < sentences.length;i++)
+
+                for(int i =0;i < all_sentens.length;i++)
                 {
-                    stn.add(sentences[i]);
-                }*/
+                    stn.add(all_sentens[i]);
+                }
             }
     }
     //保存进度

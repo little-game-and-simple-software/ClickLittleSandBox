@@ -40,28 +40,28 @@ public class Game
   public  void load(String filename,Activity a,ArrayAdapter adapter,ArrayList<String> stn,String[] sentence) throws FileNotFoundException, IOException 
    {
       // String finalResult="";
-	   ArrayList<String> currentStnArray=new ArrayList<String>();
-       File dir=a.getFilesDir();
-       String path=dir.getPath()+"/"+filename;
-        File toread=new File(path);
-        FileReader fileReader=new FileReader(toread);
+	   ArrayList<String> currentStnArray = new ArrayList<String>();
+       File dir = a.getFilesDir();
+       String path = dir.getPath()+"/"+filename;
+       File toread = new File(path);
+       FileReader fileReader = new FileReader(toread);
        BufferedReader reader = new BufferedReader(fileReader);
-         String tmp_line;
-       while((tmp_line=reader.readLine())!=null)
+       String tmp_line;
+       while((tmp_line=reader.readLine()) != null)
        {
            adapter.add(tmp_line);
         //   stn.add(tmp_line);
        }
        //获得最后一个值 原始数组
-     String t=  (String) adapter.getItem(adapter.getCount()-1);
+     String t =  (String) adapter.getItem(adapter.getCount()-1);
      //获取最后一个值在原始数组的位置
-     for(int i=0;i<sentence.length;i++)
+     for(int i =0;i < sentence.length;i++)
      {
          currentStnArray.add(sentence[i]);
      }
    //  int index=currentStnArray.indexOf(t);
-     Toast.makeText(a,"最后"+t,Toast.LENGTH_SHORT).show();
-   int index=  currentStnArray.indexOf(t);
+       Toast.makeText(a,"最后"+t,Toast.LENGTH_SHORT).show();
+       int index=  currentStnArray.indexOf(t);
    Toast.makeText(a,"最后一个句子在原始数组的位置"+index,Toast.LENGTH_SHORT).show();
    //重置数组
    stn.clear();
@@ -70,7 +70,6 @@ public class Game
        stn.add(sentence[ii]);
    }
      reader.close();
-
    }
-         }
+}
 
