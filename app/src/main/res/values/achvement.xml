@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--成就-->
+    <string name="achivement1">手废了没</string>
+    <string name="achivement2">2</string>
+    <string name="achivement3">3</string>
+    <string name="achivement4">4</string>
+    <string name="no_get">未获得此成就</string>
+    <string name="yes_get">已获得此成就</string>
+</resources>

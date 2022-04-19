@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sentens">
+        <item name="senten1">道可道，非常道。</>
+        <item name="senten2">"有空去看看《国际歌》，不要忘记了前人的努力。</item>
+        <item name="senten3">上学时，不要整天想着玩游戏，等放了假，随便玩。</item>
+        <item name="senten4">如果感到焦虑不安，可以试试正念疗法。</item>
+        <item name="senten5">学历代表过去，学习能力代表将来。</item>
+        <item name="senten6">生于忧患，死于安乐。</item>
+        <item name="senten7">我的世界是一款自由的沙盒游戏，你可以试试。</item>
+        <item name="senten8">游戏是世界第九大艺术。</item>
+        <item name="senten9">金坷垃是检验神曲的唯一标准。</item>
+        <item name="senten10">github是全球最大的软件技术开源平台。</item>
+        <item name="senten11">在《光遇》遇见每一个温柔的人。</item>
+        <item name="senten12">一根葱这种零食挺好吃的。</item>
+        <item name="senten13">如果对网页制作感兴趣，可以试试easypage这个app。</item>
+        <item name="senten14">真正有目标的人，不会整天看电视，只有闲人才会从早看到晚。</item>
+        <item name="senten15">学历不能代表一切，没有高学历，一样可以从事自己喜欢的事情并去开公司，只是会更加艰难一点。</item>
+        <item name="senten16">读书不能死读书，要活学活用。</item>
+        <item name="senten17">身体是革命的本钱。</item>
+        <item name="senten18">要做大事，先从小事做起。</item>
+        <item name="senten19">在追求梦想的时候，不能被资本腐蚀了心志，要明白你赚来的钱都是广大劳动人民的。</item>
+        <item name="senten20">学习任何东西，不管是自学还是老师教，都要记得做笔记，如果不练习，不使用，很快就会遗忘。</item>
+        <item name="senten21">如果觉得思维混乱，可以试试思维导图。</item>
+        <item name="senten22">透写台是个好工具，可以帮助你更好地临摹。</item>
+        <item name="senten23">到了初中以后，可以思考下学习是为了什么，不要变成学习机器。</item>
+        <item name="senten24">字典上的字都是互相解释的。</item>
+        <item name="senten25">赚钱不能吃香太难看，不能恶心人，要取一种平衡状态。</item>
+        <item name="senten26">是金子总会发光。</item>
+        <item name="senten27">音乐最擅长表达的是情绪，但不擅长表达理性逻辑。</item>
+        <item name="senten28">出名的方式有很多种，出臭名还是出美名，我的观点是出美名更好。</item>
+        <item name="senten29">认真做事只能把事情做对，用心做事才能把事情做好</item>
+    </string-array>
+</resources>
