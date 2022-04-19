@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sentens">
-        <item name="senten1">道可道，非常道。</>
+        <item name="senten1">道可道，非常道。</item>
         <item name="senten2">"有空去看看《国际歌》，不要忘记了前人的努力。</item>
         <item name="senten3">上学时，不要整天想着玩游戏，等放了假，随便玩。</item>
         <item name="senten4">如果感到焦虑不安，可以试试正念疗法。</item>
