@@ -109,19 +109,6 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
 
-		<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="作者的其他游戏"
-			android:onClick="showothergames"/>
-
-	</LinearLayout>
-
-	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
-
 		<TextView
 			android:id="@+id/unlock_stn"
 			android:layout_width="wrap_content"

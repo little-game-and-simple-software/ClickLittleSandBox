@@ -56,15 +56,10 @@ public class MainMenu extends Activity {
     //联系作者
     public void contect(View v)
     {
-        EasyDialog tool=new EasyDialog();
+        EasyDialog tool = new EasyDialog();
         tool.init(this);
         tool.setMessage("联系作者","请加qq2439905184");
-        tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener(){
-            @Override
-            public void onClick(DialogInterface p1,int p2)
-            {
-            }
-        });
+        tool.builder.setNegativeButton("确认",null);
         tool.show();
     }
     //打开每日一句网站

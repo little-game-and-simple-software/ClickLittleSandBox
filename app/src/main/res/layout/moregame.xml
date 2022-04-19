@@ -7,8 +7,8 @@
 
 	<GridView
 		android:id="@+id/grid"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_height="309dp"
 		android:numColumns="auto_fit" />
 <!--
 	<Button
@@ -29,17 +29,25 @@
 		android:text="音乐键盘手"
 		android:onClick="music"/>
 -->
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="更多发布在TapTap的游戏"
-		android:onClick="taptap"/>
 
-	<Button
-		android:layout_width="wrap_content"
+	<LinearLayout
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:onClick="indienova"
-		android:text="更多发布在indienova的游戏" />
+		android:gravity="center"
+		android:orientation="vertical">
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="indienova"
+			android:text="访问indienova上的工作室主页" />
+
+		<Button
+			android:layout_width="224dp"
+			android:layout_height="wrap_content"
+			android:onClick="taptap"
+			android:text="访问taptap上的工作室主页" />
+	</LinearLayout>
 
 </LinearLayout>
 

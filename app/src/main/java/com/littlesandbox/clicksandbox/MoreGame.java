@@ -23,12 +23,10 @@ public class MoreGame extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.moregame);
-    //  WebView web=  (WebView) $.select_id(this,R.id.web);
-    //  web.loadUrl("https://indienova.com/u/2439905184");
         GridView gv = findViewById(R.id.grid);
-        String view_text_array[] = {"冲击","水果下落消除","音乐键盘手"};
+        String view_text_array[] = {"冲击","水果下落消除","音乐键盘手","更多游戏敬请期待"};
         String urls[] = {"https://www.taptap.com/app/189201","https://www.taptap.com/app/196602","https://www.taptap.com/app/199683"};
-        int imgs[] = {R.drawable.rush,R.drawable.fruit,R.drawable.music};
+        int imgs[] = {R.drawable.rush ,R.drawable.fruit, R.drawable.music, R.drawable.ic_launcher};
         //ListAdapter ap = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,view_text_array);
         GridAdapter gp = new GridAdapter(MoreGame.this,view_text_array);
         gp.set_img(imgs);
@@ -38,21 +36,30 @@ public class MoreGame extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int positon, long l)
             {
-                if(positon==0)
+                if(positon == 0)
                 {
                     Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/app/189201"));
                     startActivity(i);
                 }
-                if(positon==1)
+                if(positon == 1)
                 {
                     Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/app/196602"));
                     startActivity(i);
                 }
-                if(positon==2)
+                if(positon == 2)
                 {
                     Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/app/199683"));
                     startActivity(i);
                 }
+                if(positon == 3)
+                {
+                    EasyDialog tool = new EasyDialog();
+                    tool.init(MoreGame.this);
+                    tool.setMessage("公告","请期待我们以后的游戏");
+                    tool.builder.setNegativeButton("确认",null);
+                    tool.show();
+                }
+                //debug用 别删
                 //Toast.makeText(MoreGame.this,"位置:"+positon,Toast.LENGTH_SHORT).show();
             }
         });
@@ -67,23 +74,4 @@ public class MoreGame extends Activity {
         Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/developer/83988"));
         startActivity(i); 
     }
-    //冲击
-    /*public void rush(View v)
-    {
-        Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/app/189201"));
-        startActivity(i); 
-    }
-    public void fruit(View v)
-    {
-        Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/app/196602"));
-        startActivity(i); 
-        }
-        public void music(View v)
-        {
-            Intent i=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.taptap.com/app/199683"));
-            startActivity(i); 
-        }
-    */
-    
-    
 }
