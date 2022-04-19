@@ -1,13 +1,10 @@
 package com.littlesandbox.clicksandbox;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -16,9 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
-import com.zh.pocket.ads.interstitial.InterstitialAD;
-import com.zh.pocket.ads.interstitial.InterstitialADListener;
-import com.zh.pocket.http.bean.ADError;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,8 +21,8 @@ import java.util.ArrayList;
 public class MainActivity extends Activity
 {
 	//句子索引
-	int iindex=0;
-    int progress=0;
+	int iindex = 0;
+    int progress = 0;
     ProgressBar bar;
     TextView randView;
     TextView unlocked_stn;
@@ -36,7 +30,7 @@ public class MainActivity extends Activity
     //String sentences[]={"道可道，非常道","有空去看看《国际歌》，不要忘记了前人的努力","上学时，不要整天想着玩游戏，等放了假，随便玩。","如果感到焦虑不安，可以试试正念疗法。","学历代表过去，学习能力代表将来","生于忧患，死于安乐","我的世界是一款自由的沙盒游戏，你可以试试。","游戏是世界第九大艺术","金坷垃是检验神曲的唯一标准","github是全球最大的软件技术开源平台","在《光遇》遇见每一个温柔的人","一根葱这种零食挺好吃的","如果对网页制作感兴趣，可以试试easypage","真正有目标的人，不会整天看电视，只有闲人才会从早看到晚","学历不能代表一切，没有高学历，一样可以从事自己喜欢的事情并去开公司，只是会更加艰难一点。","读书不能死读书，要活学活用","身体是革命的本钱","要做大事，先从小事做起","在追求梦想的时候，不能被资本腐蚀了心志，要明白你转来的钱都是广大劳动人民的。","学习任何东西，不管是自学还是老师教，都要记得做笔记，如果不练习，不使用，很快就会遗忘","如果觉得思维混乱，可以试试思维导图","透写台是个好工具，可以帮助你更好地临摹","到了初中以后，可以思考下学习是为了什么，不要变成学习机器，不能过于功利主义","字典上的字都是互相解释的","赚钱不能吃香太难看，不能恶心人，要取一种平衡状态","是金子总会发光","音乐最擅长表达的是情绪，但不擅长表达理性逻辑","出名的方式有很多种，出臭名还是出美名，我的观点是出美名更好"};
     TextView tmptext;
     //存档临时数据的arraylist
-    ArrayList<String> stn=new ArrayList<String>();
+    ArrayList<String> stn = new ArrayList<String>();
     Context ctx;
     TextView len_T;
     //显示进度
@@ -48,7 +42,7 @@ public class MainActivity extends Activity
 	TextView unlockTv;
 	//封装类
 	Bgm bgm;
-	EasySoundPool tool;
+	EasySoundPool easySoundPool;
     //防止多次点击自动按钮
     boolean canClickAutoBtn;
     @Override
@@ -57,6 +51,8 @@ public class MainActivity extends Activity
         //   requestPermissions();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        easySoundPool = new EasySoundPool(10,null);
+        easySoundPool.load(MainActivity.this, R.raw.qubodup_crash,5);
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
         // list.setAdapter(adapter);
         canClickAutoBtn=true;
@@ -68,7 +64,6 @@ public class MainActivity extends Activity
         {}
         list.setAdapter(adapter);
 		playBgm();
-
 		//listadapter数据长度
 		//创建数组适配器，4个参数 
     }
@@ -170,7 +165,6 @@ public class MainActivity extends Activity
     {
 
     }
-
     @Override
     public void onBackPressed()
     {
@@ -189,7 +183,9 @@ public class MainActivity extends Activity
         startActivity(i);
     }
     //手动点击
-	public void clickit(View v) {
+	public void clickit(View v)
+    {
+        easySoundPool.play(easySoundPool.click_stream_id);
         progress += 5;
         bar.setProgress(progress);
         showprogress.setText(progress + "/" + "100");

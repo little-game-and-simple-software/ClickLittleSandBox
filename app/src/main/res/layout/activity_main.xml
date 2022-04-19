@@ -19,7 +19,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:onClick="clickit"
-				android:text="点击" />
+				android:text="点击"
+				android:visibility="gone" />
 
 			<Button
 				android:layout_width="wrap_content"
@@ -85,24 +86,27 @@
 		android:id="@+id/progress"/>
 
 	<ImageView
-		android:src="@drawable/sand"
-		android:layout_width="100dp"
-		android:layout_height="100dp"
-		android:layout_gravity="center"/>
+		android:layout_width="150dp"
+		android:layout_height="150dp"
+		android:layout_gravity="center"
+		android:onClick="clickit"
+		android:src="@drawable/sand" />
 
 	<TextView
+		android:id="@+id/rand"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="随机值:"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:id="@+id/rand"/>
+		android:visibility="gone" />
 
 	<TextView
+		android:id="@+id/len"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="长度"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:id="@+id/len"/>
+		android:visibility="gone" />
 
 	<LinearLayout
 		android:orientation="horizontal"
