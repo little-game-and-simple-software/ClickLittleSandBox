@@ -63,7 +63,7 @@ public class MainMenu extends Activity {
         tool.show();
     }
     //打开每日一句网站
-    public void openEveryDay()
+    public void openEveryDay(View v)
     {
         EasyDialog tool = new EasyDialog();
         tool.init(MainMenu.this);

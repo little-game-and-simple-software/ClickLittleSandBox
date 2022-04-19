@@ -58,12 +58,14 @@
 			android:id="@+id/button10"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:onClick="openEveryDay"
 			android:text="访问每日一句" />
 
 		<Button
 			android:id="@+id/button11"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:onClick="show_other_games"
 			android:text="浏览作者的其他游戏" />
 	</LinearLayout>
 
