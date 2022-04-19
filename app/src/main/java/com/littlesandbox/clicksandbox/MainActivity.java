@@ -176,7 +176,7 @@ public class MainActivity extends Activity
          Game.save(stn, file);
          }catch(IOException e)
          {}*/
-        Toast.makeText(ctx,"如果不小心退出，请按图片重新进入主界面",Toast.LENGTH_LONG).show();
+       // Toast.makeText(ctx,"如果不小心退出，请按图片重新进入主界面",Toast.LENGTH_LONG).show();
     }
 	//点击成就按钮
     public void achievement(View v)
