@@ -23,7 +23,7 @@
         <activity android:name=".wechat"></activity>
         <activity android:name=".MoreGame"></activity>
         <activity android:name=".Error"></activity>
-        <activity android:name=".Splash">
+        <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

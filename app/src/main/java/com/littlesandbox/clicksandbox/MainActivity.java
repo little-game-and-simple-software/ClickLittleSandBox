@@ -57,7 +57,7 @@ public class MainActivity extends Activity
         //   requestPermissions();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
         // list.setAdapter(adapter);
         canClickAutoBtn=true;
 		initView();
@@ -75,27 +75,27 @@ public class MainActivity extends Activity
 //初始化界面
 	private void initView()
 	{
-        ctx=getApplicationContext();
-		bar=findViewById(R.id.bar);
-		showprogress=findViewById(R.id.progress);
-        len_T=findViewById(R.id.len);
-		scoreT=findViewById(R.id.score);
-		unlocked_stn=findViewById(R.id.unlock_stn);
-		unlockTv =findViewById(R.id.unlocked);
-        randView=findViewById(R.id.rand);
-        unlocked_stn=findViewById(R.id.unlock_stn);
+        ctx = getApplicationContext();
+		bar = findViewById(R.id.bar);
+		showprogress = findViewById(R.id.progress);
+        len_T = findViewById(R.id.len);
+		scoreT = findViewById(R.id.score);
+		unlocked_stn = findViewById(R.id.unlock_stn);
+		unlockTv = findViewById(R.id.unlocked);
+        randView = findViewById(R.id.rand);
+        unlocked_stn = findViewById(R.id.unlock_stn);
         //显示有多少个句子
 		list=findViewById(R.id.list);
 	}
     //初始化数据
     public void initData() throws IOException  
     {
-        String  dir=getFilesDir().getPath();
+        String  dir = getFilesDir().getPath();
         File gameDataFile=new File(dir+"/test.txt");
         if(gameDataFile.exists())
         {
             Toast.makeText(ctx,"游戏文件存在",Toast.LENGTH_LONG).show();
-            for(int i=0;i<sentences.length;i++)
+            for(int i =0;i < sentences.length;i++)
             {
                 stn.add(sentences[i]);
             } 
@@ -103,11 +103,11 @@ public class MainActivity extends Activity
             //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();
 
         }
-        if(gameDataFile.exists()==false)
+        if(gameDataFile.exists() == false)
         {
             Toast.makeText(ctx,"游戏文件不存在",Toast.LENGTH_LONG).show();
             //原始数据
-            for(int i=0;i<sentences.length;i++)
+            for(int i =0;i < sentences.length;i++)
             {
                 stn.add(sentences[i]);
             }
@@ -127,7 +127,7 @@ public class MainActivity extends Activity
     //重置进度
     public void reset(View v)
     {
-        EasyDialog tool= new EasyDialog();
+        EasyDialog tool = new EasyDialog();
         tool.init(MainActivity.this);
         tool.setMessage("注意!","确定要重置吗,将会清除数据所有游戏数据");
         tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener()
@@ -136,8 +136,8 @@ public class MainActivity extends Activity
                 public void onClick(DialogInterface p1,int p2)
                 {
                     Toast.makeText(ctx,"外部调用",Toast.LENGTH_LONG).show();
-                    String dir=getFilesDir().getPath();
-                    File f=new File(dir+"/test.txt");
+                    String dir = getFilesDir().getPath();
+                    File f = new File(dir+"/test.txt");
                     if(f.exists())
                     {
                         boolean result= f.delete();
@@ -151,7 +151,7 @@ public class MainActivity extends Activity
     }
 	private void playBgm()
 	{
-	    bgm=new Bgm();
+	    bgm = new Bgm();
 		bgm.init(ctx);
 		bgm.play();
 	}
@@ -161,109 +161,16 @@ public class MainActivity extends Activity
 		super.onDestroy();
 		bgm.stop();
 	}
-    //关于此游戏
-    public void about(View v)
-    {
-        EasyDialog tool=new EasyDialog();
-        tool.init(this);
-        tool.setMessage("关于此游戏","66666");
-        tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick(DialogInterface p1,int p2)
-                {
-
-                }
-            });
-        tool.show();
-    }
-
-	//赞助作者的按钮 todo 移除并改为帮帮开发者 插屏广告id不对
-	public void showad(View v)
-	{
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setTitle("帮帮开发者");
-        builder.setMessage("观看广告帮助作者");
-        builder.setNegativeButton("观看广告",new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick(DialogInterface p1,int p2) 
-                {
-                    Toast.makeText(MainActivity.this,"观看广告",Toast.LENGTH_LONG).show();
-                    InterstitialAD interstitialAD = new InterstitialAD(MainActivity.this, "52781");
-                    interstitialAD.setInterstitialADListener(new InterstitialADListener()
-                    {
-
-                        @Override
-                        public void onAdLoader() {
-
-                        }
-
-                        @Override
-                        public void onADExposure() {
-
-                        }
-
-                        @Override
-                        public void onADClicked() {
-
-                        }
-
-                        @Override
-                        public void onADClosed() {
-
-                        }
-
-                        @Override
-                        public void onSuccess() {
-
-                        }
-
-                        @Override
-                        public void onFailed(ADError adError)
-                        {
-                            Log.d("ADError",adError.getMessage());
-                        }
-                    });
-                    interstitialAD.show();
-                    //Toast.makeText(ctx,"感谢帮助",Toast.LENGTH_SHORT).show();
-                }
-            });
-        builder.show();
-	}
-	//跳转到每日一句
-	public void openWeb(View v)
-	{
-		Uri uri=Uri.parse("http://everydayonesentence.biu8.top");
-		Intent i=new Intent(Intent.ACTION_VIEW,uri);
-		startActivity(i);
-	}
-    //自动点击 对接tgsdk
+    //自动点击
     public void auto(View v)
     {
-        /*boolean could= TGSDK.couldShowAd(Global.sceneid);
-        if(could)
-        {
-            TGSDK.showAd(this,Global.sceneid);
-            Toast.makeText(this,"ok",Toast.LENGTH_LONG).show();
-        }
-        else
-        {
-            Toast.makeText(this,"failed",Toast.LENGTH_LONG).show();
-        }*/
+
     }
-    //展示更多游戏
-	public void showothergames(View v)
-	{
-        Intent i=new Intent(ctx,MoreGame.class);
-        startActivity(i);
-		//Toast.makeText(ctx,"功能没有做",Toast.LENGTH_LONG).show();
-	}
+
     @Override
     public void onBackPressed()
     {
         super.onBackPressed();
-
         //File file = new File("/sdcard/Download/test.txt");
         /*      try{
          Game.save(stn, file);
@@ -271,21 +178,6 @@ public class MainActivity extends Activity
          {}*/
         Toast.makeText(ctx,"如果不小心退出，请按图片重新进入主界面",Toast.LENGTH_LONG).show();
     }
-
-	//联系作者
-	public void contect(View v)
-	{
-		EasyDialog tool=new EasyDialog();
-        tool.init(this);
-        tool.setMessage("联系作者","请加qq2439905184");
-        tool.builder.setNegativeButton("确认",new DialogInterface.OnClickListener(){
-                @Override
-                public void onClick(DialogInterface p1,int p2)
-                {
-                }
-            });
-        tool.show();
-	}
 	//点击成就按钮
     public void achievement(View v)
     {

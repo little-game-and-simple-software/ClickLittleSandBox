@@ -145,12 +145,6 @@ public class Error extends Activity {
         });
         full.loadAD();
     }
-    public void reset(View v) {
-        String dir = getFilesDir().getPath();
-        File f = new File(dir + "/test.txt");
-        boolean result = f.delete();
-        Toast.makeText(this, "删除状态" + result, Toast.LENGTH_SHORT).show();
-    }
 
     public void enter(View v) {
         startActivity(new Intent(this, MainActivity.class));
