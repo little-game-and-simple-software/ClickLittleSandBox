@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -51,7 +53,7 @@ public class MainActivity extends Activity
         //   requestPermissions();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        easySoundPool = new EasySoundPool(10,null);
+        easySoundPool = new EasySoundPool(10);
         easySoundPool.load(MainActivity.this, R.raw.qubodup_crash,5);
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
         // list.setAdapter(adapter);
