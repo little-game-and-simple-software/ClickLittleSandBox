@@ -1,5 +1,6 @@
 package com.littlesandbox.clicksandbox;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -8,7 +9,9 @@ import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.TranslateAnimation;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -47,6 +50,8 @@ public class MainActivity extends Activity
 	EasySoundPool easySoundPool;
     //防止多次点击自动按钮
     boolean canClickAutoBtn;
+    private ImageView sandbox;
+    private ObjectAnimator knock_animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -55,6 +60,7 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
         easySoundPool = new EasySoundPool(10);
         easySoundPool.load(MainActivity.this, R.raw.qubodup_crash,5);
+        sandbox = findViewById(R.id.sandbox);
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,new ArrayList<String>());
         // list.setAdapter(adapter);
         canClickAutoBtn=true;
@@ -184,13 +190,17 @@ public class MainActivity extends Activity
         Intent i = new Intent(MainActivity.this,Achievement.class);
         startActivity(i);
     }
-    //手动点击
+    //手动点击 View:小沙盒的图标
 	public void clickit(View v)
     {
         easySoundPool.play(easySoundPool.click_stream_id);
         progress += 5;
         bar.setProgress(progress);
         showprogress.setText(progress + "/" + "100");
+        //盒子被敲打之后的抖动 动画
+        knock_animation  = ObjectAnimator.ofFloat(sandbox, "translationX", 0, -100f ,-100, 0);
+        knock_animation.setDuration(1000);
+        knock_animation.start();
         //todo 添加一个每次点击按钮时的音效 留住玩家
         //数组长度
         int size = stn.size();
