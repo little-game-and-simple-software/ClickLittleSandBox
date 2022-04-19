@@ -49,7 +49,7 @@ public class MainMenu extends Activity {
     {
         EasyDialog tool=new EasyDialog();
         tool.init(this);
-        tool.setMessage("关于此游戏","全力收集句子吧！，");
+        tool.setMessage("关于此游戏","全力收集句子吧！");
         tool.builder.setNegativeButton("确认",null);
         tool.show();
     }
