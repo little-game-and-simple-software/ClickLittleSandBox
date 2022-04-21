@@ -28,6 +28,7 @@
             android:orientation="horizontal">
 
             <RadioGroup
+                android:id="@+id/achive_filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -46,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="已获得"
-                    android:textColor="#FFEB3B"
+                    android:textColor="#000000"
                     android:textColorHint="#482424" />
 
                 <RadioButton
@@ -62,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
+                android:onClick="change_view_mode"
                 android:text="列表模式" />
 
         </LinearLayout>
