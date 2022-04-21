@@ -1,0 +1,28 @@
+{
+  "achive1":
+  {
+    "title": "自动点击，是否双手",
+    "img": "R.drawable.auto",
+    "how_to_get": "第一次使用自动点击功能获得"
+  },
+  "achive2":
+  {
+    "title": "手废了没",
+    "img": "R.drawable.hand",
+    "how_to_get": "点击次数超300次获得",
+    "require_clicks": 300
+  },
+  "achive3":
+  {
+    "title": "人型打桩机",
+    "img": "R.drawable.xxx",
+    "how_to_get": "点击次数超过1000次获得",
+    "require_clicks": 1000
+  },
+  "achive4":
+  {
+    "title": "持之以恒",
+    "img": "R.drawable.xx",
+    "how_to_get": "获得所有句子后获得"
+  }
+}
