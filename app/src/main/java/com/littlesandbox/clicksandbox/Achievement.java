@@ -1,32 +1,19 @@
 package com.littlesandbox.clicksandbox;
 
 import android.app.Activity;
-import android.graphics.Color;
+import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.littlesandbox.clicksandbox.AdListener.AchivementBannerListener;
 import com.littlesandbox.clicksandbox.AdListener.BannerListener;
-import com.littlesandbox.clicksandbox.Datas.Achivements;
-import com.littlesandbox.clicksandbox.utils.EasyRawJson;
 import com.zh.pocket.ads.banner.BannerAD;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 
 public class Achievement extends Activity
 {
@@ -37,18 +24,20 @@ public class Achievement extends Activity
     private LinearLayout achive_roots;
     public BannerAD bannerAD;
     public BannerListener bannerListener;
+    public static Context ctx;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achievement);
+        ctx= getApplicationContext();
         achive_banner_layout = findViewById(R.id.achive_banner);
         bannerAD = new BannerAD(this,Global.bannerid);
         bannerListener = new BannerListener(Achievement.this);
         bannerAD.setBannerADListener(bannerListener);
 
         bannerAD.loadAD(achive_banner_layout);
-        setAchiveLayoutData();
+        initAchiveLayoutData();
         RadioGroup achive_filter_group = findViewById(R.id.achive_filter);
         achive_filter_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
@@ -66,7 +55,30 @@ public class Achievement extends Activity
     {
         Toast.makeText(Achievement.this,"功能未完成",Toast.LENGTH_LONG).show();
     }
-    private void setAchiveLayoutData()
+    //接在存档
+    private void load_game_data()
+    {
+        AchivementStruct achivement_data1 = Game.load_achivement(ctx, 0);
+        AchivementStruct achivement_data2 = Game.load_achivement(ctx,1);
+        AchivementStruct achivement_data3 = Game.load_achivement(ctx,2);
+        AchivementStruct achivement_data4 = Game.load_achivement(ctx,3);
+
+        AchivementStruct[] achivementStructs = new AchivementStruct[4];
+        achivementStructs[0] = achivement_data1;
+        achivementStructs[1] = achivement_data2;
+        achivementStructs[2] = achivement_data3;
+        achivementStructs[3] = achivement_data4;
+
+        setAchiveLayoutData(achivementStructs);
+    }
+    private void setAchiveLayoutData(AchivementStruct[] achivementStructs)
+    {
+        for(int i = 0 ;i < achivementStructs.length; i++)
+        {
+            //下次再做！ 2022-4-21
+        }
+    }
+    private void initAchiveLayoutData()
     {
         achive_roots = findViewById(R.id.achives_root);
         View achive_release_hand_view = achive_roots.findViewById(R.id.include_1);
@@ -124,11 +136,13 @@ public class Achievement extends Activity
     {
         int button_id;
         ImageView img;
+        public AchivementStruct achivementData;
         public AchiveNowListener(){}
         public AchiveNowListener(int id, ImageView p_img)
         {
             this.button_id = id;
             this.img = p_img;
+            achivementData = new AchivementStruct();
         }
         @Override
         public void onClick(View view)
@@ -138,20 +152,40 @@ public class Achievement extends Activity
             {
                // Log.d("img",img.toString());
                 img.setImageResource(R.drawable.auto);
+                achivementData.lock_status = false;
+                achivementData.title = "自动点击-释放双手";
+                achivementData.progress = 1;
+                achivementData.current_progress = 1;
+                Game.save_achivement(ctx, achivementData,0);
             }
             if(button_id == 1)
             {
+                achivementData.lock_status = false;
+                achivementData.title = "手废了没";
+                achivementData.progress = 300;
+                achivementData.current_progress = 300;
+                Game.save_achivement(ctx, achivementData,1);
                 img.setImageResource(R.drawable.hand);
             }
             if(button_id == 2)
             {
+                achivementData.lock_status = false;
+                achivementData.title = "人型打桩机";
+                achivementData.progress = 1000;
+                achivementData.current_progress = 1000;
+                Game.save_achivement(ctx, achivementData, 2);
                 img.setImageResource(R.drawable.dzj);
             }
             if(button_id == 3)
             {
+                achivementData.lock_status = false;
+                achivementData.title = "持之以恒";
+                achivementData.progress = 1;
+                achivementData.current_progress = 1;
+                Game.save_achivement(ctx, achivementData, 3);
                 img.setImageResource(R.drawable.czyh);
             }
-            //bannerAD.loadAD(achive_banner_layout);
+            bannerAD.loadAD(achive_banner_layout);
         }
     }
 }

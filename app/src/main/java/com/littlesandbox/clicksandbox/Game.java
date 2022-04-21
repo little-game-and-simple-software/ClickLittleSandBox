@@ -7,14 +7,48 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import android.content.Context;
 import android.widget.Adapter;
 import android.app.Activity;
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 
+import com.google.gson.Gson;
+import com.littlesandbox.clicksandbox.utils.EasyFile;
+
 //存档读档
 public class Game 
 {
+    //保存成就 由于不会拼接json 所以分文件存储
+    public static void save_achivement(Context ctx, AchivementStruct data, int id)
+    {
+        File filesdir =  ctx.getFilesDir();
+        File achive_file = new File(filesdir.getPath() + "/achivement" + String.valueOf(id) + ".json");
+        Gson gson = new Gson();
+        String json_1 = gson.toJson(data);
+        try {
+            FileWriter fw = new FileWriter(achive_file);
+            fw.write(json_1);
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static AchivementStruct load_achivement(Context ctx, int id)
+    {
+        File filesdir =  ctx.getFilesDir();
+        File achive_file = new File(filesdir.getPath() + "/achivement" + String.valueOf(id) + ".json");
+        EasyFile easyFile = new EasyFile(achive_file);
+        String loaded_json = null;
+        try {
+             loaded_json = easyFile.readAll();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Gson gson = new Gson();
+        AchivementStruct jsonObjData = gson.fromJson(loaded_json, AchivementStruct.class);
+        return jsonObjData;
+    }
     public void save(Adapter data,Activity a) throws IOException
     { 
         FileWriter write;
@@ -23,7 +57,7 @@ public class Game
         String path=dir.getPath()+"/test.txt";
         File towrite=new File(path);
         Toast.makeText(a,towrite.toString(),Toast.LENGTH_SHORT).show();
-        write=new FileWriter(towrite);
+        write = new FileWriter(towrite);
         //writer=new FileWriter(file);
         if(data.getCount()>0) 
         {
