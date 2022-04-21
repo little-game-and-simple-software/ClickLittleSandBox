@@ -8,162 +8,119 @@
     tools:context=".Achievement">
 
     <LinearLayout
-        android:id="@+id/achievement_describe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/describe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="成就描述" />
-
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="状态" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_weight="1"
-            android:text="获得条件" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/achievement1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/hand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#FF0000"
-            android:contentDescription="hand"
-            android:isScrollContainer="false"
-            android:src="@drawable/hand" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="@string/achivement1"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="14dp" />
-
-        <TextView
-            android:id="@+id/achievement_status1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="点击次数达到500次" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="hand"
-            android:text="立即获得成就(banner AD)" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/achievement2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="47dp"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/auto" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="手废了没"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="14dp" />
-
-        <TextView
-            android:id="@+id/achievement_status2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:text="未获得" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="get_achievement"
-            android:text="立即获得成就(AD)" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/achievement3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="47dp"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/czyh" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="手废了没"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="14dp" />
-
-        <TextView
-            android:id="@+id/achievement_status3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:text="未获得" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="get_achievement"
-            android:text="立即获得成就(AD)" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/achive_state1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/no_get" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="更多成就敬请期待" />
-
-    <LinearLayout
         android:id="@+id/achive_banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#8BC34A"
+                    android:text="全部"
+                    android:textColor="#FFEB3B"
+                    android:textColorHint="#FFEB3B" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已获得"
+                    android:textColor="#FFEB3B"
+                    android:textColorHint="#482424" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未获得" />
+
+            </RadioGroup>
+
+            <Switch
+                android:id="@+id/switch_view_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="列表模式" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/split_bar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#D0C8BC"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/achive_total_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总收集数:"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/achive_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/achives_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include_1"
+            layout="@layout/achivement_item">
+        </include>
+        <include
+            android:id="@+id/include_2"
+            layout="@layout/achivement_item">
+        </include>
+
+        <include
+            android:id="@+id/include_3"
+            layout="@layout/achivement_item"></include>
+
+        <include
+            android:id="@+id/include_4"
+            layout="@layout/achivement_item">
+        </include>
     </LinearLayout>
 
 </LinearLayout>
