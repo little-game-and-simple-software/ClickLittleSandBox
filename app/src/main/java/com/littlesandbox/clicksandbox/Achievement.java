@@ -1,10 +1,13 @@
 package com.littlesandbox.clicksandbox;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +39,22 @@ public class Achievement extends Activity
         achive_banner_layout = findViewById(R.id.achive_banner);
         //tv_achive_state1 = findViewById(R.id.achive_state1);
         setAchiveLayoutData();
+        RadioGroup achive_filter_group = findViewById(R.id.achive_filter);
+        achive_filter_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i)
+            {
+                Toast.makeText(Achievement.this,"功能未完成",Toast.LENGTH_LONG).show();
+                /*RadioButton clicked = (RadioButton) radioGroup.getChildAt(i);
+                clicked.setTextColor(Color.YELLOW);
+                clicked.setBackgroundColor(Color.rgb(139,195,74));*/
+            }
+        });
+    }
+    public void change_view_mode(View v)
+    {
+        Toast.makeText(Achievement.this,"功能未完成",Toast.LENGTH_LONG).show();
     }
     private void setAchiveLayoutData()
     {
