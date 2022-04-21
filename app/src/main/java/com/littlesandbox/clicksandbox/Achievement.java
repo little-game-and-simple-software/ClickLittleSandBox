@@ -3,6 +3,7 @@ package com.littlesandbox.clicksandbox;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -108,7 +109,10 @@ public class Achievement extends Activity
         achive_title4.setText("持之以恒");
         achive_how_to_get4.setText("获得所有句子后获得");
         achive_img4.setImageResource(R.drawable.unknown);
-
+        
+        //AchiveNowListener achiveNowListener = new AchiveNowListener();
+        //2022-4-21 bug 闪退 在OnClick监听已经修复 未在banner监听测试
+        //Log.d("img",achive_img1.toString());
         achive_now1.setOnClickListener(new AchiveNowListener(0,achive_img1));
         achive_now2.setOnClickListener(new AchiveNowListener(1,achive_img2));
         achive_now3.setOnClickListener(new AchiveNowListener(2,achive_img3));
@@ -118,16 +122,36 @@ public class Achievement extends Activity
     }
     class AchiveNowListener implements View.OnClickListener
     {
-        public AchiveNowListener(int id,ImageView img)
+        int button_id;
+        ImageView img;
+        public AchiveNowListener(){}
+        public AchiveNowListener(int id, ImageView p_img)
         {
-            bannerListener.buttonid = id;
-            bannerListener.achive_img = img;
+            this.button_id = id;
+            this.img = p_img;
         }
         @Override
         public void onClick(View view)
         {
-            //Button button = (Button)view;
-            bannerAD.loadAD(achive_banner_layout);
+            //这里就不较真了 反正调用广告次数过多出现问题
+            if(button_id == 0)
+            {
+               // Log.d("img",img.toString());
+                img.setImageResource(R.drawable.auto);
+            }
+            if(button_id == 1)
+            {
+                img.setImageResource(R.drawable.hand);
+            }
+            if(button_id == 2)
+            {
+                img.setImageResource(R.drawable.dzj);
+            }
+            if(button_id == 3)
+            {
+                img.setImageResource(R.drawable.czyh);
+            }
+            //bannerAD.loadAD(achive_banner_layout);
         }
     }
 }
