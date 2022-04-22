@@ -11,7 +11,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.littlesandbox.clicksandbox.AdListener.BannerListener;
 import com.zh.pocket.ads.banner.BannerAD;
 
@@ -21,10 +20,39 @@ public class Achievement extends Activity
     protected View get_achievement;
     protected LinearLayout achive_banner_layout;
     protected TextView tv_achive_state1;
-    private LinearLayout achive_roots;
+
     public BannerAD bannerAD;
     public BannerListener bannerListener;
     public static Context ctx;
+    //界面
+    public static class Views
+    {
+        public static LinearLayout achive_roots;
+        public static View achive_release_hand_view;
+        public static ImageView achive_img1;
+        public static Button achive_now1;
+
+        public static View achive_auto_view;
+        public static TextView achive_title2;
+        public static TextView achive_how_to_get2;
+        public static TextView achive_progress2;
+        public static Button achive_now2;
+        public static ImageView achive_img2;
+
+        public static View achive_hand_view;
+        public static TextView achive_title3;
+        public static TextView achive_how_to_get3;
+        public static TextView achive_progress3;
+        public static Button achive_now3;
+        public static ImageView achive_img3;
+
+        public static View achive_da_zhuang;
+        public static TextView achive_title4;
+        public static TextView achive_how_to_get4;
+        public static TextView achive_progress4;
+        public static Button achive_now4;
+        public static ImageView achive_img4;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -37,6 +65,8 @@ public class Achievement extends Activity
         bannerAD.setBannerADListener(bannerListener);
 
         bannerAD.loadAD(achive_banner_layout);
+        //先找到界面 再修改数据
+        init_view();
         initAchiveLayoutData();
         RadioGroup achive_filter_group = findViewById(R.id.achive_filter);
         achive_filter_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
@@ -50,6 +80,7 @@ public class Achievement extends Activity
                 clicked.setBackgroundColor(Color.rgb(139,195,74));*/
             }
         });
+        load_game_data();
     }
     public void change_view_mode(View v)
     {
@@ -76,61 +107,64 @@ public class Achievement extends Activity
         for(int i = 0 ;i < achivementStructs.length; i++)
         {
             //下次再做！ 2022-4-21
+
         }
     }
+    private void init_view()
+    {
+        //Achievement.views
+        Views.achive_roots = findViewById(R.id.achives_root);
+        //1
+        Views.achive_release_hand_view = Views.achive_roots.findViewById(R.id.include_1);
+        Views.achive_img1 = Views.achive_release_hand_view.findViewById(R.id.achive_img);
+        Views.achive_now1 = Views.achive_release_hand_view.findViewById(R.id.achive_now);
+        //2
+        Views.achive_auto_view = Views.achive_roots.findViewById(R.id.include_2);
+        Views.achive_img2 = Views.achive_auto_view.findViewById(R.id.achive_img);
+        Views.achive_title2 = Views.achive_auto_view.findViewById(R.id.achive_title);
+        Views.achive_how_to_get2 = Views.achive_auto_view.findViewById(R.id.achive_how_to_get);
+        Views.achive_progress2 = Views.achive_auto_view.findViewById(R.id.achive_progess);
+        Views.achive_now2 = Views.achive_auto_view.findViewById(R.id.achive_now);
+        //3
+        Views.achive_hand_view = Views.achive_roots.findViewById(R.id.include_3);
+        Views.achive_img3 = Views.achive_hand_view.findViewById(R.id.achive_img);
+        Views.achive_title3 = Views.achive_hand_view.findViewById(R.id.achive_title);
+        Views.achive_how_to_get3 = Views.achive_hand_view.findViewById(R.id.achive_how_to_get);
+        Views.achive_progress3 = Views.achive_hand_view.findViewById(R.id.achive_progess);
+        Views.achive_now3 = Views.achive_hand_view.findViewById(R.id.achive_now);
+        //4
+        Views.achive_da_zhuang = Views.achive_roots.findViewById(R.id.include_3);
+        Views.achive_img4 = Views.achive_da_zhuang.findViewById(R.id.achive_img);
+        Views.achive_title4 = Views.achive_da_zhuang.findViewById(R.id.achive_title);
+        Views.achive_how_to_get4 = Views.achive_da_zhuang.findViewById(R.id.achive_how_to_get);
+        Views.achive_progress4 = Views.achive_da_zhuang.findViewById(R.id.achive_progess);
+        Views.achive_now4 = Views.achive_da_zhuang.findViewById(R.id.achive_now);
+    }
+    //备份方法
     private void initAchiveLayoutData()
     {
-        achive_roots = findViewById(R.id.achives_root);
-        View achive_release_hand_view = achive_roots.findViewById(R.id.include_1);
-        ImageView achive_img1 = achive_release_hand_view.findViewById(R.id.achive_img);
-        Button achive_now1 = achive_release_hand_view.findViewById(R.id.achive_now);
+        Views.achive_img1.setImageResource(R.drawable.unknown);
+        Views.achive_img2.setImageResource(R.drawable.unknown);
+        Views.achive_img3.setImageResource(R.drawable.unknown);
+        Views.achive_img4.setImageResource(R.drawable.unknown);
 
-        View achive_auto_view = achive_roots.findViewById(R.id.include_2);
-        TextView achive_title2 = achive_auto_view.findViewById(R.id.achive_title);
-        TextView achive_how_to_get2 = achive_auto_view.findViewById(R.id.achive_how_to_get);
-        TextView achive_progress2 = achive_auto_view.findViewById(R.id.achive_progess);
-        Button achive_now2 = achive_auto_view.findViewById(R.id.achive_now);
-        ImageView achive_img2 = achive_auto_view.findViewById(R.id.achive_img);
+        Views.achive_title2.setText("手废了没");
+        Views.achive_how_to_get2.setText("点击次数超300次获得");
+        Views.achive_progress2.setText("300");
 
-        View achive_hand_view = achive_roots.findViewById(R.id.include_3);
-        TextView achive_title3 = achive_hand_view.findViewById(R.id.achive_title);
-        TextView achive_how_to_get3 = achive_hand_view.findViewById(R.id.achive_how_to_get);
-        TextView achive_progress3 = achive_hand_view.findViewById(R.id.achive_progess);
-        Button achive_now3 = achive_hand_view.findViewById(R.id.achive_now);
-        ImageView achive_img3 = achive_hand_view.findViewById(R.id.achive_img);
+        Views.achive_title3.setText("人型打桩机");
+        Views.achive_how_to_get3.setText("点击次数超过1000次获得");
+        Views.achive_how_to_get3.setText("1000");
+        Views.achive_img3.setImageResource(R.drawable.unknown);
 
-        View achive_da_zhuang = achive_roots.findViewById(R.id.include_4);
-        TextView achive_title4 = achive_da_zhuang.findViewById(R.id.achive_title);
-        TextView achive_how_to_get4 = achive_da_zhuang.findViewById(R.id.achive_how_to_get);
-        TextView achive_progress4 = achive_da_zhuang.findViewById(R.id.achive_progess);
-        Button achive_now4 = achive_da_zhuang.findViewById(R.id.achive_now);
-        ImageView achive_img4 = achive_da_zhuang.findViewById(R.id.achive_img);
+        Views.achive_title4.setText("持之以恒");
+        Views.achive_how_to_get4.setText("获得所有句子后获得");
+        Views.achive_img4.setImageResource(R.drawable.unknown);
 
-        achive_img1.setImageResource(R.drawable.unknown);
-
-        achive_title2.setText("手废了没");
-        achive_how_to_get2.setText("点击次数超300次获得");
-        achive_progress2.setText("300");
-        achive_img2.setImageResource(R.drawable.unknown);
-
-        achive_title3.setText("人型打桩机");
-        achive_how_to_get3.setText("点击次数超过1000次获得");
-        achive_how_to_get3.setText("1000");
-        achive_img3.setImageResource(R.drawable.unknown);
-
-        achive_title4.setText("持之以恒");
-        achive_how_to_get4.setText("获得所有句子后获得");
-        achive_img4.setImageResource(R.drawable.unknown);
-        
-        //AchiveNowListener achiveNowListener = new AchiveNowListener();
-        //2022-4-21 bug 闪退 在OnClick监听已经修复 未在banner监听测试
-        //Log.d("img",achive_img1.toString());
-        achive_now1.setOnClickListener(new AchiveNowListener(0,achive_img1));
-        achive_now2.setOnClickListener(new AchiveNowListener(1,achive_img2));
-        achive_now3.setOnClickListener(new AchiveNowListener(2,achive_img3));
-        achive_now4.setOnClickListener(new AchiveNowListener(3,achive_img4));
-        //String json = EasyRawJson.getJson(Achievement.this);
-        Gson gson = new Gson();
+        Views.achive_now1.setOnClickListener(new AchiveNowListener(0,Views.achive_img1));
+        Views.achive_now2.setOnClickListener(new AchiveNowListener(1,Views.achive_img2));
+        Views.achive_now3.setOnClickListener(new AchiveNowListener(2,Views.achive_img3));
+        Views.achive_now4.setOnClickListener(new AchiveNowListener(3,Views.achive_img4));
     }
     class AchiveNowListener implements View.OnClickListener
     {
@@ -160,30 +194,30 @@ public class Achievement extends Activity
             }
             if(button_id == 1)
             {
+                img.setImageResource(R.drawable.hand);
                 achivementData.lock_status = false;
                 achivementData.title = "手废了没";
                 achivementData.progress = 300;
                 achivementData.current_progress = 300;
                 Game.save_achivement(ctx, achivementData,1);
-                img.setImageResource(R.drawable.hand);
             }
             if(button_id == 2)
             {
+                img.setImageResource(R.drawable.dzj);
                 achivementData.lock_status = false;
                 achivementData.title = "人型打桩机";
                 achivementData.progress = 1000;
                 achivementData.current_progress = 1000;
                 Game.save_achivement(ctx, achivementData, 2);
-                img.setImageResource(R.drawable.dzj);
             }
             if(button_id == 3)
             {
+                img.setImageResource(R.drawable.czyh);
                 achivementData.lock_status = false;
                 achivementData.title = "持之以恒";
                 achivementData.progress = 1;
                 achivementData.current_progress = 1;
                 Game.save_achivement(ctx, achivementData, 3);
-                img.setImageResource(R.drawable.czyh);
             }
             bannerAD.loadAD(achive_banner_layout);
         }
