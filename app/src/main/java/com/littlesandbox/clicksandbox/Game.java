@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Adapter;
 import android.app.Activity;
 import android.widget.Toast;
@@ -31,6 +32,29 @@ public class Game
             fw.write(json_1);
             fw.close();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    //读取 收集了几个句子
+    public static int load_collect_senten_count(Context ctx) throws IOException
+    {
+        File filesdir =  ctx.getFilesDir();
+        File achive_file = new File(filesdir.getPath() + "/sentence.txt");
+        FileReader fileReader = new FileReader(achive_file);
+        int result = fileReader.read();
+        return result;
+    }
+    //保存 收集了几个句子
+    public static void save_collect_senten_count(Context ctx,int counts)
+    {
+        File filesdir =  ctx.getFilesDir();
+        File achive_file = new File(filesdir.getPath() + "/sentence.txt");
+        try {
+            FileWriter fileWriter = new FileWriter(achive_file);
+            fileWriter.write(counts);
+            fileWriter.close();
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
