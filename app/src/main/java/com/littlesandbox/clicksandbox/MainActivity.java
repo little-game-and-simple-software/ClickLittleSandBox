@@ -29,7 +29,7 @@ public class MainActivity extends Activity
 {
     //当前已经收集的句子总数
     private int collected_senten = 0;
-    private int clicks = 290;//初始0
+    private int clicks = 0;//初始0
 	//句子索引
 	int iindex = 0;
     int progress = 0;
@@ -115,6 +115,7 @@ public class MainActivity extends Activity
             new Game().load("test.txt",MainActivity.this,adapter,stn,all_sentens);
             collected_senten = Game.load_collect_senten_count(MainActivity.this);
             unlockTv.setText("解锁个数" +String.valueOf(collected_senten) +"/" +"28");
+            clicks = Game.load_clicks(MainActivity.this);
             //  Toast.makeText(ctx,"stn长度"+stn.size(),1000).show();
         }
         else
@@ -141,7 +142,6 @@ public class MainActivity extends Activity
             new Game().save(adapter,MainActivity.this);
             Game.save_clicks(MainActivity.this,clicks);
             Game.save_collect_senten_count(MainActivity.this,collected_senten);
-            //Game.save_achivement(MainActivity.this,achivementStruct1,0);
         } catch(IOException e)
         {
             e.printStackTrace();
@@ -188,7 +188,7 @@ public class MainActivity extends Activity
 	{
 	    bgm = new Bgm();
 		bgm.init(ctx);
-		//bgm.play();
+		bgm.play();
 	}
 	@Override
 	protected void onDestroy()

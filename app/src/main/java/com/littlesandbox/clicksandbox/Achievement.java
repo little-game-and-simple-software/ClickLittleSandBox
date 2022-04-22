@@ -87,6 +87,7 @@ public class Achievement extends Activity
     {
         Toast.makeText(Achievement.this,"功能未完成",Toast.LENGTH_LONG).show();
     }
+    //逻辑不对 应该是单独读取，Null
     //加载存档 读取json文件
     private void load_game_data()
     {
@@ -94,27 +95,23 @@ public class Achievement extends Activity
         AchivementStruct achivement_data2 = Game.load_achivement(ctx,1);
         AchivementStruct achivement_data3 = Game.load_achivement(ctx,2);
         AchivementStruct achivement_data4 = Game.load_achivement(ctx,3);
-        if(achivement_data1 !=null && achivement_data2!=null &&achivement_data3!= null && achivement_data4!=null)
-        {
+        //
             AchivementStruct[] achivementStructs = new AchivementStruct[4];
             achivementStructs[0] = achivement_data1;
             achivementStructs[1] = achivement_data2;
             achivementStructs[2] = achivement_data3;
             achivementStructs[3] = achivement_data4;
             setAchiveLayoutData(achivementStructs);
-        }
-       else
-           {
-               Log.d("Achievemnt","不存在成就文件");
-               //Toast.makeText(Achievement.this,"数据出错，请重置",Toast.LENGTH_LONG).show();
-           }
+        //Log.d("Achievemnt","不存在成就文件");
+        //Toast.makeText(Achievement.this,"数据出错，请重置",Toast.LENGTH_LONG).show();
     }
     //读取文件并设置成就解锁属性
     private void setAchiveLayoutData(AchivementStruct[] structs)
     {
-        Views.achive_title2.setText(structs[1].title);
-        Views.achive_title3.setText(structs[2].title);
-        Views.achive_title4.setText(structs[3].title);
+        //这里硬编码 解决崩溃
+        Views.achive_title2.setText("手废了没");
+        Views.achive_title3.setText("人型打桩机");
+        Views.achive_title4.setText("持之以恒");
 
         boolean[] unlocked_status = new boolean[4];
         ImageView[] unlocked_views = new ImageView[4];
@@ -126,7 +123,10 @@ public class Achievement extends Activity
         for(int i = 0; i<structs.length; i++)
         {
             AchivementStruct struct = structs[i];
-            unlocked_status[i] = struct.lock_status;
+            if(struct != null)
+            {
+                unlocked_status[i] = struct.lock_status;
+            }
         }
 
         for(int i = 0; i<unlocked_status.length; i++)

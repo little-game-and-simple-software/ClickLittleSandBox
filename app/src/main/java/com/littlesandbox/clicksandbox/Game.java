@@ -25,6 +25,21 @@ public class Game
     {
 
     }
+    public static int load_clicks(Context ctx)
+    {
+        File dir =  ctx.getFilesDir();
+        File achive_file = new File(dir.getPath() + "/clicks.txt");
+        FileReader fr;
+        int result = 0;
+        try {
+            fr = new FileReader(achive_file);
+            result = fr.read();
+            fr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
     //保存点击次数
     public static void save_clicks(Context ctx,int clicks)
     {
