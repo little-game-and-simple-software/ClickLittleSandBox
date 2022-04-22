@@ -20,6 +20,26 @@ import com.littlesandbox.clicksandbox.utils.EasyFile;
 //存档读档
 public class Game 
 {
+    //重置游戏
+    public static void reset(Context ctx)
+    {
+
+    }
+    //保存点击次数
+    public static void save_clicks(Context ctx,int clicks)
+    {
+        File dir =  ctx.getFilesDir();
+        File achive_file = new File(dir.getPath() + "/clicks.txt");
+        FileWriter fw;
+        try {
+            fw = new FileWriter(achive_file);
+            fw.write(clicks);
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     //保存成就 由于不会拼接json 所以分文件存储
     public static void save_achivement(Context ctx, AchivementStruct data, int id)
     {
