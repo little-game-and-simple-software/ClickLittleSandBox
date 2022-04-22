@@ -36,7 +36,7 @@ public class BannerListener implements BannerADListener
     @Override
     public void onSuccess() {
         Log.d(tag,"Banner广告成功播放");
-        if(buttonid == 0)
+       /* if(buttonid == 0)
         {
             achive_img.setImageResource(R.drawable.auto);
         }
@@ -51,7 +51,7 @@ public class BannerListener implements BannerADListener
         if(buttonid == 3)
         {
             achive_img.setImageResource(R.drawable.czyh);
-        }
+        }*/
     }
 
     @Override
