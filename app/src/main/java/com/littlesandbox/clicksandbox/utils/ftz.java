@@ -12,7 +12,7 @@ import com.littlesandbox.clicksandbox.R;
 public class ftz
 {
     //发送通知
-    public static void send_Notification(Context ctx)
+    public static void send_Notification(Context ctx,String msg)
     {
         int channelId=0;
         NotificationManager manager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -20,7 +20,7 @@ public class ftz
         Notification.Builder builder = new Notification.Builder(ctx);
         builder.setSmallIcon(R.drawable.sand);
         builder.setContentTitle("获得成就！");
-        builder.setContentText("手废了没");
+        builder.setContentText(msg);
         Notification noti = builder.build();
         manager.notify(channelId,noti);
     }
