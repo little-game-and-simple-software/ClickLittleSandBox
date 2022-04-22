@@ -19,6 +19,7 @@ public class EasySoundPool
 	//可复用
 	SoundPool pool;
 	public static int click_stream_id = 1;
+	public static int get_achivemanet_id = 2;//获得成就的音效
 	public static boolean click_sound_load_status = false ;
 	private String tag;
 	public EasySoundPool(int maxStreams)
@@ -58,6 +59,10 @@ public class EasySoundPool
 	{
 		pool.load(ctx, R.raw.qubodup_crash, sound_quality);
 	}
+	public void direct_load(Context ctx, int resId, int sound_quality)
+	{
+		pool.load(ctx,resId,sound_quality);
+	}
 	//通用方法
 	public void play(int soundId)
 	{
@@ -73,6 +78,10 @@ public class EasySoundPool
 					Log.e(tag,soundId + "未加载成功！");
 				}
 		}
+	}
+	public void direct_play(int soundId)
+	{
+		pool.play(soundId,1f,1f,0,0,1f);
 	}
 	public void pause(int soundId)
 	{

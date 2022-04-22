@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 //import com.soulgame.sgsdk.tgsdklib.TGSDK;
 
+import com.littlesandbox.clicksandbox.utils.ftz;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,6 +29,7 @@ public class MainActivity extends Activity
 {
     //当前已经收集的句子总数
     private int collected_senten = 0;
+    private int clicks = 290;//初始0
 	//句子索引
 	int iindex = 0;
     int progress = 0;
@@ -53,6 +56,7 @@ public class MainActivity extends Activity
     boolean canClickAutoBtn;
     private ImageView sandbox;
     private ObjectAnimator knock_animation;
+    private EasySoundPool pool2;//成就pool
     @Override
     protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -72,6 +76,7 @@ public class MainActivity extends Activity
         } catch(IOException e)
         {}
         list.setAdapter(adapter);
+        init_sound();
 		playBgm();
 		//listadapter数据长度
 		//创建数组适配器，4个参数 
@@ -122,14 +127,20 @@ public class MainActivity extends Activity
                 }
             }
     }
+    public void init_sound()
+    {
+        //成就pool
+        pool2 = new EasySoundPool(2);
+        pool2.direct_load(MainActivity.this,R.raw.big_egg_collect,5);
+    }
     //保存进度
     public void save(View v)
     {
         try
         {
             new Game().save(adapter,MainActivity.this);
+            Game.save_clicks(MainActivity.this,clicks);
             Game.save_collect_senten_count(MainActivity.this,collected_senten);
-            //AchivementStruct achivementStruct1 = new AchivementStruct();
             //Game.save_achivement(MainActivity.this,achivementStruct1,0);
         } catch(IOException e)
         {
@@ -177,7 +188,7 @@ public class MainActivity extends Activity
 	{
 	    bgm = new Bgm();
 		bgm.init(ctx);
-		bgm.play();
+		//bgm.play();
 	}
 	@Override
 	protected void onDestroy()
@@ -211,6 +222,7 @@ public class MainActivity extends Activity
 	public void clickit(View v)
     {
         easySoundPool.play(easySoundPool.click_stream_id);
+        clicks += 1;
         progress += 5;
         bar.setProgress(progress);
         showprogress.setText(progress + "/" + "100");
@@ -218,10 +230,38 @@ public class MainActivity extends Activity
         knock_animation  = ObjectAnimator.ofFloat(sandbox, "translationX", 0, -100f ,-100, 0);
         knock_animation.setDuration(1000);
         knock_animation.start();
-        //todo 添加一个每次点击按钮时的音效 留住玩家
         //数组长度
         int size = stn.size();
-        //Toast.makeText(ctx,"临时数组长度"+size,500).show();
+        if(clicks == 300)
+        {
+            AchivementStruct achivementStruct = new AchivementStruct();
+            achivementStruct.title = "手废了没";
+            achivementStruct.lock_status = false;
+            achivementStruct.current_progress = 300;
+            ftz.send_Notification(MainActivity.this,achivementStruct.title);
+            Game.save_achivement(MainActivity.this,achivementStruct,1);
+            pool2.direct_play(1);
+        }
+        if(clicks == 1000)
+        {
+            AchivementStruct achivementStruct = new AchivementStruct();
+            achivementStruct.title = "人型打桩机";
+            achivementStruct.lock_status = false;
+            achivementStruct.current_progress = 300;
+            ftz.send_Notification(MainActivity.this,achivementStruct.title);
+            Game.save_achivement(MainActivity.this,achivementStruct,2);
+            pool2.direct_play(1);
+        }
+        if(clicks == 3000)
+        {
+            AchivementStruct achivementStruct = new AchivementStruct();
+            achivementStruct.title = "持之以恒";
+            achivementStruct.lock_status = false;
+            achivementStruct.current_progress = 3000;
+            ftz.send_Notification(MainActivity.this,achivementStruct.title);
+            Game.save_achivement(MainActivity.this,achivementStruct,3);
+            pool2.direct_play(1);
+        }
         //可变句子数组
         /*if(size>0)
         {
