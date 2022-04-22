@@ -133,7 +133,7 @@ public class Achievement extends Activity
         Views.achive_progress3 = Views.achive_hand_view.findViewById(R.id.achive_progess);
         Views.achive_now3 = Views.achive_hand_view.findViewById(R.id.achive_now);
         //4
-        Views.achive_da_zhuang = Views.achive_roots.findViewById(R.id.include_3);
+        Views.achive_da_zhuang = Views.achive_roots.findViewById(R.id.include_4);
         Views.achive_img4 = Views.achive_da_zhuang.findViewById(R.id.achive_img);
         Views.achive_title4 = Views.achive_da_zhuang.findViewById(R.id.achive_title);
         Views.achive_how_to_get4 = Views.achive_da_zhuang.findViewById(R.id.achive_how_to_get);
