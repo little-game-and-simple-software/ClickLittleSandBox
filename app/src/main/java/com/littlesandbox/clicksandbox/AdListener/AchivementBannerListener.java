@@ -14,6 +14,7 @@ import com.zh.pocket.http.bean.ADError;
 
 import java.util.Iterator;
 
+//废弃类
 public class AchivementBannerListener implements BannerADListener
 {
     public String tag="MyBannerListener";
@@ -50,10 +51,10 @@ public class AchivementBannerListener implements BannerADListener
                 }
             }
         }
-        Achivements.collected_ments.add(achive1);
+        /*Achivements.collected_ments.add(achive1);
         tv_achive_state1.setText(ctx.getString(R.string.yes_get));
         tv_achive_state1.setTextColor(Color.RED);
-        ftz.send_Notification(ctx);
+        ftz.send_Notification(ctx);*/
     }
 
     @Override
