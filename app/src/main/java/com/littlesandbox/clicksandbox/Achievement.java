@@ -3,6 +3,7 @@ package com.littlesandbox.clicksandbox;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -86,28 +87,70 @@ public class Achievement extends Activity
     {
         Toast.makeText(Achievement.this,"功能未完成",Toast.LENGTH_LONG).show();
     }
-    //接在存档
+    //加载存档 读取json文件
     private void load_game_data()
     {
         AchivementStruct achivement_data1 = Game.load_achivement(ctx, 0);
         AchivementStruct achivement_data2 = Game.load_achivement(ctx,1);
         AchivementStruct achivement_data3 = Game.load_achivement(ctx,2);
         AchivementStruct achivement_data4 = Game.load_achivement(ctx,3);
-
-        AchivementStruct[] achivementStructs = new AchivementStruct[4];
-        achivementStructs[0] = achivement_data1;
-        achivementStructs[1] = achivement_data2;
-        achivementStructs[2] = achivement_data3;
-        achivementStructs[3] = achivement_data4;
-
-        setAchiveLayoutData(achivementStructs);
-    }
-    private void setAchiveLayoutData(AchivementStruct[] achivementStructs)
-    {
-        for(int i = 0 ;i < achivementStructs.length; i++)
+        if(achivement_data1 !=null && achivement_data2!=null &&achivement_data3!= null && achivement_data4!=null)
         {
-            //下次再做！ 2022-4-21
+            AchivementStruct[] achivementStructs = new AchivementStruct[4];
+            achivementStructs[0] = achivement_data1;
+            achivementStructs[1] = achivement_data2;
+            achivementStructs[2] = achivement_data3;
+            achivementStructs[3] = achivement_data4;
+            setAchiveLayoutData(achivementStructs);
+        }
+       else
+           {
+               Log.d("Achievemnt","不存在成就文件");
+               //Toast.makeText(Achievement.this,"数据出错，请重置",Toast.LENGTH_LONG).show();
+           }
+    }
+    //读取文件并设置成就解锁属性
+    private void setAchiveLayoutData(AchivementStruct[] structs)
+    {
+        Views.achive_title2.setText(structs[1].title);
+        Views.achive_title3.setText(structs[2].title);
+        Views.achive_title4.setText(structs[3].title);
 
+        boolean[] unlocked_status = new boolean[4];
+        ImageView[] unlocked_views = new ImageView[4];
+        unlocked_views[0] = Views.achive_img1;
+        unlocked_views[1] = Views.achive_img2;
+        unlocked_views[2] = Views.achive_img3;
+        unlocked_views[3] = Views.achive_img4;
+
+        for(int i = 0; i<structs.length; i++)
+        {
+            AchivementStruct struct = structs[i];
+            unlocked_status[i] = struct.lock_status;
+        }
+
+        for(int i = 0; i<unlocked_status.length; i++)
+        {
+            ImageView unlock = unlocked_views[i];
+            if(unlocked_status[i] == false)
+            {
+                if(i == 0)
+                {
+                    unlock.setImageResource(R.drawable.auto);
+                }
+                if(i == 2)
+                {
+                    unlock.setImageResource(R.drawable.hand);
+                }
+                if(i == 3)
+                {
+                    unlock.setImageResource(R.drawable.dzj);
+                }
+                if(i == 4)
+                {
+                    unlock.setImageResource(R.drawable.czyh);
+                }
+            }
         }
     }
     private void init_view()

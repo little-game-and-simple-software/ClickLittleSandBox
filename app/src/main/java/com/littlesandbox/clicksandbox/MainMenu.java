@@ -35,6 +35,14 @@ public class MainMenu extends Activity {
     public void reset(View v) {
         String dir = getFilesDir().getPath();
         File f = new File(dir + "/test.txt");
+        File achivement1 = new File(dir + "/achivement0.json");
+        File achivement2 = new File(dir + "/achivement1.json");
+        File achivement3 = new File(dir + "/achivement2.json");
+        File achivement4 = new File(dir + "/achivement3.json");
+        achivement1.delete();
+        achivement2.delete();
+        achivement3.delete();
+        achivement4.delete();
         boolean result = f.delete();
         Log.d(tag,"删除状态" + result);
         if(!result)

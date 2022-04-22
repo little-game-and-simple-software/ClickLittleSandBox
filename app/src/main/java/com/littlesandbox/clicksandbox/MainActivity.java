@@ -129,6 +129,8 @@ public class MainActivity extends Activity
         {
             new Game().save(adapter,MainActivity.this);
             Game.save_collect_senten_count(MainActivity.this,collected_senten);
+            //AchivementStruct achivementStruct1 = new AchivementStruct();
+            //Game.save_achivement(MainActivity.this,achivementStruct1,0);
         } catch(IOException e)
         {
             e.printStackTrace();
@@ -147,12 +149,24 @@ public class MainActivity extends Activity
                 {
                     Toast.makeText(ctx,"外部调用",Toast.LENGTH_LONG).show();
                     String dir = getFilesDir().getPath();
-                    File f = new File(dir+"/test.txt");
-                    if(f.exists())
+                    File senten_file = new File(dir + "/test.txt");
+                    File achivement1 = new File(dir + "/achivement0.json");
+                    File achivement2 = new File(dir + "/achivement1.json");
+                    File achivement3 = new File(dir + "/achivement2.json");
+                    File achivement4 = new File(dir + "/achivement3.json");
+                    if(senten_file.exists() && achivement1.exists() && achivement2.exists() && achivement4.exists())
                     {
-                        boolean result= f.delete();
+                        boolean result= senten_file.delete();
+                        achivement1.delete();
+                        achivement2.delete();
+                        achivement3.delete();
+                        achivement4.delete();
                         Toast.makeText(ctx,"删除状态"+result,Toast.LENGTH_LONG).show();
                     }
+                    else
+                        {
+                            Toast.makeText(MainActivity.this,"存档出错,请重装游戏解决！",Toast.LENGTH_LONG).show();
+                        }
                     //重置界面
                     recreate();
                 }

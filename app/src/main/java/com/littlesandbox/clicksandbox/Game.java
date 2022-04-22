@@ -60,17 +60,21 @@ public class Game
     }
     public static AchivementStruct load_achivement(Context ctx, int id)
     {
+        Gson gson = new Gson();
+        AchivementStruct jsonObjData = null;
         File filesdir =  ctx.getFilesDir();
         File achive_file = new File(filesdir.getPath() + "/achivement" + String.valueOf(id) + ".json");
-        EasyFile easyFile = new EasyFile(achive_file);
-        String loaded_json = null;
-        try {
-             loaded_json = easyFile.readAll();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(achive_file.exists())
+        {
+            EasyFile easyFile = new EasyFile(achive_file);
+            String loaded_json = null;
+            try {
+                 loaded_json = easyFile.readAll();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            jsonObjData = gson.fromJson(loaded_json, AchivementStruct.class);
         }
-        Gson gson = new Gson();
-        AchivementStruct jsonObjData = gson.fromJson(loaded_json, AchivementStruct.class);
         return jsonObjData;
     }
     public void save(Adapter data,Activity a) throws IOException
